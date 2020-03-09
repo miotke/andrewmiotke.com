@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+  <p>Hi, I'm Andrew a software developer writing Swift and Python in Tacoma, WA.</p>
+  <p>Feel free to reach out to me on <a href="https://www.twitter.com/miotke">Twitter</a> or on <a href="https://github.com/miotke">GitHub</a>.
+      If you're interested in seeing my resume, check out my <a href="https://gist.github.com/miotke/4f25049cee4c422c63dc94257ce3b2aa">Resume Gist</a>.
+  </p>
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+</div>

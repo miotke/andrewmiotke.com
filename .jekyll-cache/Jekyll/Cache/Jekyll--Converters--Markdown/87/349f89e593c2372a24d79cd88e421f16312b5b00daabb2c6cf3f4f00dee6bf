@@ -1,0 +1,34 @@
+I"<<p>Paul Hudson(@twostraws) has started the 100 Days of Swift “challenge” and I’ve decided to jump onboard!</p>
+
+<p>How I’m going to structure this:
+I’m going to write a post each day describing what the day was about and the key take away/thing I learned that day was.</p>
+
+<p>All that to be said, I’m a few days late so let’s get started with Day 1.</p>
+
+<h1 id="day-1">Day 1</h1>
+<p>Day 1 covered a large range of things:</p>
+<ul>
+  <li>Variables(<code class="highlighter-rouge">var</code>)</li>
+  <li>Constants(<code class="highlighter-rouge">let</code>)</li>
+  <li>Booleans(<code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>)</li>
+  <li>multi-line strings</li>
+  <li>Strings(<code class="highlighter-rouge">String</code>)</li>
+  <li>Integers(<code class="highlighter-rouge">Int</code>)</li>
+  <li>Doubles (<code class="highlighter-rouge">Double</code>)</li>
+</ul>
+
+<p>My big take away and learn from day 1 was multi-line strings. I didn’t know Swift had this feature and while I don’t fully know the reason for it I could see a use for it.</p>
+
+<h4 id="multi-line-string-example">Multi-line String Example</h4>
+<p>`let exampleString = “””</p>
+
+<p>Multi-line strings</p>
+
+<p>take up</p>
+
+<p>Multiple lines like this</p>
+
+<p>“””`</p>
+
+<p>Thanks for reading! 😊</p>
+:ET

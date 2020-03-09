@@ -1,0 +1,36 @@
+I"><h1 id="day-2">Day 2</h1>
+<p>Alright, day 2 was completed on my phone while on the train home 🚂, which led to an interesting dynamic of switching between mobile Safari “tabs”. That being said I learned a lot so lets get into it!</p>
+
+<p>Day 2 covered a lot of stuff:</p>
+<ul>
+  <li>Arrays <code class="highlighter-rouge">let myArray = ["some", "cool", "array", "in", "Swift"]</code></li>
+  <li>Sets <code class="highlighter-rouge">let mySet = Set(["some", "cool", "set", "in", "Swift"])</code></li>
+  <li>Tupels <code class="highlighter-rouge">let myTupel = (swift: "Swift", complement: "is cool!")</code></li>
+  <li>Dictionaries <code class="highlighter-rouge">let myDictionary = ["my state": "Washington State", "my city": "Tacoma"]</code></li>
+  <li>Dictionary default values <code class="highlighter-rouge">let defaultValues = ["my city": "Tacoma"]</code> <code class="highlighter-rouge">defaultValues["Seattle", default: "Unknown"]</code></li>
+  <li>Empty collections:
+    <ul>
+      <li><code class="highlighter-rouge">let city = [String: String]() // Dictionary</code></li>
+      <li><code class="highlighter-rouge">let populationByYear = [Int]() // Array if index 0 is the first year tracking population</code></li>
+      <li><code class="highlighter-rouge">let citySections = Set&lt;String&gt;() // Set</code></li>
+    </ul>
+  </li>
+  <li>Enumerations or enums</li>
+  <li>Enumerations with associated values</li>
+  <li>Enumerations with raw values</li>
+</ul>
+
+<h1 id="key-take-away">Key Take away</h1>
+<p>Enumerations with associated values</p>
+
+<pre><code class="language-Swift">enum TacomaActivities {
+    case brewery(beerType: String)
+    case walk(location: String)
+    case food(resturant: String)
+}
+
+let brewery = TacomaActivities.brewery(beerType: "7 Seas")
+</code></pre>
+
+<p>Thanks for reading and stay tuned for Day 3! 😄</p>
+:ET
