@@ -16,5 +16,5 @@ the App Store.
 ## Other stuff
 
 ### Building the site
-Run server: 
-`bundle exec jekyll serve`
+Run server locally: 
+`bundle exec jekyll serve --incremental`
