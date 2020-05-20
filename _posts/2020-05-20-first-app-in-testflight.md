@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "First App in TestFlight"
+title:  "First App in TestFlight: Tankd"
 date:   2020-05-20 09:29:46 -0700
 categories: update
 ---
