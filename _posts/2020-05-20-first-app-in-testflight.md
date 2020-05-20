@@ -17,8 +17,8 @@ Feel free to download the TestFlight build [here](https://testflight.apple.com/j
 
 
 <p align="center">
-	<img src="/images/root.png">
-	<img src="/images/add_fuel_stop.png">
+<img src="/images/root.jpg">
+<img src="/images/add_fuel_stop.jpg">
 </p>
 
 ### SwiftUI and other technologies
