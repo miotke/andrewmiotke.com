@@ -1,172 +1,163 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-15T14:11:45-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">andrewmiotke.com</title><entry><title type="html">Portfolio App: Meal Time</title><link href="http://localhost:4000/update/2020/04/22/meal-time.html" rel="alternate" type="text/html" title="Portfolio App: Meal Time" /><published>2020-04-22T15:36:46-07:00</published><updated>2020-04-22T15:36:46-07:00</updated><id>http://localhost:4000/update/2020/04/22/meal-time</id><content type="html" xml:base="http://localhost:4000/update/2020/04/22/meal-time.html">### Update
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-02T15:35:31-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">andrewmiotke.com</title><entry><title type="html">Please don’t ruin it for everyone, tech leakers</title><link href="http://localhost:4000/personal/update/2020/05/28/leakers.html" rel="alternate" type="text/html" title="Please don’t ruin it for everyone, tech leakers" /><published>2020-05-28T09:01:46-07:00</published><updated>2020-05-28T09:01:46-07:00</updated><id>http://localhost:4000/personal/update/2020/05/28/leakers</id><content type="html" xml:base="http://localhost:4000/personal/update/2020/05/28/leakers.html">First things first, I'll glance at leaks of products when they blitz past my screen. As someone who has always followed tech, of course I'm interested in knowing what's going to be released soon. That being said I find it a real shame that the hard work of so many people gets ruined by a few over zealous people looking to make a name for themselves.
 
-As I outlined in [A New Hope](http://andrewmiotke.com/update/2020/03/31/a-new-hope.html) I'm taking
-this time to refocus my software development efforts on iOS and Swift. It's been about a week and a half
-since I was laid off of my job and I have taken it in stride. I've decided to work on a few different types of
-apps, some &quot;portfolio&quot; that won't be released on the App Store and at least one that will be released on the App Store.
+## The problem 
+The problem I see with leaks, like the ones we see about new Apple products, is that behind these giant pieces of glass that we tap on all day are real people who worked tirelessly on them. They’re excited about being able to show the world what they’ve been working on. The feeling of accomplishment and knowing that your hard work is now on stage being shown off to the world. I can not imagine how cool that must feel. However, before the stage lights up and the world focuses on the keynote speaker, everyone already knows what is going to be said and shown before it even happens. 
 
-### Introducing: Meal Time
-Meal Time is the first &quot;portfolio&quot; app that I've built during this jobless time. I started this idea some time ago
-but never &quot;finished&quot; it until now(finished is in quotes because there's always things I could change).
+Unfortunately there’s groups of people who are willing to spoil it for everyone and leak this confidential information. As a consumer, I love the sense of excitement and surprise of a new product or software announcement. It seriously spoils the fun when I know all about the new iPhone before Apple can even announce it themselves. I can’t imagine what it feels like to be working on something just to find out every single detail of it has been posted on Twitter. It’s a real shame to take that away from the people who have worked so hard on something for so long. 
 
-I was curious how the whole app ecosystem worked, that being a web api and mobile app. I used the Django
-REST framework to build the api and hosted that api was deployed to Heroku's free tier. I then build an iOS app using Swift to consume the data this api was serving.
-The app would display the menu title, price, and a description then display it in the app. I used a simple root view and detail view
-to navigate around and get more information.
+## Leakers 
+I want to take this moment though to speak about what _I_ find so troubling about &quot;professional leakers”. There’s been a lot of them over the years and most noticeable are the ones that focus on Apple. Lately however, there’s been an influx of people who have had incredible track records of getting this information correct. I would assume they’re getting this information from someone inside the company then sharing said information when they need a social media boost. 
 
-If you look at the detail view, all the meal UILabels including the UIImage(it's just an emoji) are all populated
-by data coming from the Django REST api.
+Those sharing are taking this information and putting it in front the world. I’m not really sure what the benefit of it is though. I don’t think the excuse of “It helps the consumer in their buying decision” holds much water. 
 
-If you would like to check it out in more detail feel free to head over to the [Meal Time](https://github.com/miotke/MealTime) repository on GitHub.
+Ultimately though it takes away from those who are working on whatever has been leaked and reported, and that sucks. I’ll come to this more at the end but I think it’s super important. 
+
+## Internal Leakers 
+I couldn’t come up with a better term than _internal leaker_ but I consider these people the ones who are inside a company freely handing out confidential information to those willing to post it online. 
+
+Those taking confidential information about a product are really just ruining it for everyone. The people who sit beside you designing the next piece of hardware or the person writing code to release that next cool feature and everything in between. There are people working endlessly to create what we all drool after. Sharing this information before it is officially announced only hurts the ones around you.</content><author><name></name></author><summary type="html">First things first, I’ll glance at leaks of products when they blitz past my screen. As someone who has always followed tech, of course I’m interested in knowing what’s going to be released soon. That being said I find it a real shame that the hard work of so many people gets ruined by a few over zealous people looking to make a name for themselves.</summary></entry><entry><title type="html">First App in TestFlight: Tankd</title><link href="http://localhost:4000/update/2020/05/20/first-app-in-testflight.html" rel="alternate" type="text/html" title="First App in TestFlight: Tankd" /><published>2020-05-20T09:29:46-07:00</published><updated>2020-05-20T09:29:46-07:00</updated><id>http://localhost:4000/update/2020/05/20/first-app-in-testflight</id><content type="html" xml:base="http://localhost:4000/update/2020/05/20/first-app-in-testflight.html">I finally did it! Earlier this week I submitted an app to TestFlight for the first time. This is the first step in achieving my goal of submitting an app to the iOS App Store and I could not be more excited. I'll talk more about the app in a moment with a link so you can download it. I'm hoping to let it bake with testers in TestFlight to work out all the kinks and bugs then move it to the App Store soon.
+
+This isn't the initial app I wrote about after getting laid off, in fact it's something much smaller but serves a purpose that didn't exactly fit in with my other app. It's also written with SwiftUI, Apple's new UI framework, which I have mixed feelings about currently. 
+
+### Tankd
+So the app is called Tankd and simply put it's a fuel stop tracking app for iOS. I had heard a few times and even talked to a few friends who like to save their receipts at every fuel stop they make. I tried this for a short bit and got frustrated with all of the receipt papers cluttering up areas like the glove box. There's also spreadsheets which would solve this problem just as easy. However, I thought I could try and make a more eloquent way of tracking fuel stops and maybe, eventually, present the data as more of an overview like a dashboard. 
+
+Feel free to download the TestFlight build [here](https://testflight.apple.com/join/XCcpPOnr)! I would love to hear your feedback and bug reports as well 🐞.
+
+
 
 &lt;p align=&quot;center&quot;&gt;
-  &lt;img src=&quot;/images/MealTimeVideo.gif&quot;&gt;
+&lt;img src=&quot;/images/root.jpg&quot;&gt;
+&lt;img src=&quot;/images/add_fuel_stop.jpg&quot;&gt;
 &lt;/p&gt;
 
-Disclaimer: This app is not fully featured and will not actually order anything 😉
+### SwiftUI and other technologies
+SwiftUI is a brand new UI framework from Apple that was announced and released at WWDC 2019. It's declarative and super cool. You can build some really nice looking UIs and apps with it very quickly but it's not perfect and has its flaws. Honestly, with the size and complexity of Tankd it seems like a good candidate to really dip my toes into SwiftUI. I ran into a variety of bugs and issues when building Tankd mainly with wrapping my brain around writing UI in a declarative way vs an imperative way like you would from UIKit. Describing how you want your UI to look is a really nice way to quickly get something on screen, looking nice, and letting the system deal with the constraints. 
 
-Thanks for reading!
+In Tankd I also used Core Data as the persistent data store. SwiftUI made a simple Core Data implementation really simple and I really enjoyed using Core Data with SwiftUI. 
+
+
+Again, thanks for reading :) 
 
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><summary type="html">Update</summary></entry><entry><title type="html">test</title><link href="http://localhost:4000/apps/2020/04/22/test.html" rel="alternate" type="text/html" title="test" /><published>2020-04-22T15:36:46-07:00</published><updated>2020-04-22T15:36:46-07:00</updated><id>http://localhost:4000/apps/2020/04/22/test</id><content type="html" xml:base="http://localhost:4000/apps/2020/04/22/test.html">### Update
+[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><summary type="html">I finally did it! Earlier this week I submitted an app to TestFlight for the first time. This is the first step in achieving my goal of submitting an app to the iOS App Store and I could not be more excited. I’ll talk more about the app in a moment with a link so you can download it. I’m hoping to let it bake with testers in TestFlight to work out all the kinks and bugs then move it to the App Store soon.</summary></entry><entry><title type="html">Portfolio App: Meal Time</title><link href="http://localhost:4000/update/2020/04/22/meal-time.html" rel="alternate" type="text/html" title="Portfolio App: Meal Time" /><published>2020-04-22T15:36:46-07:00</published><updated>2020-04-22T15:36:46-07:00</updated><id>http://localhost:4000/update/2020/04/22/meal-time</id><content type="html" xml:base="http://localhost:4000/update/2020/04/22/meal-time.html">&lt;h3 id=&quot;update&quot;&gt;Update&lt;/h3&gt;
 
-As I outlined in [A New Hope](http://andrewmiotke.com/update/2020/03/31/a-new-hope.html) I'm taking
-this time to refocus my software development efforts on iOS and Swift. It's been about a week and a half
-since I was laid off of my job and I have taken it in stride. I've decided to work on a few different types of
-apps, some &quot;portfolio&quot; that won't be released on the App Store and at least one that will be released on the App Store.
+&lt;p&gt;As I outlined in &lt;a href=&quot;http://andrewmiotke.com/update/2020/03/31/a-new-hope.html&quot;&gt;A New Hope&lt;/a&gt; I’m taking
+this time to refocus my software development efforts on iOS and Swift. It’s been about a week and a half
+since I was laid off of my job and I have taken it in stride. I’ve decided to work on a few different types of
+apps, some “portfolio” that won’t be released on the App Store and at least one that will be released on the App Store.&lt;/p&gt;
 
-### Introducing: Meal Time
-Meal Time is the first &quot;portfolio&quot; app that I've built during this jobless time. I started this idea some time ago
-but never &quot;finished&quot; it until now(finished is in quotes because there's always things I could change).
+&lt;h3 id=&quot;introducing-meal-time&quot;&gt;Introducing: Meal Time&lt;/h3&gt;
+&lt;p&gt;Meal Time is the first “portfolio” app that I’ve built during this jobless time. I started this idea some time ago
+but never “finished” it until now(finished is in quotes because there’s always things I could change).&lt;/p&gt;
 
-I was curious how the whole app ecosystem worked, that being a web api and mobile app. I used the Django
-REST framework to build the api and hosted that api was deployed to Heroku's free tier. I then build an iOS app using Swift to consume the data this api was serving.
+&lt;p&gt;I was curious how the whole app ecosystem worked, that being a web api and mobile app. I used the Django
+REST framework to build the api and hosted that api was deployed to Heroku’s free tier. I then build an iOS app using Swift to consume the data this api was serving.
 The app would display the menu title, price, and a description then display it in the app. I used a simple root view and detail view
-to navigate around and get more information.
+to navigate around and get more information.&lt;/p&gt;
 
-If you look at the detail view, all the meal UILabels including the UIImage(it's just an emoji) are all populated
-by data coming from the Django REST api.
+&lt;p&gt;If you look at the detail view, all the meal UILabels including the UIImage(it’s just an emoji) are all populated
+by data coming from the Django REST api.&lt;/p&gt;
 
-If you would like to check it out in more detail feel free to head over to the [Meal Time](https://github.com/miotke/MealTime) repository on GitHub.
+&lt;p&gt;If you would like to check it out in more detail feel free to head over to the &lt;a href=&quot;https://github.com/miotke/MealTime&quot;&gt;Meal Time&lt;/a&gt; repository on GitHub.&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-  &lt;img src=&quot;/images/MealTimeVideo.gif&quot;&gt;
+  &lt;img src=&quot;/images/MealTimeVideo.gif&quot; /&gt;
 &lt;/p&gt;
 
-Disclaimer: This app is not fully featured and will not actually order anything 😉
+&lt;p&gt;Disclaimer: This app is not fully featured and will not actually order anything 😉&lt;/p&gt;
 
-Thanks for reading!
+&lt;p&gt;Thanks for reading!&lt;/p&gt;</content><author><name></name></author><summary type="html">Update</summary></entry><entry><title type="html">A New Hope</title><link href="http://localhost:4000/update/2020/03/31/a-new-hope.html" rel="alternate" type="text/html" title="A New Hope" /><published>2020-03-31T13:56:46-07:00</published><updated>2020-03-31T13:56:46-07:00</updated><id>http://localhost:4000/update/2020/03/31/a-new-hope</id><content type="html" xml:base="http://localhost:4000/update/2020/03/31/a-new-hope.html">&lt;p&gt;After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks…hard.
+I’m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.&lt;/p&gt;
 
+&lt;h3 id=&quot;the-breakup&quot;&gt;The breakup&lt;/h3&gt;
+&lt;p&gt;I found out at the same time as many of my colleagues, Slack exploded and Notification Center on my Mac was trying to keep up. It was terrible.
+There were enough tears coming out of my face to fill a bucket. I was in absolute disbelief because I’ve never been let go from a job before, I guess there’s a first for everything 🤷‍♂️.&lt;/p&gt;
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><summary type="html">Update</summary></entry><entry><title type="html">A New Hope</title><link href="http://localhost:4000/update/2020/03/31/a-new-hope.html" rel="alternate" type="text/html" title="A New Hope" /><published>2020-03-31T13:56:46-07:00</published><updated>2020-03-31T13:56:46-07:00</updated><id>http://localhost:4000/update/2020/03/31/a-new-hope</id><content type="html" xml:base="http://localhost:4000/update/2020/03/31/a-new-hope.html">After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks...hard.
-I'm now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.
+&lt;h3 id=&quot;hope&quot;&gt;Hope&lt;/h3&gt;
+&lt;p&gt;Soon after I realized that this isn’t a damning thing and that this might actually be good. The thing was, I wasn’t that happy with my current role.
+Sure, I was told things will change and I’ll get to start working on the projects that I’ve been asking to work on for a long time but in this new world things change very rapidly, clearly.
+What I really wanted to do was program, write code, and create things. I’ve been doing this in my spare time for awhile now but I haven’t been able to make that leap in my career.&lt;/p&gt;
 
-### The breakup
-I found out at the same time as many of my colleagues, Slack exploded and Notification Center on my Mac was trying to keep up. It was terrible.
-There were enough tears coming out of my face to fill a bucket. I was in absolute disbelief because I've never been let go from a job before, I guess there's a first for everything 🤷‍♂️.
-
-### Hope
-Soon after I realized that this isn't a damning thing and that this might actually be good. The thing was, I wasn't that happy with my current role.
-Sure, I was told things will change and I'll get to start working on the projects that I've been asking to work on for a long time but in this new world things change very rapidly, clearly.
-What I really wanted to do was program, write code, and create things. I've been doing this in my spare time for awhile now but I haven't been able to make that leap in my career.
-
-After it was all said and done the clouds actually parted(which is rare in Washington, it's been raining for weeks now) and I realized something, this wasn't a death sentence.
-As a matter of fact, this could be a positive thing - a real positive thing. I took a long walk, in hopes that the clouds wouldn't roll in, and gained some perspective. It's funny how after the dust settled of no longer
+&lt;p&gt;After it was all said and done the clouds actually parted(which is rare in Washington, it’s been raining for weeks now) and I realized something, this wasn’t a death sentence.
+As a matter of fact, this could be a positive thing - a real positive thing. I took a long walk, in hopes that the clouds wouldn’t roll in, and gained some perspective. It’s funny how after the dust settled of no longer
 having a steady income how the light changes on everything. Walking down the street I was actually smiling which felt nice after what seemed like hours of sadness and crying. I was talking with my wife, Maggie, and we both feel the same way,
-we don't feel shackled down to living in Tacoma or even Washington. We can literally pick up and go where we want, assuming we can financially, of course.
+we don’t feel shackled down to living in Tacoma or even Washington. We can literally pick up and go where we want, assuming we can financially, of course.
 I can now focus on programming and honing those skills to hopefully pick up a new job.
-I can finally release that iOS app that I've been putting off finishing, hell I might even try and find a way to contribute to [Swift](https://swift.org), the language that I really cut my teeth on and really enjoy.
-Maybe I'll pack up my car and drive down and see my wife who has been working in a different state for the last little bit.
+I can finally release that iOS app that I’ve been putting off finishing, hell I might even try and find a way to contribute to &lt;a href=&quot;https://swift.org&quot;&gt;Swift&lt;/a&gt;, the language that I really cut my teeth on and really enjoy.
+Maybe I’ll pack up my car and drive down and see my wife who has been working in a different state for the last little bit.&lt;/p&gt;
 
-I'll say one thing though, I don't want to sit back and be complacent. I've thought about what would happen to me if I ever lost a job, I was afraid of being that guy to sit on the couch watching TV while the hours slowly tick away.
-I'm afraid of becoming that person but, as of right now I have zero intention on becoming that person. I want to be programming, I want to be building and learning new things and dammit I'm going to do that.
+&lt;p&gt;I’ll say one thing though, I don’t want to sit back and be complacent. I’ve thought about what would happen to me if I ever lost a job, I was afraid of being that guy to sit on the couch watching TV while the hours slowly tick away.
+I’m afraid of becoming that person but, as of right now I have zero intention on becoming that person. I want to be programming, I want to be building and learning new things and dammit I’m going to do that.&lt;/p&gt;
 
-There is hope at the end of all of this, I just hope that you can too. It's not easy, it's never going to be easy but we can at least try to not look down the barrel of the gun at every waking moment.
+&lt;p&gt;There is hope at the end of all of this, I just hope that you can too. It’s not easy, it’s never going to be easy but we can at least try to not look down the barrel of the gun at every waking moment.&lt;/p&gt;
 
-### Understanding and acknowledgement
-Everything I wrote today is about my personal experience, thus far. That being said I totally understand that there's many others out there in much harder financial and social situations and I want to make sure I acknowledge that.
-If you're like me and in the tech world, give your peers a quick shoutout on social media, share a cool project to help boost those skills.
+&lt;h3 id=&quot;understanding-and-acknowledgement&quot;&gt;Understanding and acknowledgement&lt;/h3&gt;
+&lt;p&gt;Everything I wrote today is about my personal experience, thus far. That being said I totally understand that there’s many others out there in much harder financial and social situations and I want to make sure I acknowledge that.
+If you’re like me and in the tech world, give your peers a quick shoutout on social media, share a cool project to help boost those skills.&lt;/p&gt;</content><author><name></name></author><summary type="html">After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks…hard. I’m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.</summary></entry><entry><title type="html">Resume Gist</title><link href="http://localhost:4000/personal/update/2019/04/06/resume-gist.html" rel="alternate" type="text/html" title="Resume Gist" /><published>2019-04-06T10:28:46-07:00</published><updated>2019-04-06T10:28:46-07:00</updated><id>http://localhost:4000/personal/update/2019/04/06/resume-gist</id><content type="html" xml:base="http://localhost:4000/personal/update/2019/04/06/resume-gist.html">&lt;p&gt;For awhile now I’ve been thinking about the resumé, that piece of paper - or nowadays pdf file that we upload to a website or give a recruiter. The rule of thumb I’ve always been given is keep it short and sweet and try to keep it all on one page. In today’s world we rarely stay at a company for more than three or four years, how are we supposed to keep all this work experience limited one page? Especially when you have to include tings like education, and typically a quick synopsis of who you are.&lt;/p&gt;
 
+&lt;p&gt;Recently I took my boring, plain text resumé and made it into a &lt;a href=&quot;https://gist.github.com&quot;&gt;GitHub Gist&lt;/a&gt;. I found this to be a really compelling way to keep my resume concise and formatted in a way that is visually appealing. Since it’s just a Gist you can view it in your browser, it’s formatted in markdown so it’s easy on the eyes, and you can update it easily. It also looks like it’s just on one really long page.&lt;/p&gt;
 
+&lt;h3 id=&quot;readability&quot;&gt;Readability&lt;/h3&gt;
+&lt;p&gt;Far too often when reading resumés you get a white paper with a black wall of text. It’s not easy to read and can be one of the most draining processes, at least for me. Using markdown breaks up the text and has a native font that is easy on the eyes and can be easily read. I think this is a great alternative to the classic Times New Roman font that we so often see.&lt;/p&gt;
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><summary type="html">After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks…hard. I’m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.</summary></entry><entry><title type="html">Resume Gist</title><link href="http://localhost:4000/personal/update/2019/04/06/resume-gist.html" rel="alternate" type="text/html" title="Resume Gist" /><published>2019-04-06T10:28:46-07:00</published><updated>2019-04-06T10:28:46-07:00</updated><id>http://localhost:4000/personal/update/2019/04/06/resume-gist</id><content type="html" xml:base="http://localhost:4000/personal/update/2019/04/06/resume-gist.html">For awhile now I've been thinking about the resumé, that piece of paper - or nowadays pdf file that we upload to a website or give a recruiter. The rule of thumb I've always been given is keep it short and sweet and try to keep it all on one page. In today’s world we rarely stay at a company for more than three or four years, how are we supposed to keep all this work experience limited one page? Especially when you have to include tings like education, and typically a quick synopsis of who you are. 
+&lt;h3 id=&quot;editable&quot;&gt;Editable&lt;/h3&gt;
+&lt;p&gt;A traditional resumé is not particularly easy to edit. You might run into problems like formatting, fighting your text editor, and just having a safe place to store your resumé. On top of all that, you have keep and editable version of it and a pdf version, so now you’re playing around with maintaining two different versions of your resumé. Using a GitHub Gist allows you to leave all of that behind…well except for using markdown syntax, but that is quick to pickup.&lt;/p&gt;
 
-Recently I took my boring, plain text resumé and made it into a [GitHub Gist](https://gist.github.com). I found this to be a really compelling way to keep my resume concise and formatted in a way that is visually appealing. Since it’s just a Gist you can view it in your browser, it’s formatted in markdown so it’s easy on the eyes, and you can update it easily. It also looks like it’s just on one really long page. 
+&lt;p&gt;A Gist is simply just a markdown file and GitHub will host and present it for you. Formatting is simple once you get the hang of the markdown syntax. The only tool you have to really “fight” is GitHub’s markdown editor which is pretty straight forward to use.&lt;/p&gt;
 
-### Readability
-Far too often when reading resumés you get a white paper with a black wall of text. It’s not easy to read and can be one of the most draining processes, at least for me. Using markdown breaks up the text and has a native font that is easy on the eyes and can be easily read. I think this is a great alternative to the classic Times New Roman font that we so often see. 
+&lt;p&gt;The best part though, is versioning. GitHub will track any revisions you make to the Gist just like your code. GitHub will present in a clean markdown format and they will give you a link to easily share, it couldn’t be easier. This means you don’t have to worry about keeping an editable version that you constantly update and then a pdf version of that to share out. Just give them the link to your Gist and you can edit as you need to.&lt;/p&gt;
 
-### Editable
-A traditional resumé is not particularly easy to edit. You might run into problems like formatting, fighting your text editor, and just having a safe place to store your resumé. On top of all that, you have keep and editable version of it and a pdf version, so now you’re playing around with maintaining two different versions of your resumé. Using a GitHub Gist allows you to leave all of that behind…well except for using markdown syntax, but that is quick to pickup. 
+&lt;h3 id=&quot;short-comings&quot;&gt;Short Comings&lt;/h3&gt;
+&lt;p&gt;There are downsides however, most places you apply for ask for you to upload a pdf version of your resumé so I still keep a current version of that resumé on hand. If an employer wants to see a more elaborate and detailed version of the resume, well this Gist will be a great addition to the pdf resumé.&lt;/p&gt;
 
-A Gist is simply just a markdown file and GitHub will host and present it for you. Formatting is simple once you get the hang of the markdown syntax. The only tool you have to really “fight” is GitHub’s markdown editor which is pretty straight forward to use. 
+&lt;h3 id=&quot;final-thought&quot;&gt;Final Thought&lt;/h3&gt;
+&lt;p&gt;I don’t know if this will ever catch on but I think it would be a great transition when applying for a job or just trying to share out your experience.&lt;/p&gt;
 
-The best part though, is versioning. GitHub will track any revisions you make to the Gist just like your code. GitHub will present in a clean markdown format and they will give you a link to easily share, it couldn’t be easier. This means you don’t have to worry about keeping an editable version that you constantly update and then a pdf version of that to share out. Just give them the link to your Gist and you can edit as you need to. 
+&lt;p&gt;Check out my Resumé Gist &lt;a href=&quot;https://gist.github.com/miotke/4f25049cee4c422c63dc94257ce3b2aa&quot;&gt;here!&lt;/a&gt;&lt;/p&gt;
 
-### Short Comings
-There are downsides however, most places you apply for ask for you to upload a pdf version of your resumé so I still keep a current version of that resumé on hand. If an employer wants to see a more elaborate and detailed version of the resume, well this Gist will be a great addition to the pdf resumé.
+&lt;p&gt;Thanks for reading!&lt;/p&gt;</content><author><name></name></author><summary type="html">For awhile now I’ve been thinking about the resumé, that piece of paper - or nowadays pdf file that we upload to a website or give a recruiter. The rule of thumb I’ve always been given is keep it short and sweet and try to keep it all on one page. In today’s world we rarely stay at a company for more than three or four years, how are we supposed to keep all this work experience limited one page? Especially when you have to include tings like education, and typically a quick synopsis of who you are.</summary></entry><entry><title type="html">Taking Classes</title><link href="http://localhost:4000/personal/update/2019/02/17/taking-classes.html" rel="alternate" type="text/html" title="Taking Classes" /><published>2019-02-17T15:22:46-08:00</published><updated>2019-02-17T15:22:46-08:00</updated><id>http://localhost:4000/personal/update/2019/02/17/taking-classes</id><content type="html" xml:base="http://localhost:4000/personal/update/2019/02/17/taking-classes.html">&lt;h1 id=&quot;taking-classes&quot;&gt;Taking Classes&lt;/h1&gt;
+&lt;p&gt;Well it’s that time again, it’s time to start looking at taking a new class to continue to grow my fundamentals in programming. This time I found a class at the Univeristy of Washington(UW) and the course is in Python 🐍!&lt;/p&gt;
 
-### Final Thought
-I don’t know if this will ever catch on but I think it would be a great transition when applying for a job or just trying to share out your experience.
+&lt;p&gt;Python is a language that I’ve wanted to learn for awhile now, once I had an understanding of Swift. I applied for the class last week and I’m just waiting to get the “acceptance letter”. I plan on using this site to write about my experience and to write about what I learn. I’m trying to commit to writing each week 😬🤞.&lt;/p&gt;
 
-Check out my Resumé Gist [here!](https://gist.github.com/miotke/4f25049cee4c422c63dc94257ce3b2aa)
+&lt;p&gt;If you’re reading this and are interested in the class, here’s the link: &lt;a href=&quot;https://www.pce.uw.edu/certificates/python-programming&quot;&gt;Certification in Python Programming&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Taking Classes Well it’s that time again, it’s time to start looking at taking a new class to continue to grow my fundamentals in programming. This time I found a class at the Univeristy of Washington(UW) and the course is in Python 🐍!</summary></entry><entry><title type="html">Vision and Purpose</title><link href="http://localhost:4000/update/2018/07/10/vision-and-purpose.html" rel="alternate" type="text/html" title="Vision and Purpose" /><published>2018-07-10T09:04:00-07:00</published><updated>2018-07-10T09:04:00-07:00</updated><id>http://localhost:4000/update/2018/07/10/vision-and-purpose</id><content type="html" xml:base="http://localhost:4000/update/2018/07/10/vision-and-purpose.html">&lt;p&gt;In my last post I explained my journey up to this point in time and my found passion for Swift. Today I’m going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.&lt;/p&gt;
 
-Thanks for reading!</content><author><name></name></author><summary type="html">For awhile now I’ve been thinking about the resumé, that piece of paper - or nowadays pdf file that we upload to a website or give a recruiter. The rule of thumb I’ve always been given is keep it short and sweet and try to keep it all on one page. In today’s world we rarely stay at a company for more than three or four years, how are we supposed to keep all this work experience limited one page? Especially when you have to include tings like education, and typically a quick synopsis of who you are.</summary></entry><entry><title type="html">Taking Classes</title><link href="http://localhost:4000/personal/update/2019/02/17/taking-classes.html" rel="alternate" type="text/html" title="Taking Classes" /><published>2019-02-17T15:22:46-08:00</published><updated>2019-02-17T15:22:46-08:00</updated><id>http://localhost:4000/personal/update/2019/02/17/taking-classes</id><content type="html" xml:base="http://localhost:4000/personal/update/2019/02/17/taking-classes.html"># Taking Classes
-Well it's that time again, it's time to start looking at taking a new class to continue to grow my fundamentals in programming. This time I found a class at the Univeristy of Washington(UW) and the course is in Python 🐍!
+&lt;h1 id=&quot;vision&quot;&gt;Vision&lt;/h1&gt;
+&lt;p&gt;My vision for this website is to have a place that I can talk about my various learnings with Swift and other topics as I explore iOS development and developing on Apple platforms. Along with this I hope to show case and promote other people who are contributing to the Swift community as I find their articles, podcasts, or even a repo on Github.&lt;/p&gt;
 
-Python is a language that I've wanted to learn for awhile now, once I had an understanding of Swift. I applied for the class last week and I'm just waiting to get the &quot;acceptance letter&quot;. I plan on using this site to write about my experience and to write about what I learn. I'm trying to commit to writing each week 😬🤞.
+&lt;h1 id=&quot;purpose&quot;&gt;Purpose&lt;/h1&gt;
+&lt;p&gt;As I mentioned in the &lt;em&gt;Vision&lt;/em&gt; section above I want to promote the work of other contributors in the Swift community, people such as Sean Allen on Youtube or Zack and Steve from the &lt;em&gt;Fireside Swift&lt;/em&gt; podcasts(I’ll link to those resources at the bottom). I believe that if I can help promote them with the potential readers of this site then that will grant them more exposure and they can continue doing the great work that they’re doing.&lt;/p&gt;
 
-If you're reading this and are interested in the class, here's the link: [Certification in Python Programming](https://www.pce.uw.edu/certificates/python-programming)</content><author><name></name></author><summary type="html">Taking Classes Well it’s that time again, it’s time to start looking at taking a new class to continue to grow my fundamentals in programming. This time I found a class at the Univeristy of Washington(UW) and the course is in Python 🐍!</summary></entry><entry><title type="html">Vision and Purpose</title><link href="http://localhost:4000/update/2018/07/10/vision-and-purpose.html" rel="alternate" type="text/html" title="Vision and Purpose" /><published>2018-07-10T09:04:00-07:00</published><updated>2018-07-10T09:04:00-07:00</updated><id>http://localhost:4000/update/2018/07/10/vision-and-purpose</id><content type="html" xml:base="http://localhost:4000/update/2018/07/10/vision-and-purpose.html">In my last post I explained my journey up to this point in time and my found passion for Swift. Today I'm going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.
+&lt;p&gt;The other purpose of this is to have a sound board that I can write about topics related to Swift. I’ve only been writing Swift for a short time now but I’m enjoying it more and more with ever line I write. If I have a place I can write about Swift then it will help me solidify those concepts and maybe help someone else who is in the learning process as well.&lt;/p&gt;
 
-# Vision
-My vision for this website is to have a place that I can talk about my various learnings with Swift and other topics as I explore iOS development and developing on Apple platforms. Along with this I hope to show case and promote other people who are contributing to the Swift community as I find their articles, podcasts, or even a repo on Github.
+&lt;p&gt;This all comes down to helping others if at all possible. If I can (hopefully)write something interesting or teachable to others and give thanks to others who are contributing great content to the Swift community then the purpose of this site has been achieved.&lt;/p&gt;
 
-# Purpose
-As I mentioned in the _Vision_ section above I want to promote the work of other contributors in the Swift community, people such as Sean Allen on Youtube or Zack and Steve from the _Fireside Swift_ podcasts(I'll link to those resources at the bottom). I believe that if I can help promote them with the potential readers of this site then that will grant them more exposure and they can continue doing the great work that they're doing.
+&lt;h1 id=&quot;contributor-thanks&quot;&gt;Contributor Thanks&lt;/h1&gt;
+&lt;h3 id=&quot;sean-allen&quot;&gt;Sean Allen&lt;/h3&gt;
 
-The other purpose of this is to have a sound board that I can write about topics related to Swift. I've only been writing Swift for a short time now but I'm enjoying it more and more with ever line I write. If I have a place I can write about Swift then it will help me solidify those concepts and maybe help someone else who is in the learning process as well.
+&lt;p&gt;Twitter: &lt;a href=&quot;https://twitter.com/seanallen_dev?lang=en&quot;&gt;@seanallen_dev&lt;/a&gt;&lt;/p&gt;
 
-This all comes down to helping others if at all possible. If I can (hopefully)write something interesting or teachable to others and give thanks to others who are contributing great content to the Swift community then the purpose of this site has been achieved.
+&lt;p&gt;Youtube: &lt;a href=&quot;https://www.youtube.com/channel/UCbTw29mcP12YlTt1EpUaVJw/about&quot;&gt;Sean Allen iOS Dev Videos&lt;/a&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;fireside-swift&quot;&gt;Fireside Swift&lt;/h3&gt;
+&lt;h6 id=&quot;steven-berard--zack-falgout&quot;&gt;Steven Berard &amp;amp; Zack Falgout&lt;/h6&gt;
 
-# Contributor Thanks
-### Sean Allen
+&lt;p&gt;Twitter: &lt;a href=&quot;https://twitter.com/swberard?lang=en&quot;&gt;@SWBerard&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://twitter.com/zfalgout1&quot;&gt;@ZFalgout1&lt;/a&gt;&lt;/p&gt;
 
-Twitter: [@seanallen_dev](https://twitter.com/seanallen_dev?lang=en)
+&lt;p&gt;Podcast: &lt;a href=&quot;https://itunes.apple.com/us/podcast/fireside-swift/id1269435221?mt=2&quot;&gt;Fireside Swift&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In my last post I explained my journey up to this point in time and my found passion for Swift. Today I’m going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.</summary></entry><entry><title type="html">andrewmiotke.com v2.0</title><link href="http://localhost:4000/update/2018/06/30/welcome.html" rel="alternate" type="text/html" title="andrewmiotke.com v2.0" /><published>2018-06-30T17:44:46-07:00</published><updated>2018-06-30T17:44:46-07:00</updated><id>http://localhost:4000/update/2018/06/30/welcome</id><content type="html" xml:base="http://localhost:4000/update/2018/06/30/welcome.html">&lt;p&gt;Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.&lt;/p&gt;
 
-Youtube: [Sean Allen iOS Dev Videos](https://www.youtube.com/channel/UCbTw29mcP12YlTt1EpUaVJw/about)
+&lt;h1 id=&quot;what-happened-with-web&quot;&gt;What happened with web?&lt;/h1&gt;
+&lt;p&gt;Well, I learned after spending too much time that I didn’t care enough. It wasn’t that it was hard, or the job market wasn’t flourishing - because it is and still is. I left the &lt;em&gt;dream&lt;/em&gt; of becoming a web developer because I wasn’t having fun with it. Full transparency, I never achieved a career or was offered a job as a web developer. I didn’t even work that hard in my spare time to study languages like JavaScript, it just didn’t interest me enough. To this day I still think it’s incredible what can be done in a browser.&lt;/p&gt;
 
-### Fireside Swift
-###### Steven Berard &amp; Zack Falgout
+&lt;p&gt;Don’t get me wrong, the craft of the web is fascinating and I have the up most respect for developers out there that work so hard to create the sites we all enjoy.&lt;/p&gt;
 
-Twitter: [@SWBerard](https://twitter.com/swberard?lang=en) &amp; [@ZFalgout1](https://twitter.com/zfalgout1)
+&lt;h1 id=&quot;why-swift-why-the-world-of-ios-development&quot;&gt;Why Swift, why the world of iOS Development?&lt;/h1&gt;
+&lt;p&gt;Deep down I have always been an Apple nerd or as some call it a fanboy so turning to iOS development seemed like an easy decision to make. Before Swift, back when Objective-C was the language of the iPhone I worked as a Genius at Apple in the Tacoma Mall store, in fact I helped open that store and was one of the original employees there which was one of the coolest experiences of my life to date. However, as an Apple employee you can’t submit apps to the app store which discouraged me all those years ago(maybe time for a policy change Apple?). I was interested in iOS development during those days but didn’t write a line of Objective-C until years later when I picked up my first book. They say Objective-C is scary and a tough language to break into, I agreed and went back to the web(see above).&lt;/p&gt;
 
-Podcast: [Fireside Swift](https://itunes.apple.com/us/podcast/fireside-swift/id1269435221?mt=2)
+&lt;p&gt;Two years and two companies later I read a blog post by one of the iOS developers at my current company and something clicked then. They talked about battery life and how to optimize the app with battery capacity in mind, that peaked my interest of programming and really manipulating how a “computer” works. I think working on core OS level code is really cool as it has to talk so cohesively with the hardware(mixing in with my current IT life). So I starting reading &lt;em&gt;Hacking With Swift&lt;/em&gt; and worked through that book on my long commute home from Seattle, I was immediately hooked on it. I’m still in the learning phases and I plan on using this site to expand my knowledge by writing various posts about specific topics.&lt;/p&gt;
 
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><summary type="html">In my last post I explained my journey up to this point in time and my found passion for Swift. Today I’m going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.</summary></entry><entry><title type="html">andrewmiotke.com v2.0</title><link href="http://localhost:4000/update/2018/06/30/welcome.html" rel="alternate" type="text/html" title="andrewmiotke.com v2.0" /><published>2018-06-30T17:44:46-07:00</published><updated>2018-06-30T17:44:46-07:00</updated><id>http://localhost:4000/update/2018/06/30/welcome</id><content type="html" xml:base="http://localhost:4000/update/2018/06/30/welcome.html">Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.
-
-# What happened with web?
-Well, I learned after spending too much time that I didn't care enough. It wasn't that it was hard, or the job market wasn't flourishing - because it is and still is. I left the _dream_ of becoming a web developer because I wasn't having fun with it. Full transparency, I never achieved a career or was offered a job as a web developer. I didn't even work that hard in my spare time to study languages like JavaScript, it just didn't interest me enough. To this day I still think it's incredible what can be done in a browser.
-
-Don't get me wrong, the craft of the web is fascinating and I have the up most respect for developers out there that work so hard to create the sites we all enjoy.
-
-# Why Swift, why the world of iOS Development?
-Deep down I have always been an Apple nerd or as some call it a fanboy so turning to iOS development seemed like an easy decision to make. Before Swift, back when Objective-C was the language of the iPhone I worked as a Genius at Apple in the Tacoma Mall store, in fact I helped open that store and was one of the original employees there which was one of the coolest experiences of my life to date. However, as an Apple employee you can't submit apps to the app store which discouraged me all those years ago(maybe time for a policy change Apple?). I was interested in iOS development during those days but didn't write a line of Objective-C until years later when I picked up my first book. They say Objective-C is scary and a tough language to break into, I agreed and went back to the web(see above).
-
-Two years and two companies later I read a blog post by one of the iOS developers at my current company and something clicked then. They talked about battery life and how to optimize the app with battery capacity in mind, that peaked my interest of programming and really manipulating how a &quot;computer&quot; works. I think working on core OS level code is really cool as it has to talk so cohesively with the hardware(mixing in with my current IT life). So I starting reading _Hacking With Swift_ and worked through that book on my long commute home from Seattle, I was immediately hooked on it. I'm still in the learning phases and I plan on using this site to expand my knowledge by writing various posts about specific topics.
-
-# What am I doing current?
-Currently I'm still working in the IT industry as a Sys Admin/Support Specialist(we do a lot of things, it's a mixed bag). I've learned a lot, met a lot of great people, and got my hands on a lot of new toys before anyone else. However, that time is over and I am diving head first into a programming career. I commute from download Seattle to Tacoma every day so I've been using this time to work on Swift or work on this website but, it's finally time to move on.
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><summary type="html">Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.</summary></entry></feed>
+&lt;h1 id=&quot;what-am-i-doing-current&quot;&gt;What am I doing current?&lt;/h1&gt;
+&lt;p&gt;Currently I’m still working in the IT industry as a Sys Admin/Support Specialist(we do a lot of things, it’s a mixed bag). I’ve learned a lot, met a lot of great people, and got my hands on a lot of new toys before anyone else. However, that time is over and I am diving head first into a programming career. I commute from download Seattle to Tacoma every day so I’ve been using this time to work on Swift or work on this website but, it’s finally time to move on.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.</summary></entry></feed>
