@@ -10,24 +10,60 @@ Email: andrewmiotke@gmail.com
 GitHub: [@miotke](https://github.com/miotke)
 Twitter: [@miotke](https://twitter.com/miotke)
 
-Objective
-----------
-Andrew is a self taught and dedicated programmer with twelve years of experience in the IT field. He has found his true calling through learning Swift and iOS development in any moment he can. While his passion lies in Swift, he has also gotten a certificate in Python programming to expand his knowledge of code. Andrew finds excitement in writing code, building apps, and making technology work for him.
+
+Andrew is a passionate and self taught programmer who has focused on Swift and iOS development over the last two and half years. While his passion lies in Swift, he has also received a certificate in Python programming to expand his knowledge of code.
+
+## Skills
+#### Programming languages
+* Swift 4+
+* Python 3
+* HTML
+* CSS
+
+#### Software
+* macOS 10.4 - 10.15
+* iOS 1 - 13
+* Ubuntu
+* Xcode
+* Git
+* GitHub
+
+#### Hardware
+* Mac hardware
+* iPhone and iPad
+
+## Apps
+Over the past 2-3 years I have been learning Swift. Below are a few examples of that work.
+#### [MealTime](https://github.com/miotke/MealTime)
+A simple REST API lunch menu that connects to an iOS app written in Swift. Using Swift and Django REST framework.
+
+#### [Tankd](https://testflight.apple.com/join/XCcpPOnr)
+An iOS app that will allow you to track your car's fuel stops written in SwiftUI.
+
+Currently available in [TestFlight](https://testflight.apple.com/join/XCcpPOnr)
+
+#### [SimpleToDo](https://github.com/miotke/SimpleToDo)
+A ToDo list app to continue working on my skills as an iOS Developer.
+Using technologies such as CoreData and DiffableDataSources.
+
 
 ## Work Experience
-### iOS Developer(2 week rotation)
-2018 - 2018 
-
+### iOS Developer(2 week sprint)
 Rover.com(Seattle, WA)
-* Worked with the Rover mobile team on a 2 week rotation building new UI objects in Swift for their production app
+
+December 2018 - 2018 
+
+* Worked with the Rover mobile team on a 2 week sprint building new UI objects in Swift for their production app
 * Wrote unit tests in Swift for new and existing code 
 * Utilized Git with GitHub for version control
 * Tracking work through Jira
 
-### IT Support Specialist
-2017 - 2020
 
+### IT Support Specialist
 Rover.com(Seattle, WA)
+
+June 2017 - March 2020 (laid off due to COVID-19)
+
 * Manage over 400 Macs with Jamf Pro to ensure security, reliability, and to better the user experience with their Mac in a corporate environment
 * Communicate effectively with all members of the company and support their technology needs
 * Find solutions to automate various tasks such as account creation and device setup using tools supplied with Jamf Pro or custom Bash scripts
@@ -56,29 +92,29 @@ Apple(Tacoma, WA)
 * Acted as a technical mentor and resource to the entire store staff and helped train newly hired people to the Genius role
 * Maintained all external Genius hard drives to store OS images and other various tools for the Genius team
 
-## Technical Skills
-### Software
-macOS 10.4 - 10.14, iOS 1 - 12, Ubuntu, Windows 7 - 10, ChromeOS, Google Apps, G-Suite adminF, Xcode, Git,
-GitHub, Meraki Web Console, Jamf Pro
-
-### Programming Languages
-Python, Swift, HTML, CSS
-
-### Hardware
-Mac and iOS hardware, Windows PC’s, Meraki hardware
-
 ## Education
-### Certificate in Python Programming
- * 2019, University of Washington(Seattle, WA)
+#### University of Washington(Seattle, WA)
+March 2019 - Novemeber 2019
 
-### Casper Certified Technician(CCT)
- * 2015, JAMF Software
+* Python Programming Certificate
 
-### HTML5, CSS3, and Responsive Web Design
- * 2014 - 2015, University of Washington(Seattle, WA)
+2014-2015
 
-### Apple Certified Macintosh Technician(ACMT)
-  * 2010, Apple
+* HTML5, CSS3, and Responsive Web Design
 
-### Apple iOS Device Certification
- * 2010, Apple
+#### JAMF Software
+2015
+
+* Casper Certified Technician(CCT)
+
+#### Apple
+2010
+
+* Apple Certified Macintosh Technician(ACMT) 
+* Apple iOS Device Certification
+
+#### Emerald Ridge High School(Puyallup, WA) 
+2004 - 2007
+
+* Diploma
+
