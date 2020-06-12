@@ -14,13 +14,13 @@ Twitter: [@miotke](https://twitter.com/miotke)
 Andrew is a passionate and self taught programmer who has focused on Swift and iOS development over the last two and half years. While his passion lies in Swift, he has also received a certificate in Python programming to expand his knowledge of code.
 
 ## Skills
-#### Programming languages
+### Programming languages
 * Swift 4+
 * Python 3
 * HTML
 * CSS
 
-#### Software
+### Software
 * macOS 10.4 - 10.15
 * iOS 1 - 13
 * Ubuntu
@@ -28,21 +28,21 @@ Andrew is a passionate and self taught programmer who has focused on Swift and i
 * Git
 * GitHub
 
-#### Hardware
+### Hardware
 * Mac hardware
 * iPhone and iPad
 
 ## Apps
 Over the past 2-3 years I have been learning Swift. Below are a few examples of that work.
-#### [MealTime](https://github.com/miotke/MealTime)
+### [MealTime](https://github.com/miotke/MealTime)
 A simple REST API lunch menu that connects to an iOS app written in Swift. Using Swift and Django REST framework.
 
-#### [Tankd](https://testflight.apple.com/join/XCcpPOnr)
+### [Tankd](https://testflight.apple.com/join/XCcpPOnr)
 An iOS app that will allow you to track your car's fuel stops written in SwiftUI.
 
 Currently available in [TestFlight](https://testflight.apple.com/join/XCcpPOnr)
 
-#### [SimpleToDo](https://github.com/miotke/SimpleToDo)
+### [SimpleToDo](https://github.com/miotke/SimpleToDo)
 A ToDo list app to continue working on my skills as an iOS Developer.
 Using technologies such as CoreData and DiffableDataSources.
 
@@ -93,7 +93,7 @@ Apple(Tacoma, WA)
 * Maintained all external Genius hard drives to store OS images and other various tools for the Genius team
 
 ## Education
-#### University of Washington(Seattle, WA)
+### University of Washington(Seattle, WA)
 March 2019 - Novemeber 2019
 
 * Python Programming Certificate
@@ -102,18 +102,18 @@ March 2019 - Novemeber 2019
 
 * HTML5, CSS3, and Responsive Web Design
 
-#### JAMF Software
+### JAMF Software
 2015
 
 * Casper Certified Technician(CCT)
 
-#### Apple
+### Apple
 2010
 
 * Apple Certified Macintosh Technician(ACMT) 
 * Apple iOS Device Certification
 
-#### Emerald Ridge High School(Puyallup, WA) 
+### Emerald Ridge High School(Puyallup, WA) 
 2004 - 2007
 
 * Diploma
