@@ -38,7 +38,7 @@ Over the past 2-3 years I have been learning Swift. Below are a few examples of 
 A simple REST API lunch menu that connects to an iOS app written in Swift. Using Swift and Django REST framework.
 
 #### [Tankd](https://apps.apple.com/us/app/tankd-fuel-tracking-app/id1513444671)
-An iOS app that will allow you to track your car's fuel stops written in SwiftUI.
+An iOS app that will allow you to track your cars fuel stops written in SwiftUI.
 
 Currently available on the App Store [Tankd](https://apps.apple.com/us/app/tankd-fuel-tracking-app/id1513444671)
 
