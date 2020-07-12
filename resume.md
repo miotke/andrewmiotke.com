@@ -37,10 +37,10 @@ Over the past 2-3 years I have been learning Swift. Below are a few examples of 
 ### [MealTime](https://github.com/miotke/MealTime)
 A simple REST API lunch menu that connects to an iOS app written in Swift. Using Swift and Django REST framework.
 
-### [Tankd](https://testflight.apple.com/join/XCcpPOnr)
+#### [Tankd](https://apps.apple.com/us/app/tankd-fuel-tracking-app/id1513444671)
 An iOS app that will allow you to track your car's fuel stops written in SwiftUI.
 
-Currently available in [TestFlight](https://testflight.apple.com/join/XCcpPOnr)
+Currently available on the App Store [Tankd](https://apps.apple.com/us/app/tankd-fuel-tracking-app/id1513444671)
 
 ### [SimpleToDo](https://github.com/miotke/SimpleToDo)
 A ToDo list app to continue working on my skills as an iOS Developer.
