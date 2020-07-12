@@ -11,7 +11,7 @@ GitHub: [@miotke](https://github.com/miotke)
 Twitter: [@miotke](https://twitter.com/miotke)
 
 
-Andrew is a passionate and self taught programmer who has focused on Swift and iOS development over the last two and half years. While his passion lies in Swift, he has also received a certificate in Python programming to expand his knowledge of code.
+Andrew is a passionate and self-taught programmer who has focused on Swift and iOS development over the last two and half years. While his passion lies in Swift, he has also received a certificate in Python programming to expand his knowledge of code.
 
 ## Skills
 ### Programming languages
