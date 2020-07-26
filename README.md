@@ -1,4 +1,4 @@
-# andrewmiotke.com
+# [andrewmiotke.com](http://andrewmiotke.com)
 
 A personal site documenting my experiences and programming.
 
