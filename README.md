@@ -11,9 +11,3 @@ These directories create what makes up the site.
 ## apps
 This directory will hold the app info pages for any iOS apps that I build and release to
 the App Store.
-
-## Other stuff
-
-### Building the site
-Run server locally: 
-`bundle exec jekyll serve --incremental`
