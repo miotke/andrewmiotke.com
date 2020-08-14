@@ -11,3 +11,11 @@ These directories create what makes up the site.
 ## apps
 This directory will hold the app info pages for any iOS apps that I build and release to
 the App Store.
+
+## Documentation 
+### Run local server
+Building the site locally is fairly simple, just run the following: 
+
+`bundle exec jekyll serve --incremental`
+
+The incremental flag allows you to make changes without re-running the server.
