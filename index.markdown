@@ -7,7 +7,7 @@ layout: home
 
 Hi, I'm Andrew a software developer writing Swift and Python in Tacoma, WA.
 Feel free to reach out to me on [Twitter](https://twitter.com/miotke) or on [Github](https://github.com/miotke).
-If you're interested in seeing my resume, check out my [Resume Gist](https://gist.github.com/miotke/4f25049cee4c422c63dc94257ce3b2aa).
+If you're interested in seeing my resume, you can find it [here](https://andrewmiotke.com/resume.html).
 I'm mostly interested in writing Swift and Python but I'm always interested in learning a new technology or language. Click Apps at the top to view the apps that have been released onto the App Store ⤴️.
 
 I rarely write but when I do you can read it below 👇.
