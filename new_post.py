@@ -35,6 +35,15 @@ categories: update
 
     new_post_file = f'{path}{file_name}{extension}'
 
+    # Calls the create_git_branch function and passes
+    # in the post_title.
+    try:
+        create_git_branch(post_title)
+        print(f'🚀 Successfully create and checked out a new git branch: {post_title}')
+    except:
+        print(f'❌ Failed created a new git branch named {post_title}')
+
+    # Creates the new post file and adds the Jekyll front matter.
     try:
         # Creates new post file using the new_post_file variable.
         # Stores the file in the _posts/ directory.
@@ -50,6 +59,17 @@ categories: update
         print(f'👍 {file_name} successfully created in _posts/.')
     except: 
         print('😳 An error occured')
+
+
+def create_git_branch(post_title):
+    try:
+        os.system(f'git push origin master:{post_title}')
+    except:
+        print(f'Failed to create and push new branch {post_title}')
+    try:
+        os.system(f'git checdkout {post_title}')
+    except:
+        print(f'Failed to checkout branch: {post_title}')
 
 
 if __name__ == "__main__": 
