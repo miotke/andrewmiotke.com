@@ -67,7 +67,7 @@ def create_git_branch(post_title):
     except:
         print(f'Failed to create and push new branch {post_title}')
     try:
-        os.system(f'git checdkout {post_title}')
+        os.system(f'git checkout {post_title}')
     except:
         print(f'Failed to checkout branch: {post_title}')
 
