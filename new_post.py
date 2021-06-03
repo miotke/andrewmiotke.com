@@ -57,6 +57,7 @@ categories: update
 
         # Prints to the console that a new file has been created.
         print(f'👍 {file_name} successfully created in _posts/.')
+        os.system('code .')
     except: 
         print('😳 An error occured')
 
