@@ -11,7 +11,6 @@ Creating a "card" within a List view using SwiftUI was something that always see
 
 <p align="center">
   <img src="/images/mecid_creating_card.png">
-  <img src="/images/list_card_example.png">
 </p>
 
 ## Code sample
@@ -34,6 +33,10 @@ struct ContentView: View {
     }
 }
 ```
+
+<p align="center">
+    <img src="/images/list_card_example.png">
+</p>
 
 A caveat that I found, which might be somewhat obvious, is you can't have a Section within a Section. For example: if you had a todo list with a "Completed" and "Not completed" sections those rows could not be broken apart into a separate "card" per row using this example.
 
