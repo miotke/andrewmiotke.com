@@ -25,7 +25,7 @@ The Markdown syntax are familiar but if you're used to other flavors of Markdown
 Call the `createAttributedString` function in your `Text()` view to render the markdown.
 
 ```swift 
-    let someString = "Here's some string"
+    let someString = "`Hey!` You're **awesome!**"
 
     // Takes in a string and returns an AttributedString
     func createAttributedString(_ markdown: String) -> AttributedString {
@@ -43,3 +43,5 @@ Call the `createAttributedString` function in your `Text()` view to render the m
     // Calls createAttributedString with the string passed in. 
     Text(createAttributedString(someString))
 ```
+
+This would return "`Hey!` You're **awesome!**"
