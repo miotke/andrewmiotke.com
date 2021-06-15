@@ -9,7 +9,7 @@ This year at WWDC 2021 Apple introduced Markdown support in its UI frameworks, w
 
 This is a quick reference for supporting Markdown in your app. 
 
-Currently in SwiftUI a `Text(" ")` view will render Markdown without trouble. However, if you're pulling a fetching a String out of CoreData as was my case you may need a return that fetched string as an `AttributedString`.
+Currently in SwiftUI `Text("**Here is a** [link to apple.com](https://apple.com)")` will render the Markdown without trouble. However, if you're fetching a String out of CoreData as was my case or you're calling a String from a `var` or `let` you may need a return that fetched string as an `AttributedString`.
 
 ## Markdown syntax
 
