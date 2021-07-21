@@ -15,7 +15,7 @@ Here are the notes I've taken so far while learning Docker over the last few day
 
 - [Docker for beginners](https://docker-curriculum.com/)
 
-## `docker pull`
+## docker pull
 
 ##### Command: 
 - `docker pull [image name or url]`
@@ -24,12 +24,12 @@ Pulls the docker image from the docker registry. The docker registry is similar 
 
 Use `docker images` to list all of the images on the local machine. 
 
-## `docker run`
+## docker run
 
-##### Command: 
+#### Command: 
 - `docker run [image name]`
 
-##### Flags
+#### Flags
 
 - `-d` detaches the terminal window from the running docker container.
 - `-P` publishes all exposed ports to random ports so that the application inside the container can be accessed. You can also specify which port to use with `docker run -p 8888:80 ...`.
@@ -39,25 +39,26 @@ Runs a docker container based on the image that is passed in.
 
 `docker run -it [image name]` attaches you to an interactive shell in the container itself. 
 
-## `docker stop`
+## docker stop
 
-##### Command: 
+#### Command: 
 - `docker stop [container ID or name]`
 
 Stops the running container when running in detached mode. 
 
-## `docker ps`
+## docker ps
 
-##### Command: 
+#### Command: 
 - `docker ps`
 
-Shows all of the containers that are currently running 
+#### Flags:
+- `-a`Shows all containers that have been run.
 
-`docker ps -a` shows all containers that have been run.  Docker creates a new container everytime the command is run. That way the environment is always as you expect. 
+Shows all of the containers that are currently running. Docker creates a new container everytime the command is run. That way the environment is always as you expect. 
 
-## `docker rm`
+## docker rm
 
-##### Command: 
+#### Command: 
 - `docker rm [container ID]`
 
 Container stick around on the disk even after they are no longer running and have a STATUS of `Exited`. Run `docker ps -a` to get the container ID then run `docker rm [container ID]`, i.e. `docker rm 605982f999a1`.
@@ -68,9 +69,9 @@ You can also pass in the `--rm` flag during the `docker run` command to delete t
 
 To get a list of containers use `docker ps` for active containers or `docker ps -a` for all containers that are currently running, exited, ect. 
 
-## `docker rmi`
+## docker rmi
 
-##### Command: 
+#### Command: 
 - `docker rmi [image name]`
 
 Deletes the docker image you no longer need. 
@@ -107,20 +108,20 @@ EXPOSE 5000
 CMD ["python", "./app.py"]
 ```
 
-## `docker build`
+## docker build
 
-##### Command: 
+#### Command: 
 - Create a local docker image`docker build [dockerhubUsername/image name] [location of Dockerfile]`
 
-##### Flags
+#### Flags
 
 - `-t` to give the image a specific tag. Generally a version number.
 
 `docker build` creates a docker image out of the Dockerfile. To add a tag the docker image use `:[tag name]` after the image name, `docker build [dockerhubUsername/image name]:[tag name] [location of Dockerfile]`
 
-## `docker push`
+## docker push
 
-##### Command: 
+#### Command: 
 - `docker push [dockerhubUsername/image name]`
 
 Pushes the docker image to DockerHub.
