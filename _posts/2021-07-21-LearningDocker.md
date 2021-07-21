@@ -52,7 +52,7 @@ Stops the running container when running in detached mode.
 - `docker ps`
 
 #### Flags:
-- `-a`Shows all containers that have been run.
+- `-a`shows all containers that have been run.
 
 Shows all of the containers that are currently running. Docker creates a new container everytime the command is run. That way the environment is always as you expect. 
 
