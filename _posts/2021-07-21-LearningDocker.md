@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Learning Docker: My notes"
-date: 2021-07-20 15:21:59 -0700
+date: 2021-07-21 15:21:59 -0700
 categories: update
 ---
 
@@ -11,7 +11,7 @@ Here are the notes I've taken so far while learning Docker over the last few day
 
 # Learning Docker
 
-## Resources
+## Resources 
 
 - [Docker for beginners](https://docker-curriculum.com/)
 
@@ -116,7 +116,7 @@ CMD ["python", "./app.py"]
 
 - `-t` to give the image a specific tag. Generally a version number.
 
-`docker build` creates a docker image out of the Dockerfile. 
+`docker build` creates a docker image out of the Dockerfile. To add a tag the docker image use `:[tag name]` after the image name, `docker build [dockerhubUsername/image name]:[tag name] [location of Dockerfile]`
 
 ## `docker push`
 
@@ -124,4 +124,3 @@ CMD ["python", "./app.py"]
 - `docker push [dockerhubUsername/image name]`
 
 Pushes the docker image to DockerHub.
-
