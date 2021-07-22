@@ -9,8 +9,6 @@ Expect this post to be updated over time.
 
 Here are the notes I've taken so far while learning Docker over the last few days. 
 
-# Learning Docker
-
 ## Resources 
 
 - [Docker for beginners](https://docker-curriculum.com/)
