@@ -23,9 +23,9 @@ Cron jobs are useful for running automated tasks in Linux based environments. Th
 
 ## Resources 
 
-- Writing a basic cron job in Linux: https://techgirlkb.guru/2018/10/writing-a-basic-cron-job-in-linux/
-- Validate cron jobs: https://crontab.guru/
-- CronJob: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#cron-schedule-syntax
+- [Writing a basic cron job in Linux](https://techgirlkb.guru/2018/10/writing-a-basic-cron-job-in-linux/)
+- [Validate cron jobs](https://crontab.guru/)
+- [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#cron-schedule-syntax)
 
 ## Listing out current cron jobs
 
