@@ -5,6 +5,8 @@ date: 2021-07-22 15:02:30 -0700
 categories: update
 ---
 
+These notes are not exhaustive. As I learn more I'll try and update this post. 
+
 Cron jobs are useful for running automated tasks in Linux based environments. The syntax is kind goofy and took me reading a few different articles to really grasp it. I found this great article, [Writing a basic cron job in Linux](https://techgirlkb.guru/2018/10/writing-a-basic-cron-job-in-linux/) which really helped give a good understanding on how the astrisk syntax works. 
 
 ```cron
