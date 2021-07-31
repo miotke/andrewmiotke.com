@@ -12,6 +12,7 @@ Here are the notes I've taken so far while learning Docker over the last few day
 ## Resources 
 
 - [Docker for beginners](https://docker-curriculum.com/)
+- [Running Django + PostgreSQL containers and persisting data with Docker](https://medium.com/shot-code/running-django-postgresql-containers-and-persisting-data-with-docker-4dd8e4dd5361)
 
 ## docker pull
 
