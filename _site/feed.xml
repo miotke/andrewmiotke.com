@@ -1,48 +1,386 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-16T17:41:07-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">andrewmiotke.com</title><entry><title type="html">Please don’t ruin it for everyone, tech leakers</title><link href="http://localhost:4000/personal/update/2020/05/28/leakers.html" rel="alternate" type="text/html" title="Please don’t ruin it for everyone, tech leakers" /><published>2020-05-28T09:01:46-07:00</published><updated>2020-05-28T09:01:46-07:00</updated><id>http://localhost:4000/personal/update/2020/05/28/leakers</id><content type="html" xml:base="http://localhost:4000/personal/update/2020/05/28/leakers.html">First things first, I'll glance at leaks of products when they blitz past my screen. As someone who has always followed tech, of course I'm interested in knowing what's going to be released soon. That being said I find it a real shame that the hard work of so many people gets ruined by a few over zealous people looking to make a name for themselves.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-08-06T11:12:01-07:00</updated><id>/feed.xml</id><title type="html">andrewmiotke.com</title><entry><title type="html">Learning Cron: My notes</title><link href="/update/2021/07/22/LearningCron.html" rel="alternate" type="text/html" title="Learning Cron: My notes" /><published>2021-07-22T15:02:30-07:00</published><updated>2021-07-22T15:02:30-07:00</updated><id>/update/2021/07/22/LearningCron</id><content type="html" xml:base="/update/2021/07/22/LearningCron.html">&lt;p&gt;These notes are not exhaustive. As I learn more I’ll try and update this post.&lt;/p&gt;
 
-## The problem 
-The problem I see with leaks, like the ones we see about new Apple products, is that behind these giant pieces of glass that we tap on all day are real people who worked tirelessly on them. They’re excited about being able to show the world what they’ve been working on. The feeling of accomplishment and knowing that your hard work is now on stage being shown off to the world. I can not imagine how cool that must feel. However, before the stage lights up and the world focuses on the keynote speaker, everyone already knows what is going to be said and shown before it even happens. 
+&lt;p&gt;Cron jobs are useful for running automated tasks in Linux based environments. The syntax is kind goofy and took me reading a few different articles to really grasp it. I found this great article, &lt;a href=&quot;https://techgirlkb.guru/2018/10/writing-a-basic-cron-job-in-linux/&quot;&gt;Writing a basic cron job in Linux&lt;/a&gt; which really helped give a good understanding on how the astrisk syntax works.&lt;/p&gt;
 
-Unfortunately there’s groups of people who are willing to spoil it for everyone and leak this confidential information. As a consumer, I love the sense of excitement and surprise of a new product or software announcement. It seriously spoils the fun when I know all about the new iPhone before Apple can even announce it themselves. I can’t imagine what it feels like to be working on something just to find out every single detail of it has been posted on Twitter. It’s a real shame to take that away from the people who have worked so hard on something for so long. 
+&lt;pre&gt;&lt;code class=&quot;language-cron&quot;&gt;# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of the month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
+# │ │ │ │ │                                   7 is also Sunday on some systems)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * *
+&lt;/code&gt;&lt;/pre&gt;
 
-## Leakers 
-I want to take this moment though to speak about what _I_ find so troubling about &quot;professional leakers”. There’s been a lot of them over the years and most noticeable are the ones that focus on Apple. Lately however, there’s been an influx of people who have had incredible track records of getting this information correct. I would assume they’re getting this information from someone inside the company then sharing said information when they need a social media boost. 
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
 
-Those sharing are taking this information and putting it in front the world. I’m not really sure what the benefit of it is though. I don’t think the excuse of “It helps the consumer in their buying decision” holds much water. 
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://techgirlkb.guru/2018/10/writing-a-basic-cron-job-in-linux/&quot;&gt;Writing a basic cron job in Linux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://crontab.guru/&quot;&gt;Validate cron jobs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#cron-schedule-syntax&quot;&gt;CronJob&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-Ultimately though it takes away from those who are working on whatever has been leaked and reported, and that sucks. I’ll come to this more at the end but I think it’s super important. 
+&lt;h2 id=&quot;listing-out-current-cron-jobs&quot;&gt;Listing out current cron jobs&lt;/h2&gt;
 
-## Internal Leakers 
-I couldn’t come up with a better term than _internal leaker_ but I consider these people the ones who are inside a company freely handing out confidential information to those willing to post it online. 
+&lt;h4 id=&quot;command&quot;&gt;Command:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;crontab -l&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-Those taking confidential information about a product are really just ruining it for everyone. The people who sit beside you designing the next piece of hardware or the person writing code to release that next cool feature and everything in between. There are people working endlessly to create what we all drool after. Sharing this information before it is officially announced only hurts the ones around you.</content><author><name></name></author><summary type="html">First things first, I’ll glance at leaks of products when they blitz past my screen. As someone who has always followed tech, of course I’m interested in knowing what’s going to be released soon. That being said I find it a real shame that the hard work of so many people gets ruined by a few over zealous people looking to make a name for themselves.</summary></entry><entry><title type="html">First App in TestFlight: Tankd</title><link href="http://localhost:4000/update/2020/05/20/first-app-in-testflight.html" rel="alternate" type="text/html" title="First App in TestFlight: Tankd" /><published>2020-05-20T09:29:46-07:00</published><updated>2020-05-20T09:29:46-07:00</updated><id>http://localhost:4000/update/2020/05/20/first-app-in-testflight</id><content type="html" xml:base="http://localhost:4000/update/2020/05/20/first-app-in-testflight.html">I finally did it! Earlier this week I submitted an app to TestFlight for the first time. This is the first step in achieving my goal of submitting an app to the iOS App Store and I could not be more excited. I'll talk more about the app in a moment with a link so you can download it. I'm hoping to let it bake with testers in TestFlight to work out all the kinks and bugs then move it to the App Store soon.
+&lt;h2 id=&quot;compose-new-cron-job&quot;&gt;Compose new cron job&lt;/h2&gt;
 
-This isn't the initial app I wrote about after getting laid off, in fact it's something much smaller but serves a purpose that didn't exactly fit in with my other app. It's also written with SwiftUI, Apple's new UI framework, which I have mixed feelings about currently. 
+&lt;h4 id=&quot;command-1&quot;&gt;Command:&lt;/h4&gt;
 
-### Tankd
-So the app is called Tankd and simply put it's a fuel stop tracking app for iOS. I had heard a few times and even talked to a few friends who like to save their receipts at every fuel stop they make. I tried this for a short bit and got frustrated with all of the receipt papers cluttering up areas like the glove box. There's also spreadsheets which would solve this problem just as easy. However, I thought I could try and make a more eloquent way of tracking fuel stops and maybe, eventually, present the data as more of an overview like a dashboard. 
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;crontab -e&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-Feel free to download the TestFlight build [here](https://testflight.apple.com/join/XCcpPOnr)! I would love to hear your feedback and bug reports as well 🐞.
+&lt;p&gt;You may be asked on the first run which editor to use between Nano and a couple variations of vim.&lt;/p&gt;
 
+&lt;h2 id=&quot;my-uses&quot;&gt;My uses&lt;/h2&gt;
+&lt;p&gt;I wanted a cron job to run spin up a docker container on my Raspberry Pi at 2pm(PST) Monday - Friday. This seemed like it worked so far, on the first day. 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;0 14 * * 1,2,3,4,5 docker run [docker image]&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><category term="update" /><summary type="html">These notes are not exhaustive. As I learn more I’ll try and update this post.</summary></entry><entry><title type="html">Learning Docker: My notes</title><link href="/update/2021/07/21/LearningDocker.html" rel="alternate" type="text/html" title="Learning Docker: My notes" /><published>2021-07-21T15:21:59-07:00</published><updated>2021-07-21T15:21:59-07:00</updated><id>/update/2021/07/21/LearningDocker</id><content type="html" xml:base="/update/2021/07/21/LearningDocker.html">&lt;p&gt;Expect this post to be updated over time.&lt;/p&gt;
 
+&lt;p&gt;Here are the notes I’ve taken so far while learning Docker over the last few days.&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docker-curriculum.com/&quot;&gt;Docker for beginners&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;docker-pull&quot;&gt;docker pull&lt;/h2&gt;
+
+&lt;h5 id=&quot;command&quot;&gt;Command:&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker pull [image name or url]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pulls the docker image from the docker registry. The docker registry is similar to Github in that it hosts a bunch of docker images.&lt;/p&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;docker images&lt;/code&gt; to list all of the images on the local machine.&lt;/p&gt;
+
+&lt;h2 id=&quot;docker-run&quot;&gt;docker run&lt;/h2&gt;
+
+&lt;h4 id=&quot;command-1&quot;&gt;Command:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker run [image name]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;flags&quot;&gt;Flags&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-d&lt;/code&gt; detaches the terminal window from the running docker container.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-P&lt;/code&gt; publishes all exposed ports to random ports so that the application inside the container can be accessed. You can also specify which port to use with &lt;code class=&quot;highlighter-rouge&quot;&gt;docker run -p 8888:80 ...&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--name&lt;/code&gt; gives the container a human readable name.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Runs a docker container based on the image that is passed in.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker run -it [image name]&lt;/code&gt; attaches you to an interactive shell in the container itself.&lt;/p&gt;
+
+&lt;h2 id=&quot;docker-stop&quot;&gt;docker stop&lt;/h2&gt;
+
+&lt;h4 id=&quot;command-2&quot;&gt;Command:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker stop [container ID or name]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Stops the running container when running in detached mode.&lt;/p&gt;
+
+&lt;h2 id=&quot;docker-ps&quot;&gt;docker ps&lt;/h2&gt;
+
+&lt;h4 id=&quot;command-3&quot;&gt;Command:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker ps&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;flags-1&quot;&gt;Flags:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-a&lt;/code&gt;shows all containers that have been run.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Shows all of the containers that are currently running. Docker creates a new container everytime the command is run. That way the environment is always as you expect.&lt;/p&gt;
+
+&lt;h2 id=&quot;docker-rm&quot;&gt;docker rm&lt;/h2&gt;
+
+&lt;h4 id=&quot;command-4&quot;&gt;Command:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker rm [container ID]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Container stick around on the disk even after they are no longer running and have a STATUS of &lt;code class=&quot;highlighter-rouge&quot;&gt;Exited&lt;/code&gt;. Run &lt;code class=&quot;highlighter-rouge&quot;&gt;docker ps -a&lt;/code&gt; to get the container ID then run &lt;code class=&quot;highlighter-rouge&quot;&gt;docker rm [container ID]&lt;/code&gt;, i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;docker rm 605982f999a1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can also pass in the &lt;code class=&quot;highlighter-rouge&quot;&gt;--rm&lt;/code&gt; flag during the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker run&lt;/code&gt; command to delete the container after it’s been ran. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;docker run --rm busybox echo &quot;Hello&quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker container prune&lt;/code&gt; will delete all exited containers at once. This way you don’t need to copy and paste each container ID in the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker rm&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;p&gt;To get a list of containers use &lt;code class=&quot;highlighter-rouge&quot;&gt;docker ps&lt;/code&gt; for active containers or &lt;code class=&quot;highlighter-rouge&quot;&gt;docker ps -a&lt;/code&gt; for all containers that are currently running, exited, ect.&lt;/p&gt;
+
+&lt;h2 id=&quot;docker-rmi&quot;&gt;docker rmi&lt;/h2&gt;
+
+&lt;h4 id=&quot;command-5&quot;&gt;Command:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker rmi [image name]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Deletes the docker image you no longer need.&lt;/p&gt;
+
+&lt;p&gt;To get the list of images use &lt;code class=&quot;highlighter-rouge&quot;&gt;docker images&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;dockerfile&quot;&gt;Dockerfile&lt;/h2&gt;
+
+&lt;p&gt;Dockerfile reference: https://docs.docker.com/engine/reference/builder/&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;Dockerfile&lt;/em&gt; is a text file that outlines what a docker image should look like. It contains a list of commands that docker uses to build and create an image which can later be used to create a container.&lt;/p&gt;
+
+&lt;p&gt;Creating a Dockerfile by just creating a new file named &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Example Dockerfile I used from &lt;a href=&quot;https://docker-curriculum.com/&quot;&gt;Docker for beginners&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-Dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Specify the base image first.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; python:3&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Set a working directory for our app&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;WORKDIR&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; /usr/src/app&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Copy all the files to the container &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; . .&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install Python dependencies using the requirements.txt file&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-cache-dir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
+
+&lt;span class=&quot;c&quot;&gt;# Expose the port that the app will run on&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;EXPOSE&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; 5000&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Run the command for running the application&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;python&quot;, &quot;./app.py&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;docker-build&quot;&gt;docker build&lt;/h2&gt;
+
+&lt;h4 id=&quot;command-6&quot;&gt;Command:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create a local docker image&lt;code class=&quot;highlighter-rouge&quot;&gt;docker build [dockerhubUsername/image name] [location of Dockerfile]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;flags-2&quot;&gt;Flags&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-t&lt;/code&gt; to give the image a specific tag. Generally a version number.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker build&lt;/code&gt; creates a docker image out of the Dockerfile. To add a tag the docker image use &lt;code class=&quot;highlighter-rouge&quot;&gt;:[tag name]&lt;/code&gt; after the image name, &lt;code class=&quot;highlighter-rouge&quot;&gt;docker build [dockerhubUsername/image name]:[tag name] [location of Dockerfile]&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;docker-push&quot;&gt;docker push&lt;/h2&gt;
+
+&lt;h4 id=&quot;command-7&quot;&gt;Command:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker push [dockerhubUsername/image name]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pushes the docker image to DockerHub.&lt;/p&gt;</content><author><name></name></author><category term="update" /><summary type="html">Expect this post to be updated over time.</summary></entry><entry><title type="html">Swift: Markdown Support</title><link href="/update/2021/06/14/Swift-markdown-support.html" rel="alternate" type="text/html" title="Swift: Markdown Support" /><published>2021-06-14T11:51:22-07:00</published><updated>2021-06-14T11:51:22-07:00</updated><id>/update/2021/06/14/Swift-markdown-support</id><content type="html" xml:base="/update/2021/06/14/Swift-markdown-support.html">&lt;p&gt;This year at WWDC 2021 Apple introduced Markdown support in its UI frameworks, which is awesome! I’ve used it only with SwiftUI so far but I expect Markdown support to be adopted by a lot of apps that have formatted text input.&lt;/p&gt;
+
+&lt;p&gt;This is a quick reference for supporting Markdown in your app.&lt;/p&gt;
+
+&lt;p&gt;Currently in SwiftUI &lt;code class=&quot;highlighter-rouge&quot;&gt;Text(&quot;**Here is a** [link to apple.com](https://apple.com)&quot;)&lt;/code&gt; will render the Markdown without trouble. However, if you’re fetching a String out of CoreData as was my case or you’re calling a String from a &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; you may need a return that fetched string as an &lt;code class=&quot;highlighter-rouge&quot;&gt;AttributedString&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;markdown-syntax&quot;&gt;Markdown syntax&lt;/h2&gt;
+
+&lt;p&gt;The Markdown syntax are familiar but if you’re used to other flavors of Markdown then you might get tripped up. Below are some of the common Markdown commands available. I’ll update this list as I find more commands&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;del&gt;Strikethrough&lt;/del&gt; == &lt;code class=&quot;highlighter-rouge&quot;&gt;~~Strikethrough~~&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bold Text&lt;/strong&gt; == &lt;code class=&quot;highlighter-rouge&quot;&gt;**Bold Text**&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Monospace font&lt;/code&gt; == `&lt;code class=&quot;highlighter-rouge&quot;&gt;Markdown Text&lt;/code&gt;`&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://apple.com&quot;&gt;Add links(goes to apple.com)&lt;/a&gt; == &lt;code class=&quot;highlighter-rouge&quot;&gt;[Link text](URL goes here)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;code-sample&quot;&gt;Code sample&lt;/h2&gt;
+
+&lt;p&gt;Call the &lt;code class=&quot;highlighter-rouge&quot;&gt;createAttributedString&lt;/code&gt; function in your &lt;code class=&quot;highlighter-rouge&quot;&gt;Text()&lt;/code&gt; view to render the markdown.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;someString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;`Hey!` You&apos;re **awesome!**&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Takes in a string and returns an AttributedString&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createAttributedString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AttributedString&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;attributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AttributedString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attributedString&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Couldn&apos;t create an AttributedString: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AttributedString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;error parsing markdown&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Calls createAttributedString with the string passed in. &lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;createAttributedString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This would return “&lt;code class=&quot;highlighter-rouge&quot;&gt;Hey!&lt;/code&gt; You’re &lt;strong&gt;awesome!&lt;/strong&gt;”&lt;/p&gt;</content><author><name></name></author><category term="update" /><summary type="html">This year at WWDC 2021 Apple introduced Markdown support in its UI frameworks, which is awesome! I’ve used it only with SwiftUI so far but I expect Markdown support to be adopted by a lot of apps that have formatted text input.</summary></entry><entry><title type="html">SwiftUI: List Card View</title><link href="/swiftui/2021/06/14/SwiftUI-List-Card-View.html" rel="alternate" type="text/html" title="SwiftUI: List Card View" /><published>2021-06-14T10:48:41-07:00</published><updated>2021-06-14T10:48:41-07:00</updated><id>/swiftui/2021/06/14/SwiftUI-List-Card-View</id><content type="html" xml:base="/swiftui/2021/06/14/SwiftUI-List-Card-View.html">&lt;p&gt;To be upfront, I’m not sure if calling each row a “card” is the best way to describe this but, it seems reasonable to me.&lt;/p&gt;
+
+&lt;p&gt;Creating a “card” within a List view using SwiftUI was something that always seemed super hacky to me until &lt;a href=&quot;https://twitter.com/mecid&quot;&gt;@mecid&lt;/a&gt; replied with a very concise and obvious answer. Simply, create a List with the &lt;code class=&quot;highlighter-rouge&quot;&gt;.listStyle(InsetGroupedListStyle())&lt;/code&gt; modifier and for each row within the list, give it a &lt;code class=&quot;highlighter-rouge&quot;&gt;Section&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/images/root.jpg&quot;&gt;
-&lt;img src=&quot;/images/add_fuel_stop.jpg&quot;&gt;
+  &lt;img src=&quot;/images/mecid_creating_card.png&quot; /&gt;
 &lt;/p&gt;
 
-### SwiftUI and other technologies
-SwiftUI is a brand new UI framework from Apple that was announced and released at WWDC 2019. It's declarative and super cool. You can build some really nice looking UIs and apps with it very quickly but it's not perfect and has its flaws. Honestly, with the size and complexity of Tankd it seems like a good candidate to really dip my toes into SwiftUI. I ran into a variety of bugs and issues when building Tankd mainly with wrapping my brain around writing UI in a declarative way vs an imperative way like you would from UIKit. Describing how you want your UI to look is a really nice way to quickly get something on screen, looking nice, and letting the system deal with the constraints. 
+&lt;h2 id=&quot;code-sample&quot;&gt;Code sample&lt;/h2&gt;
 
-In Tankd I also used Core Data as the persistent data store. SwiftUI made a simple Core Data implementation really simple and I really enjoyed using Core Data with SwiftUI. 
+&lt;p&gt;The code below has a List with a ForEach loop. Within the loop a Section is created and inside the Section is the row content. Obviously the row content can have anything you like in there. If you wanted to create a more complex row you could extract that out into its own view and pass that into each section within the loop.&lt;/p&gt;
 
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SwiftUI&lt;/span&gt;
 
-Again, thanks for reading :) 
+&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;List&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;ForEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;Section&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A new row &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;listStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;InsetGroupedListStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/images/list_card_example.png&quot; /&gt;
+&lt;/p&gt;
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><summary type="html">I finally did it! Earlier this week I submitted an app to TestFlight for the first time. This is the first step in achieving my goal of submitting an app to the iOS App Store and I could not be more excited. I’ll talk more about the app in a moment with a link so you can download it. I’m hoping to let it bake with testers in TestFlight to work out all the kinks and bugs then move it to the App Store soon.</summary></entry><entry><title type="html">Portfolio App: Meal Time</title><link href="http://localhost:4000/update/2020/04/22/meal-time.html" rel="alternate" type="text/html" title="Portfolio App: Meal Time" /><published>2020-04-22T15:36:46-07:00</published><updated>2020-04-22T15:36:46-07:00</updated><id>http://localhost:4000/update/2020/04/22/meal-time</id><content type="html" xml:base="http://localhost:4000/update/2020/04/22/meal-time.html">&lt;h3 id=&quot;update&quot;&gt;Update&lt;/h3&gt;
+&lt;p&gt;A caveat that I found, which might be somewhat obvious, is you can’t have a Section within a Section. For example: if you had a todo list with a “Completed” and “Not completed” sections those rows could not be broken apart into a separate “card” per row using this example.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SwiftUI&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;List&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;Section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Completed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;ForEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+                    &lt;span class=&quot;kt&quot;&gt;Section&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A new row &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            
+            &lt;span class=&quot;kt&quot;&gt;Section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Not completed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;ForEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+                    &lt;span class=&quot;kt&quot;&gt;Section&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A new row &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;listStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;InsetGroupedListStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The code above will give you multiple sections however each section’s row will not be separated. The output of the above code example would be this. Which doesn’t look bad.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/images/nested_sections.png&quot; /&gt;
+&lt;/p&gt;</content><author><name></name></author><category term="SwiftUI" /><summary type="html">To be upfront, I’m not sure if calling each row a “card” is the best way to describe this but, it seems reasonable to me.</summary></entry><entry><title type="html">Procrastinating with writing more</title><link href="/update/2021/06/01/Procrastinating-with-writing-more.html" rel="alternate" type="text/html" title="Procrastinating with writing more" /><published>2021-06-01T14:52:51-07:00</published><updated>2021-06-01T14:52:51-07:00</updated><id>/update/2021/06/01/Procrastinating-with-writing-more</id><content type="html" xml:base="/update/2021/06/01/Procrastinating-with-writing-more.html">&lt;p&gt;I have decided I want to write more. I’m just not sure what, if any, focus I want to have with it. Tech will be the primary focus leaning toward writing code and other tech opinions that come to mind.&lt;/p&gt;
+
+&lt;p&gt;This post is my attempt at getting back into writing. In typical form, I found myself sitting down with a cup coffee yesterday morning ready to go. Then I thought about a problem I had and wrote a Python script to solve that problem. A classic procrastination moment for me, sit down to write a post and instead write some code to solve such a minor problem to begin writing. Always need more tooling :eye-roll:.&lt;/p&gt;
+
+&lt;p&gt;So what did that script do? It was simple, I wanted a script that would take an argument as the post title, create the markdown file, get the system date and time, and stuff all of that in the appropriate meta-data/front matter locations. This site is built on Jekyll and Jekyll uses some meta-data at the top of each post called “front matter”. This front matter contains a bunch of information about the post, things like what category the post is related to, the date in which it was created, and the title. Yes, of course I could have just copy and pasted a previous post and filled that front matter in accordingly but, there’s no fun in that and I always found myself making simple mistakes. So I decided to make it significantly more complicated and automate it.&lt;/p&gt;
+
+&lt;p&gt;Since creating the markdown file and updating the front matter worked pretty well, I decided to become even lazier and have the script handle all the git commands as well. I’m very particular when it comes to version control, it might be a fault at this point. I want to create a new branch with the post title and push that branch to GitHub. The command being used to create the new branch and check it out is &lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin master:[new branch name]&lt;/code&gt;. If you want to see the script you can find it &lt;a href=&quot;https://github.com/miotke/andrewmiotke.com/blob/master/new_post.py&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So far this script is working exactly as I would expect. It even gave me the added bonus(?) of allowing me to procrastinate on actual writing and instead, write some code.&lt;/p&gt;</content><author><name></name></author><category term="update" /><summary type="html">I have decided I want to write more. I’m just not sure what, if any, focus I want to have with it. Tech will be the primary focus leaning toward writing code and other tech opinions that come to mind.</summary></entry><entry><title type="html">Coming soon: AutoMate</title><link href="/apps/2020/08/14/automate.html" rel="alternate" type="text/html" title="Coming soon: AutoMate" /><published>2020-08-14T09:04:00-07:00</published><updated>2020-08-14T09:04:00-07:00</updated><id>/apps/2020/08/14/automate</id><content type="html" xml:base="/apps/2020/08/14/automate.html">&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/images/coming-soon.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;AutoMate is an app to help keep track of your car’s maintenance schedule and service history. I am expecting to have this out by the end of Fall 2020 🤞.&lt;/p&gt;
+
+&lt;p&gt;If you’re interested in downloading and using the TestFlight beta builds, feel free to check it out here: &lt;a href=&quot;https://testflight.apple.com/join/WwJH6tyO&quot;&gt;https://testflight.apple.com/join/WwJH6tyO&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ll update this post as I continue to make more progress on the app.&lt;/p&gt;
+
+&lt;h3 id=&quot;plans-and-features&quot;&gt;Plans and features&lt;/h3&gt;
+&lt;p&gt;Once complete you should be able to add your car(s) and add in your car’s full service history. All backed up using iCloud/CloudKit.&lt;/p&gt;
+
+&lt;p&gt;Target OS: iOS 14+&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add your car(s)
+    &lt;ul&gt;
+      &lt;li&gt;Store details about your car(s)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Track the service history
+    &lt;ul&gt;
+      &lt;li&gt;Store previous and current service records for your car.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tech-details&quot;&gt;Tech details&lt;/h3&gt;
+&lt;p&gt;Here’s some quick tech details about AutoMate if you’re curious&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Built using SwiftUI and targeting iOS 14+&lt;/li&gt;
+  &lt;li&gt;Persistent data with CloudKit and CoreData&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;contact&quot;&gt;Contact&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Submit a bug: &lt;a href=&quot;https://github.com/miotke/AutoMate_bugs&quot;&gt;https://github.com/miotke/AutoMate_bugs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Find me on Twitter: &lt;a href=&quot;http://twitter.com/miotke/&quot;&gt;@miotke&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h3&gt;
+&lt;p&gt;The items in the service history are not indicative to the listed car’s reliability. 😅&lt;/p&gt;</content><author><name></name></author><category term="apps" /><summary type="html"></summary></entry><entry><title type="html">Introducing: Tankd</title><link href="/apps/2020/06/16/tankd.html" rel="alternate" type="text/html" title="Introducing: Tankd" /><published>2020-06-16T09:04:00-07:00</published><updated>2020-06-16T09:04:00-07:00</updated><id>/apps/2020/06/16/tankd</id><content type="html" xml:base="/apps/2020/06/16/tankd.html">&lt;p&gt;Introducing Tankd, my first iOS app released in the App Store for iOS!&lt;/p&gt;
+
+&lt;p&gt;So the app is called Tankd and simply put it’s a fuel stop tracking app for iOS. I had heard a few times and even talked to a few friends who like to save their receipts at every fuel stop they make. I tried this for a short bit and got frustrated with all of the receipt papers cluttering up areas like the glove box. There’s also spreadsheets which would solve this problem just as easy. However, I thought I could try and make a more eloquent way of tracking fuel stops and maybe, eventually, present the data as more of an overview like a dashboard.&lt;/p&gt;
+
+&lt;p&gt;You can find Tankd on the App Store here: &lt;a href=&quot;https://apps.apple.com/us/app/tankd-fuel-tracking-app/id1513444671&quot;&gt;https://apps.apple.com/us/app/tankd-fuel-tracking-app/id1513444671&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-tech&quot;&gt;The Tech&lt;/h3&gt;
+&lt;p&gt;I used Tankd as a learning opportunity for SwiftUI, Apple’s latest UI framework for Apple’s platforms. It stores
+data persistantly using CoreData which is able to quickly store a lot of data on your device.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SwiftUI&lt;/li&gt;
+  &lt;li&gt;CoreData&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;support&quot;&gt;Support&lt;/h4&gt;
+&lt;p&gt;If you run into bugs or want to request a feature please feel free to reach out to me through an email or a DM on Twitter.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Twitter: &lt;a href=&quot;https://twitter.com/miotke&quot;&gt;@miotke&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Email: andrewmiotke@gmail.com&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;EDIT:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Added a link to Tankd on the App Store.&lt;/li&gt;
+  &lt;li&gt;Apparently I had the date wrong on the post 🤦‍♂️.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="apps" /><summary type="html">Introducing Tankd, my first iOS app released in the App Store for iOS!</summary></entry><entry><title type="html">First App in TestFlight: Tankd</title><link href="/update/2020/05/20/first-app-in-testflight.html" rel="alternate" type="text/html" title="First App in TestFlight: Tankd" /><published>2020-05-20T09:29:46-07:00</published><updated>2020-05-20T09:29:46-07:00</updated><id>/update/2020/05/20/first-app-in-testflight</id><content type="html" xml:base="/update/2020/05/20/first-app-in-testflight.html">&lt;p&gt;I finally did it! Earlier this week I submitted an app to TestFlight for the first time. This is the first step in achieving my goal of submitting an app to the iOS App Store and I could not be more excited. I’ll talk more about the app in a moment with a link so you can download it. I’m hoping to let it bake with testers in TestFlight to work out all the kinks and bugs then move it to the App Store soon.&lt;/p&gt;
+
+&lt;p&gt;This isn’t the initial app I wrote about after getting laid off, in fact it’s something much smaller but serves a purpose that didn’t exactly fit in with my other app. It’s also written with SwiftUI, Apple’s new UI framework, which I have mixed feelings about currently.&lt;/p&gt;
+
+&lt;h3 id=&quot;tankd&quot;&gt;Tankd&lt;/h3&gt;
+&lt;p&gt;So the app is called Tankd and simply put it’s a fuel stop tracking app for iOS. I had heard a few times and even talked to a few friends who like to save their receipts at every fuel stop they make. I tried this for a short bit and got frustrated with all of the receipt papers cluttering up areas like the glove box. There’s also spreadsheets which would solve this problem just as easy. However, I thought I could try and make a more eloquent way of tracking fuel stops and maybe, eventually, present the data as more of an overview like a dashboard.&lt;/p&gt;
+
+&lt;p&gt;Feel free to download the TestFlight build &lt;a href=&quot;https://testflight.apple.com/join/XCcpPOnr&quot;&gt;here&lt;/a&gt;! I would love to hear your feedback and bug reports as well 🐞.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/images/root.jpg&quot; /&gt;
+&lt;img src=&quot;/images/add_fuel_stop.jpg&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&quot;swiftui-and-other-technologies&quot;&gt;SwiftUI and other technologies&lt;/h3&gt;
+&lt;p&gt;SwiftUI is a brand new UI framework from Apple that was announced and released at WWDC 2019. It’s declarative and super cool. You can build some really nice looking UIs and apps with it very quickly but it’s not perfect and has its flaws. Honestly, with the size and complexity of Tankd it seems like a good candidate to really dip my toes into SwiftUI. I ran into a variety of bugs and issues when building Tankd mainly with wrapping my brain around writing UI in a declarative way vs an imperative way like you would from UIKit. Describing how you want your UI to look is a really nice way to quickly get something on screen, looking nice, and letting the system deal with the constraints.&lt;/p&gt;
+
+&lt;p&gt;In Tankd I also used Core Data as the persistent data store. SwiftUI made a simple Core Data implementation really simple and I really enjoyed using Core Data with SwiftUI.&lt;/p&gt;
+
+&lt;p&gt;Again, thanks for reading :)&lt;/p&gt;</content><author><name></name></author><category term="update" /><summary type="html">I finally did it! Earlier this week I submitted an app to TestFlight for the first time. This is the first step in achieving my goal of submitting an app to the iOS App Store and I could not be more excited. I’ll talk more about the app in a moment with a link so you can download it. I’m hoping to let it bake with testers in TestFlight to work out all the kinks and bugs then move it to the App Store soon.</summary></entry><entry><title type="html">Portfolio App: Meal Time</title><link href="/update/2020/04/22/meal-time.html" rel="alternate" type="text/html" title="Portfolio App: Meal Time" /><published>2020-04-22T15:36:46-07:00</published><updated>2020-04-22T15:36:46-07:00</updated><id>/update/2020/04/22/meal-time</id><content type="html" xml:base="/update/2020/04/22/meal-time.html">&lt;h3 id=&quot;update&quot;&gt;Update&lt;/h3&gt;
 
 &lt;p&gt;As I outlined in &lt;a href=&quot;http://andrewmiotke.com/update/2020/03/31/a-new-hope.html&quot;&gt;A New Hope&lt;/a&gt; I’m taking
 this time to refocus my software development efforts on iOS and Swift. It’s been about a week and a half
@@ -69,7 +407,7 @@ by data coming from the Django REST api.&lt;/p&gt;
 
 &lt;p&gt;Disclaimer: This app is not fully featured and will not actually order anything 😉&lt;/p&gt;
 
-&lt;p&gt;Thanks for reading!&lt;/p&gt;</content><author><name></name></author><summary type="html">Update</summary></entry><entry><title type="html">A New Hope</title><link href="http://localhost:4000/update/2020/03/31/a-new-hope.html" rel="alternate" type="text/html" title="A New Hope" /><published>2020-03-31T13:56:46-07:00</published><updated>2020-03-31T13:56:46-07:00</updated><id>http://localhost:4000/update/2020/03/31/a-new-hope</id><content type="html" xml:base="http://localhost:4000/update/2020/03/31/a-new-hope.html">&lt;p&gt;After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks…hard.
+&lt;p&gt;Thanks for reading!&lt;/p&gt;</content><author><name></name></author><category term="update" /><summary type="html">Update</summary></entry><entry><title type="html">A New Hope</title><link href="/update/2020/03/31/a-new-hope.html" rel="alternate" type="text/html" title="A New Hope" /><published>2020-03-31T13:56:46-07:00</published><updated>2020-03-31T13:56:46-07:00</updated><id>/update/2020/03/31/a-new-hope</id><content type="html" xml:base="/update/2020/03/31/a-new-hope.html">&lt;p&gt;After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks…hard.
 I’m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.&lt;/p&gt;
 
 &lt;h3 id=&quot;the-breakup&quot;&gt;The breakup&lt;/h3&gt;
@@ -96,86 +434,4 @@ I’m afraid of becoming that person but, as of right now I have zero intention 
 
 &lt;h3 id=&quot;understanding-and-acknowledgement&quot;&gt;Understanding and acknowledgement&lt;/h3&gt;
 &lt;p&gt;Everything I wrote today is about my personal experience, thus far. That being said I totally understand that there’s many others out there in much harder financial and social situations and I want to make sure I acknowledge that.
-If you’re like me and in the tech world, give your peers a quick shoutout on social media, share a cool project to help boost those skills.&lt;/p&gt;</content><author><name></name></author><summary type="html">After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks…hard. I’m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.</summary></entry><entry><title type="html">Resume Gist</title><link href="http://localhost:4000/personal/update/2019/04/06/resume-gist.html" rel="alternate" type="text/html" title="Resume Gist" /><published>2019-04-06T10:28:46-07:00</published><updated>2019-04-06T10:28:46-07:00</updated><id>http://localhost:4000/personal/update/2019/04/06/resume-gist</id><content type="html" xml:base="http://localhost:4000/personal/update/2019/04/06/resume-gist.html">&lt;p&gt;For awhile now I’ve been thinking about the resumé, that piece of paper - or nowadays pdf file that we upload to a website or give a recruiter. The rule of thumb I’ve always been given is keep it short and sweet and try to keep it all on one page. In today’s world we rarely stay at a company for more than three or four years, how are we supposed to keep all this work experience limited one page? Especially when you have to include tings like education, and typically a quick synopsis of who you are.&lt;/p&gt;
-
-&lt;p&gt;Recently I took my boring, plain text resumé and made it into a &lt;a href=&quot;https://gist.github.com&quot;&gt;GitHub Gist&lt;/a&gt;. I found this to be a really compelling way to keep my resume concise and formatted in a way that is visually appealing. Since it’s just a Gist you can view it in your browser, it’s formatted in markdown so it’s easy on the eyes, and you can update it easily. It also looks like it’s just on one really long page.&lt;/p&gt;
-
-&lt;h3 id=&quot;readability&quot;&gt;Readability&lt;/h3&gt;
-&lt;p&gt;Far too often when reading resumés you get a white paper with a black wall of text. It’s not easy to read and can be one of the most draining processes, at least for me. Using markdown breaks up the text and has a native font that is easy on the eyes and can be easily read. I think this is a great alternative to the classic Times New Roman font that we so often see.&lt;/p&gt;
-
-&lt;h3 id=&quot;editable&quot;&gt;Editable&lt;/h3&gt;
-&lt;p&gt;A traditional resumé is not particularly easy to edit. You might run into problems like formatting, fighting your text editor, and just having a safe place to store your resumé. On top of all that, you have keep and editable version of it and a pdf version, so now you’re playing around with maintaining two different versions of your resumé. Using a GitHub Gist allows you to leave all of that behind…well except for using markdown syntax, but that is quick to pickup.&lt;/p&gt;
-
-&lt;p&gt;A Gist is simply just a markdown file and GitHub will host and present it for you. Formatting is simple once you get the hang of the markdown syntax. The only tool you have to really “fight” is GitHub’s markdown editor which is pretty straight forward to use.&lt;/p&gt;
-
-&lt;p&gt;The best part though, is versioning. GitHub will track any revisions you make to the Gist just like your code. GitHub will present in a clean markdown format and they will give you a link to easily share, it couldn’t be easier. This means you don’t have to worry about keeping an editable version that you constantly update and then a pdf version of that to share out. Just give them the link to your Gist and you can edit as you need to.&lt;/p&gt;
-
-&lt;h3 id=&quot;short-comings&quot;&gt;Short Comings&lt;/h3&gt;
-&lt;p&gt;There are downsides however, most places you apply for ask for you to upload a pdf version of your resumé so I still keep a current version of that resumé on hand. If an employer wants to see a more elaborate and detailed version of the resume, well this Gist will be a great addition to the pdf resumé.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-thought&quot;&gt;Final Thought&lt;/h3&gt;
-&lt;p&gt;I don’t know if this will ever catch on but I think it would be a great transition when applying for a job or just trying to share out your experience.&lt;/p&gt;
-
-&lt;p&gt;Check out my Resumé Gist &lt;a href=&quot;https://gist.github.com/miotke/4f25049cee4c422c63dc94257ce3b2aa&quot;&gt;here!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Thanks for reading!&lt;/p&gt;</content><author><name></name></author><summary type="html">For awhile now I’ve been thinking about the resumé, that piece of paper - or nowadays pdf file that we upload to a website or give a recruiter. The rule of thumb I’ve always been given is keep it short and sweet and try to keep it all on one page. In today’s world we rarely stay at a company for more than three or four years, how are we supposed to keep all this work experience limited one page? Especially when you have to include tings like education, and typically a quick synopsis of who you are.</summary></entry><entry><title type="html">Taking Classes</title><link href="http://localhost:4000/personal/update/2019/02/17/taking-classes.html" rel="alternate" type="text/html" title="Taking Classes" /><published>2019-02-17T15:22:46-08:00</published><updated>2019-02-17T15:22:46-08:00</updated><id>http://localhost:4000/personal/update/2019/02/17/taking-classes</id><content type="html" xml:base="http://localhost:4000/personal/update/2019/02/17/taking-classes.html">&lt;h1 id=&quot;taking-classes&quot;&gt;Taking Classes&lt;/h1&gt;
-&lt;p&gt;Well it’s that time again, it’s time to start looking at taking a new class to continue to grow my fundamentals in programming. This time I found a class at the Univeristy of Washington(UW) and the course is in Python 🐍!&lt;/p&gt;
-
-&lt;p&gt;Python is a language that I’ve wanted to learn for awhile now, once I had an understanding of Swift. I applied for the class last week and I’m just waiting to get the “acceptance letter”. I plan on using this site to write about my experience and to write about what I learn. I’m trying to commit to writing each week 😬🤞.&lt;/p&gt;
-
-&lt;p&gt;If you’re reading this and are interested in the class, here’s the link: &lt;a href=&quot;https://www.pce.uw.edu/certificates/python-programming&quot;&gt;Certification in Python Programming&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Taking Classes Well it’s that time again, it’s time to start looking at taking a new class to continue to grow my fundamentals in programming. This time I found a class at the Univeristy of Washington(UW) and the course is in Python 🐍!</summary></entry><entry><title type="html">Introducing: Tankd</title><link href="http://localhost:4000/apps/2018/07/10/tankd.html" rel="alternate" type="text/html" title="Introducing: Tankd" /><published>2018-07-10T09:04:00-07:00</published><updated>2018-07-10T09:04:00-07:00</updated><id>http://localhost:4000/apps/2018/07/10/tankd</id><content type="html" xml:base="http://localhost:4000/apps/2018/07/10/tankd.html">&lt;p&gt;Introducing Tankd, my first iOS app released in the App Store for iOS!&lt;/p&gt;
-
-&lt;p&gt;So the app is called Tankd and simply put it’s a fuel stop tracking app for iOS. I had heard a few times and even talked to a few friends who like to save their receipts at every fuel stop they make. I tried this for a short bit and got frustrated with all of the receipt papers cluttering up areas like the glove box. There’s also spreadsheets which would solve this problem just as easy. However, I thought I could try and make a more eloquent way of tracking fuel stops and maybe, eventually, present the data as more of an overview like a dashboard.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-tech&quot;&gt;The Tech&lt;/h3&gt;
-&lt;p&gt;I used Tankd as learning opportunity for SwiftUI, Apple’s latest UI framework for Apple’s platforms. It stores
-data persistantly using CoreData which is able to quickly store a lot of data on your device.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SwiftUI&lt;/li&gt;
-  &lt;li&gt;CoreData&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;support&quot;&gt;Support&lt;/h4&gt;
-&lt;p&gt;If you run into bugs or want to request a feature please feel free to reach out to me through an email or a DM on Twitter.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Twitter: &lt;a href=&quot;https://twitter.com/miotke&quot;&gt;@miotke&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Email: andrewmiotke@gmail.com&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Introducing Tankd, my first iOS app released in the App Store for iOS!</summary></entry><entry><title type="html">Vision and Purpose</title><link href="http://localhost:4000/update/2018/07/10/vision-and-purpose.html" rel="alternate" type="text/html" title="Vision and Purpose" /><published>2018-07-10T09:04:00-07:00</published><updated>2018-07-10T09:04:00-07:00</updated><id>http://localhost:4000/update/2018/07/10/vision-and-purpose</id><content type="html" xml:base="http://localhost:4000/update/2018/07/10/vision-and-purpose.html">&lt;p&gt;In my last post I explained my journey up to this point in time and my found passion for Swift. Today I’m going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.&lt;/p&gt;
-
-&lt;h1 id=&quot;vision&quot;&gt;Vision&lt;/h1&gt;
-&lt;p&gt;My vision for this website is to have a place that I can talk about my various learnings with Swift and other topics as I explore iOS development and developing on Apple platforms. Along with this I hope to show case and promote other people who are contributing to the Swift community as I find their articles, podcasts, or even a repo on Github.&lt;/p&gt;
-
-&lt;h1 id=&quot;purpose&quot;&gt;Purpose&lt;/h1&gt;
-&lt;p&gt;As I mentioned in the &lt;em&gt;Vision&lt;/em&gt; section above I want to promote the work of other contributors in the Swift community, people such as Sean Allen on Youtube or Zack and Steve from the &lt;em&gt;Fireside Swift&lt;/em&gt; podcasts(I’ll link to those resources at the bottom). I believe that if I can help promote them with the potential readers of this site then that will grant them more exposure and they can continue doing the great work that they’re doing.&lt;/p&gt;
-
-&lt;p&gt;The other purpose of this is to have a sound board that I can write about topics related to Swift. I’ve only been writing Swift for a short time now but I’m enjoying it more and more with ever line I write. If I have a place I can write about Swift then it will help me solidify those concepts and maybe help someone else who is in the learning process as well.&lt;/p&gt;
-
-&lt;p&gt;This all comes down to helping others if at all possible. If I can (hopefully)write something interesting or teachable to others and give thanks to others who are contributing great content to the Swift community then the purpose of this site has been achieved.&lt;/p&gt;
-
-&lt;h1 id=&quot;contributor-thanks&quot;&gt;Contributor Thanks&lt;/h1&gt;
-&lt;h3 id=&quot;sean-allen&quot;&gt;Sean Allen&lt;/h3&gt;
-
-&lt;p&gt;Twitter: &lt;a href=&quot;https://twitter.com/seanallen_dev?lang=en&quot;&gt;@seanallen_dev&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Youtube: &lt;a href=&quot;https://www.youtube.com/channel/UCbTw29mcP12YlTt1EpUaVJw/about&quot;&gt;Sean Allen iOS Dev Videos&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;fireside-swift&quot;&gt;Fireside Swift&lt;/h3&gt;
-&lt;h6 id=&quot;steven-berard--zack-falgout&quot;&gt;Steven Berard &amp;amp; Zack Falgout&lt;/h6&gt;
-
-&lt;p&gt;Twitter: &lt;a href=&quot;https://twitter.com/swberard?lang=en&quot;&gt;@SWBerard&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://twitter.com/zfalgout1&quot;&gt;@ZFalgout1&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Podcast: &lt;a href=&quot;https://itunes.apple.com/us/podcast/fireside-swift/id1269435221?mt=2&quot;&gt;Fireside Swift&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In my last post I explained my journey up to this point in time and my found passion for Swift. Today I’m going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.</summary></entry><entry><title type="html">andrewmiotke.com v2.0</title><link href="http://localhost:4000/update/2018/06/30/welcome.html" rel="alternate" type="text/html" title="andrewmiotke.com v2.0" /><published>2018-06-30T17:44:46-07:00</published><updated>2018-06-30T17:44:46-07:00</updated><id>http://localhost:4000/update/2018/06/30/welcome</id><content type="html" xml:base="http://localhost:4000/update/2018/06/30/welcome.html">&lt;p&gt;Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-happened-with-web&quot;&gt;What happened with web?&lt;/h1&gt;
-&lt;p&gt;Well, I learned after spending too much time that I didn’t care enough. It wasn’t that it was hard, or the job market wasn’t flourishing - because it is and still is. I left the &lt;em&gt;dream&lt;/em&gt; of becoming a web developer because I wasn’t having fun with it. Full transparency, I never achieved a career or was offered a job as a web developer. I didn’t even work that hard in my spare time to study languages like JavaScript, it just didn’t interest me enough. To this day I still think it’s incredible what can be done in a browser.&lt;/p&gt;
-
-&lt;p&gt;Don’t get me wrong, the craft of the web is fascinating and I have the up most respect for developers out there that work so hard to create the sites we all enjoy.&lt;/p&gt;
-
-&lt;h1 id=&quot;why-swift-why-the-world-of-ios-development&quot;&gt;Why Swift, why the world of iOS Development?&lt;/h1&gt;
-&lt;p&gt;Deep down I have always been an Apple nerd or as some call it a fanboy so turning to iOS development seemed like an easy decision to make. Before Swift, back when Objective-C was the language of the iPhone I worked as a Genius at Apple in the Tacoma Mall store, in fact I helped open that store and was one of the original employees there which was one of the coolest experiences of my life to date. However, as an Apple employee you can’t submit apps to the app store which discouraged me all those years ago(maybe time for a policy change Apple?). I was interested in iOS development during those days but didn’t write a line of Objective-C until years later when I picked up my first book. They say Objective-C is scary and a tough language to break into, I agreed and went back to the web(see above).&lt;/p&gt;
-
-&lt;p&gt;Two years and two companies later I read a blog post by one of the iOS developers at my current company and something clicked then. They talked about battery life and how to optimize the app with battery capacity in mind, that peaked my interest of programming and really manipulating how a “computer” works. I think working on core OS level code is really cool as it has to talk so cohesively with the hardware(mixing in with my current IT life). So I starting reading &lt;em&gt;Hacking With Swift&lt;/em&gt; and worked through that book on my long commute home from Seattle, I was immediately hooked on it. I’m still in the learning phases and I plan on using this site to expand my knowledge by writing various posts about specific topics.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-am-i-doing-current&quot;&gt;What am I doing current?&lt;/h1&gt;
-&lt;p&gt;Currently I’m still working in the IT industry as a Sys Admin/Support Specialist(we do a lot of things, it’s a mixed bag). I’ve learned a lot, met a lot of great people, and got my hands on a lot of new toys before anyone else. However, that time is over and I am diving head first into a programming career. I commute from download Seattle to Tacoma every day so I’ve been using this time to work on Swift or work on this website but, it’s finally time to move on.&lt;/p&gt;</content><author><name></name></author><summary type="html">Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.</summary></entry></feed>
+If you’re like me and in the tech world, give your peers a quick shoutout on social media, share a cool project to help boost those skills.&lt;/p&gt;</content><author><name></name></author><category term="update" /><summary type="html">After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks…hard. I’m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.</summary></entry></feed>
