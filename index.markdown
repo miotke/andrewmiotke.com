@@ -13,5 +13,3 @@ I'm mostly writing Swift and Python but I'm always interested in learning a new 
 ## Currently learning: 
 
 Docker, Kubernetes, and other infrastructure related technologies.
-
-I rarely write but when I do you can read it below 👇.
