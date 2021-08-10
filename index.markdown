@@ -10,6 +10,8 @@ Feel free to reach out to me on [Twitter](https://twitter.com/miotke) or on [Git
 If you're interested in seeing my resume, you can find it [here](https://andrewmiotke.com/resume.html).
 I'm mostly writing Swift and Python but I'm always interested in learning a new technology or language.
 
-Currently learning: Docker, Kubernetes, and other infrastructure related technologies.
+## Currently learning: 
+
+Docker, Kubernetes, and other infrastructure related technologies.
 
 I rarely write but when I do you can read it below 👇.
