@@ -6,3 +6,5 @@ This site is built using Jekyll and hosted on GHPages. So nothing fancy just a f
 I plan to keep this simple but open source. There's not a good reason to have this project closed source. 
 
 Documentation can be found in the [wiki](https://github.com/miotke/andrewmiotke.com/wiki).
+
+As of August 12, 2021 the "primary" branch has been renamed to `main`.
