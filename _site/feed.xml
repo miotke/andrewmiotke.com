@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-08-09T21:05:44-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">andrewmiotke.com</title><entry><title type="html">Learning Cron: My notes</title><link href="http://localhost:4000/update/2021/07/22/LearningCron.html" rel="alternate" type="text/html" title="Learning Cron: My notes" /><published>2021-07-22T15:02:30-07:00</published><updated>2021-07-22T15:02:30-07:00</updated><id>http://localhost:4000/update/2021/07/22/LearningCron</id><content type="html" xml:base="http://localhost:4000/update/2021/07/22/LearningCron.html">These notes are not exhaustive. As I learn more I&apos;ll try and update this post. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-13T08:01:50-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">andrewmiotke.com</title><entry><title type="html">Automate jamf2snipe with GitHub Actions</title><link href="http://localhost:4000/mac/admin/2022/01/11/automate_jamf2snipe_with_github_actions.html" rel="alternate" type="text/html" title="Automate jamf2snipe with GitHub Actions" /><published>2022-01-11T15:30:23-08:00</published><updated>2022-01-11T15:30:23-08:00</updated><id>http://localhost:4000/mac/admin/2022/01/11/automate_jamf2snipe_with_github_actions</id><content type="html" xml:base="http://localhost:4000/mac/admin/2022/01/11/automate_jamf2snipe_with_github_actions.html"></content><author><name></name></author><category term="Mac" /><category term="Admin" /><summary type="html"></summary></entry><entry><title type="html">Learning Cron: My notes</title><link href="http://localhost:4000/update/2021/07/22/LearningCron.html" rel="alternate" type="text/html" title="Learning Cron: My notes" /><published>2021-07-22T15:02:30-07:00</published><updated>2021-07-22T15:02:30-07:00</updated><id>http://localhost:4000/update/2021/07/22/LearningCron</id><content type="html" xml:base="http://localhost:4000/update/2021/07/22/LearningCron.html">These notes are not exhaustive. As I learn more I&apos;ll try and update this post. 
 
 Cron jobs are useful for running automated tasks in Linux based environments. The syntax is kind goofy and took me reading a few different articles to really grasp it. I found this great article, [Writing a basic cron job in Linux](https://techgirlkb.guru/2018/10/writing-a-basic-cron-job-in-linux/) which really helped give a good understanding on how the astrisk syntax works. 
 
@@ -382,37 +382,4 @@ Thanks for reading!
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><category term="update" /><summary type="html">Update</summary></entry><entry><title type="html">A New Hope</title><link href="http://localhost:4000/update/2020/03/31/a-new-hope.html" rel="alternate" type="text/html" title="A New Hope" /><published>2020-03-31T13:56:46-07:00</published><updated>2020-03-31T13:56:46-07:00</updated><id>http://localhost:4000/update/2020/03/31/a-new-hope</id><content type="html" xml:base="http://localhost:4000/update/2020/03/31/a-new-hope.html">After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks...hard.
-I&apos;m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.
-
-### The breakup
-I found out at the same time as many of my colleagues, Slack exploded and Notification Center on my Mac was trying to keep up. It was terrible.
-There were enough tears coming out of my face to fill a bucket. I was in absolute disbelief because I&apos;ve never been let go from a job before, I guess there&apos;s a first for everything 🤷‍♂️.
-
-### Hope
-Soon after I realized that this isn&apos;t a damning thing and that this might actually be good. The thing was, I wasn&apos;t that happy with my current role.
-Sure, I was told things will change and I&apos;ll get to start working on the projects that I&apos;ve been asking to work on for a long time but in this new world things change very rapidly, clearly.
-What I really wanted to do was program, write code, and create things. I&apos;ve been doing this in my spare time for awhile now but I haven&apos;t been able to make that leap in my career.
-
-After it was all said and done the clouds actually parted(which is rare in Washington, it&apos;s been raining for weeks now) and I realized something, this wasn&apos;t a death sentence.
-As a matter of fact, this could be a positive thing - a real positive thing. I took a long walk, in hopes that the clouds wouldn&apos;t roll in, and gained some perspective. It&apos;s funny how after the dust settled of no longer
-having a steady income how the light changes on everything. Walking down the street I was actually smiling which felt nice after what seemed like hours of sadness and crying. I was talking with my wife, Maggie, and we both feel the same way,
-we don&apos;t feel shackled down to living in Tacoma or even Washington. We can literally pick up and go where we want, assuming we can financially, of course.
-I can now focus on programming and honing those skills to hopefully pick up a new job.
-I can finally release that iOS app that I&apos;ve been putting off finishing, hell I might even try and find a way to contribute to [Swift](https://swift.org), the language that I really cut my teeth on and really enjoy.
-Maybe I&apos;ll pack up my car and drive down and see my wife who has been working in a different state for the last little bit.
-
-I&apos;ll say one thing though, I don&apos;t want to sit back and be complacent. I&apos;ve thought about what would happen to me if I ever lost a job, I was afraid of being that guy to sit on the couch watching TV while the hours slowly tick away.
-I&apos;m afraid of becoming that person but, as of right now I have zero intention on becoming that person. I want to be programming, I want to be building and learning new things and dammit I&apos;m going to do that.
-
-There is hope at the end of all of this, I just hope that you can too. It&apos;s not easy, it&apos;s never going to be easy but we can at least try to not look down the barrel of the gun at every waking moment.
-
-### Understanding and acknowledgement
-Everything I wrote today is about my personal experience, thus far. That being said I totally understand that there&apos;s many others out there in much harder financial and social situations and I want to make sure I acknowledge that.
-If you&apos;re like me and in the tech world, give your peers a quick shoutout on social media, share a cool project to help boost those skills.
-
-
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><category term="update" /><summary type="html">After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks…hard. I’m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.</summary></entry></feed>
+[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><category term="update" /><summary type="html">Update</summary></entry></feed>
