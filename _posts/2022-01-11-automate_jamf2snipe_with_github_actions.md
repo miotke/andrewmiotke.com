@@ -49,7 +49,7 @@ jobs:
       # GitHub (rightfully so) redacts secrets variables from output
       username: $ secrets.username
       password: $ secrets.password 
-      snipe_it_api_key: ${{ secrets.snipe_it_api_key }}
+      snipe_it_api_key: $ secrets.snipe_it_api_key
     steps:
       # Checks out the your repo
       - uses: actions/checkout@v2
