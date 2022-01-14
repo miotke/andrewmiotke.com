@@ -27,7 +27,7 @@ First of all we need to set up a new action.
 2. You can either edit or delete all of the yaml that GitHub supplies in the new workflow file. If you want, you can change the name of the file from `main.yml` to anything you want, just make sure you give it the `.yml` extension.
 3. Below is a sanitized and commented version of the `.yml` file I use. Feel free to copy and change it as you see fit.
 4. **Secrets**, this is probably the most important step! Make sure you follow the instructions in the jamf2snipe README for setting up your secrets in the settings.conf file. To make your GitHub Action work, you need to add these secrets to either your GitHub org or repository's secrets. The secrets outlined in the yaml are passed to the setting.conf file that jamf2snipe requires.
-    - To access those secrets in the Action's yaml file use ${{ secrets.[your_secret_name] }} [1].
+    - To access those secrets in the Action's yaml file use `$ secrets.[your_secret_name]` but wrapped in double curly braces (`{ }`) [1].
     - In the example below username and password are the "service account" credentials from Jamf.
 5. Other notable things in this yaml file are the various `- run` commands, we'll describe those below.
     - Since we're using an Ubuntu runner we need to create the `/opt/jamf2snipe/` directory. This path is documented in the jamf2snipe README as the first place jamf2snipe will check for the settings.conf file.
@@ -77,4 +77,4 @@ jobs:
 
 If you read this then I hope it helped or if you know of a better way to handle this process, please let me know.
 
-[1] To access a secret variable you need to wrap the variable call in curly braces (`{{ }}`). GitHub redacts secrets from any output, including Jekyll websites which this site is built on. 
+[1] To access a secret variable you need to wrap the variable call in double curly braces (`{ }`). GitHub redacts secrets from any output, including Jekyll websites which this site is built on. 
