@@ -9,7 +9,7 @@ categories: Mac Admin
 
 In this post we're going to walk through using GitHub Actions to automate running jamf2snipe on a regular cadence.
 
-Disclaimer: I'm sure there's a better way to handle this but this is the approach I took and it's worked out pretty well so far.
+_Disclaimer:_ I'm sure there's a better way to handle this but this is the approach I took and it's worked out pretty well so far.
 
 We're going to assume that you already have jamf2snipe set up and it can run from your local machine and you have a forked copy of jamf2snipe in GitHub. Checkout jamf2snipe's README for instructions on how to configure the script.
 
@@ -26,14 +26,14 @@ First of all we need to set up a new action.
 1. Click on the Actions tab in your GitHub repo and click the "set up a workflow yourself ->" link. This creates a new directory and file in your repository, `.github/workflows/main.yml`.
 2. You can either edit or delete all of the yaml that GitHub supplies in the new workflow file. If you want, you can change the name of the file from `main.yml` to anything you want, just make sure you give it the `.yml` extension.
 3. Below is a sanitized and commented version of the `.yml` file I use. Feel free to copy and change it as you see fit.
-4. *Secrets* This is probably the most important step! Make sure you follow the instructions in the jamf2snipe README for setting up your secrets. To make your GitHub Action work, you need to add these secrets to either your org or repository's secrets. The secrets outlined in the yaml are passed to the setting.conf file that jamf2snipe requires.
-    - To access those secrets use in the Action's yaml file use `${{ secrets.[your_secret_name] }}`
+4. **Secrets** This is probably the most important step! Make sure you follow the instructions in the jamf2snipe README for setting up your secrets in the settings.conf file. To make your GitHub Action work, you need to add these secrets to either your GitHub org or repository's secrets. The secrets outlined in the yaml are passed to the setting.conf file that jamf2snipe requires.
+    - To access those secrets in the Action's yaml file use `${{ secrets.[your_secret_name] }}`.
     - In the example below username and password are the "service account" credentials from Jamf.
 5. Other notable things in this yaml file are the various `- run` commands, we'll describe those below.
-    - Since we're using an Ubuntu runner we need to create the `/opt/jamf2snipe/` directory. This path is documented in the jamf2snipe README as the first place jamf2snipe will check
-    - Then we copy the settings.conf file to `/opt/jamf2snipe/`
-    - And finally we run jamf2snipe. The flags that are passed in are optional, again, reference the jamf2snipe README to learn more about each option
-        - If you use the -v (verbose) flag, all jamf2snipe output will be shown in the GitHub Action's build output.
+    - Since we're using an Ubuntu runner we need to create the `/opt/jamf2snipe/` directory. This path is documented in the jamf2snipe README as the first place jamf2snipe will check for the settings.conf file.
+    - Then we copy the settings.conf file to `/opt/jamf2snipe/`.
+    - And finally we run jamf2snipe. The flags that are passed in are optional, again, reference the jamf2snipe README to learn more about each option.
+        - If you use the `-v` (verbose) flag, all jamf2snipe output will be shown in the GitHub Action's build output.
 
 ```yaml
 name: Run jamf2snipe script
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       username: ${{ secrets.username }}
-      password: ${{ secrets.username }}
+      password: ${{ secrets.password }}
       snipe_it_api_key: ${{ secrets.snipe_it_api_key }}
     steps:
       # Checks out the your repo
