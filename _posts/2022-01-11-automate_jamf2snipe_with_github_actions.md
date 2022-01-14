@@ -45,10 +45,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # wrap secrets.username in {{ }} to access the secrets
+      # wrap secrets.username in double curly braces to access the secrets
       # GitHub (rightfully so) redacts secrets variables from output
       username: $ secrets.username
-      password: $ secrets.password 
+      password: $ secrets.password
       snipe_it_api_key: $ secrets.snipe_it_api_key
     steps:
       # Checks out the your repo
@@ -77,4 +77,4 @@ jobs:
 
 If you read this then I hope it helped or if you know of a better way to handle this process, please let me know.
 
-[1] To access a secret variable you need to wrap the variable call in double curly braces (`{ }`). GitHub redacts secrets from any output, including Jekyll websites which this site is built on. 
+[1] To access a secret variable you need to wrap the variable call in double curly braces (`{ }`). GitHub redacts secrets from any output, including Jekyll websites which this site is built on.
