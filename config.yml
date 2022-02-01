@@ -17,7 +17,7 @@ params:
     title: ExampleSite
     description: "ExampleSite description"
     keywords: [Blog, Portfolio, PaperMod]
-    author: Me
+    author: Andrew
     # author: ["Me", "You"] # multiple authors
     DateFormat: "January 2, 2006"
     defaultTheme: auto # dark, light
@@ -33,7 +33,7 @@ params:
     comments: false
     hidemeta: false
     hideSummary: false
-    showtoc: false
+    showtoc: true
     tocopen: false
 
     assets:
@@ -102,14 +102,11 @@ menu:
           name: categories
           url: /categories/
           weight: 10
-        - identifier: tags
-          name: tags
-          url: /tags/
-          weight: 20
-        - identifier: example
-          name: example.org
-          url: https://example.org
-          weight: 30
+        # - identifier: tags
+        #   name: tags
+        #   url: /tags/
+        #   weight: 20
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
 # markup:
