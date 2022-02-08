@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>update on Andrew Miotke</title>
+    <link>http://localhost:1313/categories/update/</link>
+    <description>Recent content in update on Andrew Miotke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 01 Jun 2021 14:52:51 -0700</lastBuildDate><atom:link href="http://localhost:1313/categories/update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Procrastinating with writing more</title>
+      <link>http://localhost:1313/posts/2021-06-01-procrastinating-with-writing-more/</link>
+      <pubDate>Tue, 01 Jun 2021 14:52:51 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-06-01-procrastinating-with-writing-more/</guid>
+      <description>I have decided I want to write more. I&amp;rsquo;m just not sure what, if any, focus I want to have with it. Tech will be the primary focus leaning toward writing code and other tech opinions that come to mind.
+This post is my attempt at getting back into writing. In typical form, I found myself sitting down with a cup coffee yesterday morning ready to go. Then I thought about a problem I had and wrote a Python script to solve that problem.</description>
+    </item>
+    
+    <item>
+      <title>First App in TestFlight: Tankd</title>
+      <link>http://localhost:1313/posts/2020-05-20-first-app-in-testflight/</link>
+      <pubDate>Wed, 20 May 2020 09:29:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-05-20-first-app-in-testflight/</guid>
+      <description>I finally did it! Earlier this week I submitted an app to TestFlight for the first time. This is the first step in achieving my goal of submitting an app to the iOS App Store and I could not be more excited. I&amp;rsquo;ll talk more about the app in a moment with a link so you can download it. I&amp;rsquo;m hoping to let it bake with testers in TestFlight to work out all the kinks and bugs then move it to the App Store soon.</description>
+    </item>
+    
+    <item>
+      <title>Portfolio App: Meal Time</title>
+      <link>http://localhost:1313/posts/2020-04-11-meal-time/</link>
+      <pubDate>Wed, 22 Apr 2020 15:36:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-04-11-meal-time/</guid>
+      <description>Update As I outlined in A New Hope I&amp;rsquo;m taking this time to refocus my software development efforts on iOS and Swift. It&amp;rsquo;s been about a week and a half since I was laid off of my job and I have taken it in stride. I&amp;rsquo;ve decided to work on a few different types of apps, some &amp;ldquo;portfolio&amp;rdquo; that won&amp;rsquo;t be released on the App Store and at least one that will be released on the App Store.</description>
+    </item>
+    
+    <item>
+      <title>A New Hope</title>
+      <link>http://localhost:1313/posts/2020-03-31-a-new-hope/</link>
+      <pubDate>Tue, 31 Mar 2020 13:56:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-03-31-a-new-hope/</guid>
+      <description>After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks&amp;hellip;hard. I&amp;rsquo;m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.
+The breakup I found out at the same time as many of my colleagues, Slack exploded and Notification Center on my Mac was trying to keep up.</description>
+    </item>
+    
+    <item>
+      <title>Vision and Purpose</title>
+      <link>http://localhost:1313/posts/2018-07-10-vision-and-purpose/</link>
+      <pubDate>Tue, 10 Jul 2018 09:04:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2018-07-10-vision-and-purpose/</guid>
+      <description>In my last post I explained my journey up to this point in time and my found passion for Swift. Today I&amp;rsquo;m going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.
+Vision My vision for this website is to have a place that I can talk about my various learnings with Swift and other topics as I explore iOS development and developing on Apple platforms.</description>
+    </item>
+    
+    <item>
+      <title>andrewmiotke.com v2.0</title>
+      <link>http://localhost:1313/posts/2018-06-30-welcome/</link>
+      <pubDate>Sat, 30 Jun 2018 17:44:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2018-06-30-welcome/</guid>
+      <description>Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.
+What happened with web?</description>
+    </item>
+    
+  </channel>
+</rss>

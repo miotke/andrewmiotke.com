@@ -1,0 +1,195 @@
+<!doctype html><html lang=en dir=auto>
+<head><script src="/livereload.js?mindelay=10&v=2&port=1313&path=livereload" data-no-instant defer></script><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Learning Docker: My notes | Andrew Miotke</title>
+<meta name=keywords content>
+<meta name=description content="Docker notes">
+<meta name=author content="Andrew">
+<link rel=canonical href=http://localhost:1313/posts/learningdocker/>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=http://localhost:1313/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=http://localhost:1313/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=http://localhost:1313/favicon-32x32.png>
+<link rel=apple-touch-icon href=http://localhost:1313/apple-touch-icon.png>
+<link rel=mask-icon href=http://localhost:1313/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.92.1">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><meta property="og:title" content="Learning Docker: My notes">
+<meta property="og:description" content="Docker notes">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/posts/learningdocker/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-07-21T15:21:59-07:00">
+<meta property="article:modified_time" content="2021-07-21T15:21:59-07:00"><meta property="og:site_name" content="ExampleSite">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Learning Docker: My notes">
+<meta name=twitter:description content="Docker notes">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"http://localhost:1313/posts/"},{"@type":"ListItem","position":2,"name":"Learning Docker: My notes","item":"http://localhost:1313/posts/learningdocker/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Learning Docker: My notes","name":"Learning Docker: My notes","description":"Docker notes\n","keywords":[],"articleBody":"Docker notes\nExpect this post to be updated over time.\nHere are the notes I’ve taken so far while learning Docker over the last few days.\nResources  Docker for beginners Running Django + PostgreSQL containers and persisting data with Docker  docker pull Command:  docker pull [image name or url]  Pulls the docker image from the docker registry. The docker registry is similar to Github in that it hosts a bunch of docker images.\nUse docker images to list all of the images on the local machine.\ndocker run Command:  docker run [image name]  Flags  -d detaches the terminal window from the running docker container. -P publishes all exposed ports to random ports so that the application inside the container can be accessed. You can also specify which port to use with docker run -p 8888:80 .... --name gives the container a human readable name.  Runs a docker container based on the image that is passed in.\ndocker run -it [image name] attaches you to an interactive shell in the container itself.\ndocker stop Command:  docker stop [container ID or name]  Stops the running container when running in detached mode.\ndocker ps Command:  docker ps  Flags:  -ashows all containers that have been run.  Shows all of the containers that are currently running. Docker creates a new container everytime the command is run. That way the environment is always as you expect.\ndocker rm Command:  docker rm [container ID]  Container stick around on the disk even after they are no longer running and have a STATUS of Exited. Run docker ps -a to get the container ID then run docker rm [container ID], i.e. docker rm 605982f999a1.\nYou can also pass in the --rm flag during the docker run command to delete the container after it’s been ran. i.e. docker run --rm busybox echo \"Hello\".\ndocker container prune will delete all exited containers at once. This way you don’t need to copy and paste each container ID in the docker rm command.\nTo get a list of containers use docker ps for active containers or docker ps -a for all containers that are currently running, exited, ect.\ndocker rmi Command:  docker rmi [image name]  Deletes the docker image you no longer need.\nTo get the list of images use docker images.\nDockerfile Dockerfile reference: https://docs.docker.com/engine/reference/builder/\nA Dockerfile is a text file that outlines what a docker image should look like. It contains a list of commands that docker uses to build and create an image which can later be used to create a container.\nCreating a Dockerfile by just creating a new file named Dockerfile.\nExample Dockerfile I used from Docker for beginners\n# Specify the base image first.FROMpython:3# Set a working directory for our appWORKDIR/usr/src/app# Copy all the files to the containerCOPY . .# Install Python dependencies using the requirements.txt fileRUN pip install --no-cache-dir -r requirements.txt# Expose the port that the app will run onEXPOSE5000# Run the command for running the applicationCMD [\"python\", \"./app.py\"]docker build Command:  Create a local docker imagedocker build [dockerhubUsername/image name] [location of Dockerfile]  Flags  -t to give the image a specific tag. Generally a version number.  docker build creates a docker image out of the Dockerfile. To add a tag the docker image use :[tag name] after the image name, docker build [dockerhubUsername/image name]:[tag name] [location of Dockerfile]\ndocker push Command:  docker push [dockerhubUsername/image name]  Pushes the docker image to DockerHub.\n","wordCount":"564","inLanguage":"en","datePublished":"2021-07-21T15:21:59-07:00","dateModified":"2021-07-21T15:21:59-07:00","author":{"@type":"Person","name":"Andrew"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:1313/posts/learningdocker/"},"publisher":{"@type":"Organization","name":"Andrew Miotke","logo":{"@type":"ImageObject","url":"http://localhost:1313/favicon.ico"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=http://localhost:1313/ accesskey=h title="andrewmiotke.com (Alt + H)">andrewmiotke.com</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=http://localhost:1313/categories/ title=categories>
+<span>categories</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=http://localhost:1313/>Home</a>&nbsp;»&nbsp;<a href=http://localhost:1313/posts/>Posts</a></div>
+<h1 class=post-title>
+Learning Docker: My notes
+</h1>
+<div class=post-meta><span title="2021-07-21 15:21:59 -0700 PDT">July 21, 2021</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Andrew&nbsp;|&nbsp;<a href=https://github.com/miotke/andrewmiotke.com/content/posts/LearningDocker.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div>
+</header>
+<div class=post-content><p>Docker notes</p>
+<p>Expect this post to be updated over time.</p>
+<p>Here are the notes I&rsquo;ve taken so far while learning Docker over the last few days.</p>
+<h2 id=resources>Resources<a hidden class=anchor aria-hidden=true href=#resources>#</a></h2>
+<ul>
+<li><a href=https://docker-curriculum.com/>Docker for beginners</a></li>
+<li><a href=https://medium.com/shot-code/running-django-postgresql-containers-and-persisting-data-with-docker-4dd8e4dd5361>Running Django + PostgreSQL containers and persisting data with Docker</a></li>
+</ul>
+<h2 id=docker-pull>docker pull<a hidden class=anchor aria-hidden=true href=#docker-pull>#</a></h2>
+<h5 id=command>Command:<a hidden class=anchor aria-hidden=true href=#command>#</a></h5>
+<ul>
+<li><code>docker pull [image name or url]</code></li>
+</ul>
+<p>Pulls the docker image from the docker registry. The docker registry is similar to Github in that it hosts a bunch of docker images.</p>
+<p>Use <code>docker images</code> to list all of the images on the local machine.</p>
+<h2 id=docker-run>docker run<a hidden class=anchor aria-hidden=true href=#docker-run>#</a></h2>
+<h4 id=command-1>Command:<a hidden class=anchor aria-hidden=true href=#command-1>#</a></h4>
+<ul>
+<li><code>docker run [image name]</code></li>
+</ul>
+<h4 id=flags>Flags<a hidden class=anchor aria-hidden=true href=#flags>#</a></h4>
+<ul>
+<li><code>-d</code> detaches the terminal window from the running docker container.</li>
+<li><code>-P</code> publishes all exposed ports to random ports so that the application inside the container can be accessed. You can also specify which port to use with <code>docker run -p 8888:80 ...</code>.</li>
+<li><code>--name</code> gives the container a human readable name.</li>
+</ul>
+<p>Runs a docker container based on the image that is passed in.</p>
+<p><code>docker run -it [image name]</code> attaches you to an interactive shell in the container itself.</p>
+<h2 id=docker-stop>docker stop<a hidden class=anchor aria-hidden=true href=#docker-stop>#</a></h2>
+<h4 id=command-2>Command:<a hidden class=anchor aria-hidden=true href=#command-2>#</a></h4>
+<ul>
+<li><code>docker stop [container ID or name]</code></li>
+</ul>
+<p>Stops the running container when running in detached mode.</p>
+<h2 id=docker-ps>docker ps<a hidden class=anchor aria-hidden=true href=#docker-ps>#</a></h2>
+<h4 id=command-3>Command:<a hidden class=anchor aria-hidden=true href=#command-3>#</a></h4>
+<ul>
+<li><code>docker ps</code></li>
+</ul>
+<h4 id=flags-1>Flags:<a hidden class=anchor aria-hidden=true href=#flags-1>#</a></h4>
+<ul>
+<li><code>-a</code>shows all containers that have been run.</li>
+</ul>
+<p>Shows all of the containers that are currently running. Docker creates a new container everytime the command is run. That way the environment is always as you expect.</p>
+<h2 id=docker-rm>docker rm<a hidden class=anchor aria-hidden=true href=#docker-rm>#</a></h2>
+<h4 id=command-4>Command:<a hidden class=anchor aria-hidden=true href=#command-4>#</a></h4>
+<ul>
+<li><code>docker rm [container ID]</code></li>
+</ul>
+<p>Container stick around on the disk even after they are no longer running and have a STATUS of <code>Exited</code>. Run <code>docker ps -a</code> to get the container ID then run <code>docker rm [container ID]</code>, i.e. <code>docker rm 605982f999a1</code>.</p>
+<p>You can also pass in the <code>--rm</code> flag during the <code>docker run</code> command to delete the container after it&rsquo;s been ran. i.e. <code>docker run --rm busybox echo "Hello"</code>.</p>
+<p><code>docker container prune</code> will delete all exited containers at once. This way you don&rsquo;t need to copy and paste each container ID in the <code>docker rm</code> command.</p>
+<p>To get a list of containers use <code>docker ps</code> for active containers or <code>docker ps -a</code> for all containers that are currently running, exited, ect.</p>
+<h2 id=docker-rmi>docker rmi<a hidden class=anchor aria-hidden=true href=#docker-rmi>#</a></h2>
+<h4 id=command-5>Command:<a hidden class=anchor aria-hidden=true href=#command-5>#</a></h4>
+<ul>
+<li><code>docker rmi [image name]</code></li>
+</ul>
+<p>Deletes the docker image you no longer need.</p>
+<p>To get the list of images use <code>docker images</code>.</p>
+<h2 id=dockerfile>Dockerfile<a hidden class=anchor aria-hidden=true href=#dockerfile>#</a></h2>
+<p>Dockerfile reference: <a href=https://docs.docker.com/engine/reference/builder/>https://docs.docker.com/engine/reference/builder/</a></p>
+<p>A <em>Dockerfile</em> is a text file that outlines what a docker image should look like. It contains a list of commands that docker uses to build and create an image which can later be used to create a container.</p>
+<p>Creating a Dockerfile by just creating a new file named <code>Dockerfile</code>.</p>
+<p>Example Dockerfile I used from <a href=https://docker-curriculum.com/>Docker for beginners</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=color:#75715e># Specify the base image first.</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> python:3</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># Set a working directory for our app</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>WORKDIR</span><span style=color:#e6db74> /usr/src/app</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># Copy all the files to the container</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>COPY</span> . .<span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># Install Python dependencies using the requirements.txt file</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> pip install --no-cache-dir -r requirements.txt<span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># Expose the port that the app will run on</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>EXPOSE</span><span style=color:#e6db74> 5000</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># Run the command for running the application</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>CMD</span> [<span style=color:#e6db74>&#34;python&#34;</span>, <span style=color:#e6db74>&#34;./app.py&#34;</span>]<span style=color:#960050;background-color:#1e0010>
+</span></code></pre></div><h2 id=docker-build>docker build<a hidden class=anchor aria-hidden=true href=#docker-build>#</a></h2>
+<h4 id=command-6>Command:<a hidden class=anchor aria-hidden=true href=#command-6>#</a></h4>
+<ul>
+<li>Create a local docker image<code>docker build [dockerhubUsername/image name] [location of Dockerfile]</code></li>
+</ul>
+<h4 id=flags-2>Flags<a hidden class=anchor aria-hidden=true href=#flags-2>#</a></h4>
+<ul>
+<li><code>-t</code> to give the image a specific tag. Generally a version number.</li>
+</ul>
+<p><code>docker build</code> creates a docker image out of the Dockerfile. To add a tag the docker image use <code>:[tag name]</code> after the image name, <code>docker build [dockerhubUsername/image name]:[tag name] [location of Dockerfile]</code></p>
+<h2 id=docker-push>docker push<a hidden class=anchor aria-hidden=true href=#docker-push>#</a></h2>
+<h4 id=command-7>Command:<a hidden class=anchor aria-hidden=true href=#command-7>#</a></h4>
+<ul>
+<li><code>docker push [dockerhubUsername/image name]</code></li>
+</ul>
+<p>Pushes the docker image to DockerHub.</p>
+</div>
+<footer class=post-footer>
+<nav class=paginav>
+<a class=prev href=http://localhost:1313/posts/learningcron/>
+<span class=title>« Prev Page</span>
+<br>
+<span>Learning Cron: My notes</span>
+</a>
+<a class=next href=http://localhost:1313/posts/swift-markdown-support/>
+<span class=title>Next Page »</span>
+<br>
+<span>Swift: Markdown Support</span>
+</a>
+</nav>
+</footer>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2022 <a href=http://localhost:1313/>Andrew Miotke</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>

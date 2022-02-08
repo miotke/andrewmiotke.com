@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>apps on Andrew Miotke</title>
+    <link>http://localhost:1313/categories/apps/</link>
+    <description>Recent content in apps on Andrew Miotke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 14 Aug 2020 09:04:00 -0700</lastBuildDate><atom:link href="http://localhost:1313/categories/apps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coming soon: AutoMate</title>
+      <link>http://localhost:1313/posts/2020-08-14-automate/</link>
+      <pubDate>Fri, 14 Aug 2020 09:04:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-08-14-automate/</guid>
+      <description>AutoMate is an app to help keep track of your car&amp;rsquo;s maintenance schedule and service history. I am expecting to have this out by the end of Fall 2020 🤞.
+If you&amp;rsquo;re interested in downloading and using the TestFlight beta builds, feel free to check it out here: https://testflight.apple.com/join/WwJH6tyO
+I&amp;rsquo;ll update this post as I continue to make more progress on the app.
+Plans and features Once complete you should be able to add your car(s) and add in your car&amp;rsquo;s full service history.</description>
+    </item>
+    
+    <item>
+      <title>Introducing: Tankd</title>
+      <link>http://localhost:1313/posts/2020-06-16-tankd/</link>
+      <pubDate>Tue, 16 Jun 2020 09:04:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-06-16-tankd/</guid>
+      <description>Introducing Tankd, my first iOS app released in the App Store for iOS!
+So the app is called Tankd and simply put it’s a fuel stop tracking app for iOS. I had heard a few times and even talked to a few friends who like to save their receipts at every fuel stop they make. I tried this for a short bit and got frustrated with all of the receipt papers cluttering up areas like the glove box.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Andrew Miotke</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Andrew Miotke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 13 Jan 2022 16:30:23 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automate jamf2snipe with GitHub Actions</title>
+      <link>http://localhost:1313/posts/automate_jamf2snipe_with_github_actions/</link>
+      <pubDate>Thu, 13 Jan 2022 16:30:23 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/automate_jamf2snipe_with_github_actions/</guid>
+      <description>&lt;p&gt;Automate the import of Jamf objects into Snipe-IT&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learning Cron: My notes</title>
+      <link>http://localhost:1313/posts/learningcron/</link>
+      <pubDate>Thu, 22 Jul 2021 15:02:30 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/learningcron/</guid>
+      <description>&lt;p&gt;Cron job notes&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learning Docker: My notes</title>
+      <link>http://localhost:1313/posts/learningdocker/</link>
+      <pubDate>Wed, 21 Jul 2021 15:21:59 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/learningdocker/</guid>
+      <description>&lt;p&gt;Docker notes&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Swift: Markdown Support</title>
+      <link>http://localhost:1313/posts/swift-markdown-support/</link>
+      <pubDate>Mon, 14 Jun 2021 11:51:22 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/swift-markdown-support/</guid>
+      <description>&lt;p&gt;Mardown support in Swift&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI: List Card View</title>
+      <link>http://localhost:1313/posts/swiftui-list-card-view/</link>
+      <pubDate>Mon, 14 Jun 2021 10:48:41 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/swiftui-list-card-view/</guid>
+      <description>&lt;p&gt;Creating &amp;lsquo;card views&amp;rsquo; using SwiftUI&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Procrastinating with writing more</title>
+      <link>http://localhost:1313/posts/2021-06-01-procrastinating-with-writing-more/</link>
+      <pubDate>Tue, 01 Jun 2021 14:52:51 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-06-01-procrastinating-with-writing-more/</guid>
+      <description>I have decided I want to write more. I&amp;rsquo;m just not sure what, if any, focus I want to have with it. Tech will be the primary focus leaning toward writing code and other tech opinions that come to mind.
+This post is my attempt at getting back into writing. In typical form, I found myself sitting down with a cup coffee yesterday morning ready to go. Then I thought about a problem I had and wrote a Python script to solve that problem.</description>
+    </item>
+    
+    <item>
+      <title>Coming soon: AutoMate</title>
+      <link>http://localhost:1313/posts/2020-08-14-automate/</link>
+      <pubDate>Fri, 14 Aug 2020 09:04:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-08-14-automate/</guid>
+      <description>AutoMate is an app to help keep track of your car&amp;rsquo;s maintenance schedule and service history. I am expecting to have this out by the end of Fall 2020 🤞.
+If you&amp;rsquo;re interested in downloading and using the TestFlight beta builds, feel free to check it out here: https://testflight.apple.com/join/WwJH6tyO
+I&amp;rsquo;ll update this post as I continue to make more progress on the app.
+Plans and features Once complete you should be able to add your car(s) and add in your car&amp;rsquo;s full service history.</description>
+    </item>
+    
+    <item>
+      <title>Introducing: Tankd</title>
+      <link>http://localhost:1313/posts/2020-06-16-tankd/</link>
+      <pubDate>Tue, 16 Jun 2020 09:04:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-06-16-tankd/</guid>
+      <description>Introducing Tankd, my first iOS app released in the App Store for iOS!
+So the app is called Tankd and simply put it’s a fuel stop tracking app for iOS. I had heard a few times and even talked to a few friends who like to save their receipts at every fuel stop they make. I tried this for a short bit and got frustrated with all of the receipt papers cluttering up areas like the glove box.</description>
+    </item>
+    
+    <item>
+      <title>First App in TestFlight: Tankd</title>
+      <link>http://localhost:1313/posts/2020-05-20-first-app-in-testflight/</link>
+      <pubDate>Wed, 20 May 2020 09:29:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-05-20-first-app-in-testflight/</guid>
+      <description>I finally did it! Earlier this week I submitted an app to TestFlight for the first time. This is the first step in achieving my goal of submitting an app to the iOS App Store and I could not be more excited. I&amp;rsquo;ll talk more about the app in a moment with a link so you can download it. I&amp;rsquo;m hoping to let it bake with testers in TestFlight to work out all the kinks and bugs then move it to the App Store soon.</description>
+    </item>
+    
+    <item>
+      <title>Portfolio App: Meal Time</title>
+      <link>http://localhost:1313/posts/2020-04-11-meal-time/</link>
+      <pubDate>Wed, 22 Apr 2020 15:36:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-04-11-meal-time/</guid>
+      <description>Update As I outlined in A New Hope I&amp;rsquo;m taking this time to refocus my software development efforts on iOS and Swift. It&amp;rsquo;s been about a week and a half since I was laid off of my job and I have taken it in stride. I&amp;rsquo;ve decided to work on a few different types of apps, some &amp;ldquo;portfolio&amp;rdquo; that won&amp;rsquo;t be released on the App Store and at least one that will be released on the App Store.</description>
+    </item>
+    
+    <item>
+      <title>A New Hope</title>
+      <link>http://localhost:1313/posts/2020-03-31-a-new-hope/</link>
+      <pubDate>Tue, 31 Mar 2020 13:56:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-03-31-a-new-hope/</guid>
+      <description>After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks&amp;hellip;hard. I&amp;rsquo;m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.
+The breakup I found out at the same time as many of my colleagues, Slack exploded and Notification Center on my Mac was trying to keep up.</description>
+    </item>
+    
+    <item>
+      <title>Resume Gist</title>
+      <link>http://localhost:1313/posts/2019-04-06-resume-gist/</link>
+      <pubDate>Sat, 06 Apr 2019 10:28:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2019-04-06-resume-gist/</guid>
+      <description>For awhile now I&amp;rsquo;ve been thinking about the resumé, that piece of paper - or nowadays pdf file that we upload to a website or give a recruiter. The rule of thumb I&amp;rsquo;ve always been given is keep it short and sweet and try to keep it all on one page. In today’s world we rarely stay at a company for more than three or four years, how are we supposed to keep all this work experience limited one page?</description>
+    </item>
+    
+    <item>
+      <title>Taking Classes</title>
+      <link>http://localhost:1313/posts/2019-02-17-taking-classes/</link>
+      <pubDate>Sun, 17 Feb 2019 16:22:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2019-02-17-taking-classes/</guid>
+      <description>Taking Classes Well it&amp;rsquo;s that time again, it&amp;rsquo;s time to start looking at taking a new class to continue to grow my fundamentals in programming. This time I found a class at the Univeristy of Washington(UW) and the course is in Python 🐍!
+Python is a language that I&amp;rsquo;ve wanted to learn for awhile now, once I had an understanding of Swift. I applied for the class last week and I&amp;rsquo;m just waiting to get the &amp;ldquo;acceptance letter&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Vision and Purpose</title>
+      <link>http://localhost:1313/posts/2018-07-10-vision-and-purpose/</link>
+      <pubDate>Tue, 10 Jul 2018 09:04:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2018-07-10-vision-and-purpose/</guid>
+      <description>In my last post I explained my journey up to this point in time and my found passion for Swift. Today I&amp;rsquo;m going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.
+Vision My vision for this website is to have a place that I can talk about my various learnings with Swift and other topics as I explore iOS development and developing on Apple platforms.</description>
+    </item>
+    
+    <item>
+      <title>andrewmiotke.com v2.0</title>
+      <link>http://localhost:1313/posts/2018-06-30-welcome/</link>
+      <pubDate>Sat, 30 Jun 2018 17:44:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/2018-06-30-welcome/</guid>
+      <description>Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.
+What happened with web?</description>
+    </item>
+    
+  </channel>
+</rss>

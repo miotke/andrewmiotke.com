@@ -1,0 +1,163 @@
+<!doctype html><html lang=en dir=auto>
+<head><script src="/livereload.js?mindelay=10&v=2&port=1313&path=livereload" data-no-instant defer></script><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Automate jamf2snipe with GitHub Actions | Andrew Miotke</title>
+<meta name=keywords content>
+<meta name=description content="Automate the import of Jamf objects into Snipe-IT">
+<meta name=author content="Andrew">
+<link rel=canonical href=http://localhost:1313/posts/automate_jamf2snipe_with_github_actions/>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=http://localhost:1313/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=http://localhost:1313/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=http://localhost:1313/favicon-32x32.png>
+<link rel=apple-touch-icon href=http://localhost:1313/apple-touch-icon.png>
+<link rel=mask-icon href=http://localhost:1313/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.92.1">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><meta property="og:title" content="Automate jamf2snipe with GitHub Actions">
+<meta property="og:description" content="Automate the import of Jamf objects into Snipe-IT">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/posts/automate_jamf2snipe_with_github_actions/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-01-13T16:30:23-07:00">
+<meta property="article:modified_time" content="2022-01-13T16:30:23-07:00"><meta property="og:site_name" content="ExampleSite">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Automate jamf2snipe with GitHub Actions">
+<meta name=twitter:description content="Automate the import of Jamf objects into Snipe-IT">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"http://localhost:1313/posts/"},{"@type":"ListItem","position":2,"name":"Automate jamf2snipe with GitHub Actions","item":"http://localhost:1313/posts/automate_jamf2snipe_with_github_actions/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Automate jamf2snipe with GitHub Actions","name":"Automate jamf2snipe with GitHub Actions","description":"Automate the import of Jamf objects into Snipe-IT\n","keywords":[],"articleBody":"Automate the import of Jamf objects into Snipe-IT\nSnipe-IT is a great asset tracking tool for IT teams and if you use Jamf to manage Apple devices then you probably want an easy way to sync those objects from Jamf into Snipe-IT. That’s where jamf2snipe comes in, written by ParadoxGuitarist on GitHub.\nIn this post we’re going to walk through using GitHub Actions to automate running jamf2snipe on a regular cadence.\nWe’re going to assume that you already have jamf2snipe set up and it can run from your local machine and you have a forked copy of jamf2snipe in GitHub. Checkout jamf2snipe’s README for instructions on how to configure the script.\nDisclaimer: I’m sure there’s a better way to handle this but this is the approach I took and it’s worked out pretty well so far.\nThe problem Running jamf2snipe from a local machine requires a human to remember (with the help of a Slack reminder) to run the jamf2snipe script in some interval.\nThis seems like a great opportunity to automate a tedious and repetitive task. I want this script to run nightly so that our Snipe-IT data is always up to date the next morning.\nSetting up the GitHub Action First of all we need to set up a new action.\n Click on the Actions tab in your GitHub repo and click the “set up a workflow yourself -” link. This creates a new directory and file in your repository, .github/workflows/main.yml. You can either edit or delete all of the yaml that GitHub supplies in the new workflow file. If you want, you can change the name of the file from main.yml to anything you want, just make sure you give it the .yml extension. Below is a sanitized and commented version of the .yml file I use. Feel free to copy and change it as you see fit. Secrets, this is probably the most important step! Make sure you follow the instructions in the jamf2snipe README for setting up your secrets in the settings.conf file. To make your GitHub Action work, you need to add these secrets to either your GitHub org or repository’s secrets. The secrets outlined in the yaml are passed to the setting.conf file that jamf2snipe requires.  To access those secrets in the Action’s yaml file use $ secrets.[your_secret_name] but wrapped in double curly braces ({ }) [1]. In the example below username and password are the “service account” credentials from Jamf.   Other notable things in this yaml file are the various - run commands, we’ll describe those below.  Since we’re using an Ubuntu runner we need to create the /opt/jamf2snipe/ directory. This path is documented in the jamf2snipe README as the first place jamf2snipe will check for the settings.conf file. Then we copy the settings.conf file to /opt/jamf2snipe/. And finally we run jamf2snipe. The flags that are passed in are optional, again, reference the jamf2snipe README to learn more about each option.  If you use the -v (verbose) flag, all jamf2snipe output will be shown in the GitHub Action’s build output.      name: Run jamf2snipe script on: schedule: # Schedules this action to run at 5pm PST Monday - Friday - cron: '0 1 * * 1-5' jobs: build: runs-on: ubuntu-latest env: # wrap secrets.username in double curly braces to access the secrets # GitHub (rightfully so) redacts secrets variables from output username: $ secrets.username password: $ secrets.password snipe_it_api_key: $ secrets.snipe_it_api_key steps: # Checks out the your repo - uses: actions/checkout@v2 # Set up the environment to use Python 3.8.9 and installs # all required dependencies in requirements.txt - uses: actions/setup-python@v2 - uses: BSFishy/pip-action@v1 with: requirements: requirements.txt python-version: '3.8.9' # Creates a new directory in the Ubuntu runner - run: mkdir /opt/jamf2snipe/ # Copies the settings.conf file into the newly created directory - run: cp settings.conf /opt/jamf2snipe/ # Runs the jamf2snipe script with the designated arguments - name: run jamf2snipe script # The jamf2snipe command you run can whatever works best for your use. # Using the -v flag will put all output in the GitHub Action build output. run: python jamf2snipe -v --do_not_update_jamf -uf If you read this then I hope it helped or if you know of a better way to handle this process, please let me know.\n[1] To access a secret variable you need to wrap the variable call in double curly braces ({ }). GitHub redacts secrets from any output, including Jekyll websites which this site is built on.\n","wordCount":"740","inLanguage":"en","datePublished":"2022-01-13T16:30:23-07:00","dateModified":"2022-01-13T16:30:23-07:00","author":{"@type":"Person","name":"Andrew"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:1313/posts/automate_jamf2snipe_with_github_actions/"},"publisher":{"@type":"Organization","name":"Andrew Miotke","logo":{"@type":"ImageObject","url":"http://localhost:1313/favicon.ico"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=http://localhost:1313/ accesskey=h title="andrewmiotke.com (Alt + H)">andrewmiotke.com</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=http://localhost:1313/categories/ title=categories>
+<span>categories</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=http://localhost:1313/>Home</a>&nbsp;»&nbsp;<a href=http://localhost:1313/posts/>Posts</a></div>
+<h1 class=post-title>
+Automate jamf2snipe with GitHub Actions
+</h1>
+<div class=post-meta><span title="2022-01-13 16:30:23 -0700 -0700">January 13, 2022</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Andrew&nbsp;|&nbsp;<a href=https://github.com/miotke/andrewmiotke.com/content/posts/automate_jamf2snipe_with_github_actions.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div>
+</header>
+<div class=post-content><p>Automate the import of Jamf objects into Snipe-IT</p>
+<p><a href=https://snipeitapp.com>Snipe-IT</a> is a great asset tracking tool for IT teams and if you use Jamf to manage Apple devices then you probably want an easy way to sync those objects from Jamf into Snipe-IT. That&rsquo;s where <a href=https://github.com/ParadoxGuitarist/jamf2snipe>jamf2snipe</a> comes in, written by <a href=https://github.com/ParadoxGuitarist>ParadoxGuitarist</a> on GitHub.</p>
+<p>In this post we&rsquo;re going to walk through using GitHub Actions to automate running jamf2snipe on a regular cadence.</p>
+<p>We&rsquo;re going to assume that you already have jamf2snipe set up and it can run from your local machine and you have a forked copy of jamf2snipe in GitHub. Checkout jamf2snipe&rsquo;s README for instructions on how to configure the script.</p>
+<p><em>Disclaimer:</em> I&rsquo;m sure there&rsquo;s a better way to handle this but this is the approach I took and it&rsquo;s worked out pretty well so far.</p>
+<h2 id=the-problem>The problem<a hidden class=anchor aria-hidden=true href=#the-problem>#</a></h2>
+<p>Running jamf2snipe from a local machine requires a human to remember (with the help of a Slack reminder) to run the jamf2snipe script in some interval.</p>
+<p>This seems like a great opportunity to automate a tedious and repetitive task. I want this script to run nightly so that our Snipe-IT data is always up to date the next morning.</p>
+<h2 id=setting-up-the-github-action>Setting up the GitHub Action<a hidden class=anchor aria-hidden=true href=#setting-up-the-github-action>#</a></h2>
+<p>First of all we need to set up a new action.</p>
+<ol>
+<li>Click on the Actions tab in your GitHub repo and click the &ldquo;set up a workflow yourself ->&rdquo; link. This creates a new directory and file in your repository, <code>.github/workflows/main.yml</code>.</li>
+<li>You can either edit or delete all of the yaml that GitHub supplies in the new workflow file. If you want, you can change the name of the file from <code>main.yml</code> to anything you want, just make sure you give it the <code>.yml</code> extension.</li>
+<li>Below is a sanitized and commented version of the <code>.yml</code> file I use. Feel free to copy and change it as you see fit.</li>
+<li><strong>Secrets</strong>, this is probably the most important step! Make sure you follow the instructions in the jamf2snipe README for setting up your secrets in the settings.conf file. To make your GitHub Action work, you need to add these secrets to either your GitHub org or repository&rsquo;s secrets. The secrets outlined in the yaml are passed to the setting.conf file that jamf2snipe requires.
+<ul>
+<li>To access those secrets in the Action&rsquo;s yaml file use <code>$ secrets.[your_secret_name]</code> but wrapped in double curly braces (<code>{ }</code>) [1].</li>
+<li>In the example below username and password are the &ldquo;service account&rdquo; credentials from Jamf.</li>
+</ul>
+</li>
+<li>Other notable things in this yaml file are the various <code>- run</code> commands, we&rsquo;ll describe those below.
+<ul>
+<li>Since we&rsquo;re using an Ubuntu runner we need to create the <code>/opt/jamf2snipe/</code> directory. This path is documented in the jamf2snipe README as the first place jamf2snipe will check for the settings.conf file.</li>
+<li>Then we copy the settings.conf file to <code>/opt/jamf2snipe/</code>.</li>
+<li>And finally we run jamf2snipe. The flags that are passed in are optional, again, reference the jamf2snipe README to learn more about each option.
+<ul>
+<li>If you use the <code>-v</code> (verbose) flag, all jamf2snipe output will be shown in the GitHub Action&rsquo;s build output.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Run jamf2snipe script</span>
+<span style=color:#f92672>on</span>:
+  <span style=color:#f92672>schedule</span>:
+    <span style=color:#75715e># Schedules this action to run at 5pm PST Monday - Friday</span>
+    - <span style=color:#f92672>cron</span>: <span style=color:#e6db74>&#39;0 1 * * 1-5&#39;</span>
+<span style=color:#f92672>jobs</span>:
+  <span style=color:#f92672>build</span>:
+    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+    <span style=color:#f92672>env</span>:
+      <span style=color:#75715e># wrap secrets.username in double curly braces to access the secrets</span>
+      <span style=color:#75715e># GitHub (rightfully so) redacts secrets variables from output</span>
+      <span style=color:#f92672>username</span>: <span style=color:#ae81ff>$ secrets.username</span>
+      <span style=color:#f92672>password</span>: <span style=color:#ae81ff>$ secrets.password</span>
+      <span style=color:#f92672>snipe_it_api_key</span>: <span style=color:#ae81ff>$ secrets.snipe_it_api_key</span>
+    <span style=color:#f92672>steps</span>:
+      <span style=color:#75715e># Checks out the your repo</span>
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v2</span>
+
+      <span style=color:#75715e># Set up the environment to use Python 3.8.9 and installs</span>
+      <span style=color:#75715e># all required dependencies in requirements.txt</span>
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-python@v2</span>
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>BSFishy/pip-action@v1</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>requirements</span>: <span style=color:#ae81ff>requirements.txt</span>
+          <span style=color:#f92672>python-version</span>: <span style=color:#e6db74>&#39;3.8.9&#39;</span>
+
+      <span style=color:#75715e># Creates a new directory in the Ubuntu runner</span>
+      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>mkdir /opt/jamf2snipe/</span>
+
+      <span style=color:#75715e># Copies the settings.conf file into the newly created directory</span>
+      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>cp settings.conf /opt/jamf2snipe/</span>
+
+      <span style=color:#75715e># Runs the jamf2snipe script with the designated arguments</span>
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>run jamf2snipe script</span>
+        <span style=color:#75715e># The jamf2snipe command you run can whatever works best for your use.</span>
+        <span style=color:#75715e># Using the -v flag will put all output in the GitHub Action build output.</span>
+        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>python jamf2snipe -v --do_not_update_jamf -uf</span>
+</code></pre></div><p>If you read this then I hope it helped or if you know of a better way to handle this process, please let me know.</p>
+<p>[1] To access a secret variable you need to wrap the variable call in double curly braces (<code>{ }</code>). GitHub redacts secrets from any output, including Jekyll websites which this site is built on.</p>
+</div>
+<footer class=post-footer>
+<nav class=paginav>
+<a class=next href=http://localhost:1313/posts/learningcron/>
+<span class=title>Next Page »</span>
+<br>
+<span>Learning Cron: My notes</span>
+</a>
+</nav>
+</footer>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2022 <a href=http://localhost:1313/>Andrew Miotke</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>

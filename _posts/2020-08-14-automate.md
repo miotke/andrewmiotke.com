@@ -2,7 +2,7 @@
 layout: post
 title:  "Coming soon: AutoMate"
 date:   2020-08-14 09:04:00 -0700
-categories: apps
+categories: Apps
 ---
 
 <p align="center">
@@ -13,12 +13,12 @@ AutoMate is an app to help keep track of your car's maintenance schedule and ser
 
 If you're interested in downloading and using the TestFlight beta builds, feel free to check it out here: [https://testflight.apple.com/join/WwJH6tyO](https://testflight.apple.com/join/WwJH6tyO)
 
-I'll update this post as I continue to make more progress on the app. 
+I'll update this post as I continue to make more progress on the app.
 
 ### Plans and features
-Once complete you should be able to add your car(s) and add in your car's full service history. All backed up using iCloud/CloudKit. 
+Once complete you should be able to add your car(s) and add in your car's full service history. All backed up using iCloud/CloudKit.
 
-Target OS: iOS 14+ 
+Target OS: iOS 14+
 
 * Add your car(s)
     * Store details about your car(s)

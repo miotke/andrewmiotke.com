@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Andrew Miotke</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on Andrew Miotke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 13 Jan 2022 16:30:23 -0700</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac Admin</title>
+      <link>http://localhost:1313/categories/mac-admin/</link>
+      <pubDate>Thu, 13 Jan 2022 16:30:23 -0700</pubDate>
+      
+      <guid>http://localhost:1313/categories/mac-admin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/categories/docker/</link>
+      <pubDate>Wed, 21 Jul 2021 15:21:59 -0700</pubDate>
+      
+      <guid>http://localhost:1313/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Swift</title>
+      <link>http://localhost:1313/categories/swift/</link>
+      <pubDate>Mon, 14 Jun 2021 11:51:22 -0700</pubDate>
+      
+      <guid>http://localhost:1313/categories/swift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SwiftUI</title>
+      <link>http://localhost:1313/categories/swiftui/</link>
+      <pubDate>Mon, 14 Jun 2021 10:48:41 -0700</pubDate>
+      
+      <guid>http://localhost:1313/categories/swiftui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>update</title>
+      <link>http://localhost:1313/categories/update/</link>
+      <pubDate>Tue, 01 Jun 2021 14:52:51 -0700</pubDate>
+      
+      <guid>http://localhost:1313/categories/update/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apps</title>
+      <link>http://localhost:1313/categories/apps/</link>
+      <pubDate>Fri, 14 Aug 2020 09:04:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/categories/apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>personal update</title>
+      <link>http://localhost:1313/categories/personal-update/</link>
+      <pubDate>Sat, 06 Apr 2019 10:28:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/categories/personal-update/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

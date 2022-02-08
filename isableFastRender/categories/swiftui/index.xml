@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SwiftUI on Andrew Miotke</title>
+    <link>http://localhost:1313/categories/swiftui/</link>
+    <description>Recent content in SwiftUI on Andrew Miotke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 14 Jun 2021 10:48:41 -0700</lastBuildDate><atom:link href="http://localhost:1313/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SwiftUI: List Card View</title>
+      <link>http://localhost:1313/posts/swiftui-list-card-view/</link>
+      <pubDate>Mon, 14 Jun 2021 10:48:41 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/swiftui-list-card-view/</guid>
+      <description>&lt;p&gt;Creating &amp;lsquo;card views&amp;rsquo; using SwiftUI&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -33,7 +33,7 @@ params:
     comments: false
     hidemeta: false
     hideSummary: false
-    showtoc: true
+    showtoc: false # Table of Contents
     tocopen: false
 
     assets:
@@ -68,7 +68,7 @@ params:
     # home-info mode
     homeInfoParams:
         Title: "Hi there \U0001F44B"
-        Content: hello
+        Content: I'm a systems administrator that spends his time writing Python and exploring new technology. Rarely do I write here but when I do it's generally about about tech. At times I'll dabble with Swift and writing some small iOS apps.
 
     socialIcons:
         - name: twitter
@@ -82,7 +82,7 @@ params:
         hiddenInSingle: true # hide on single page
 
     editPost:
-        URL: "https://github.com/<path_to_repo>/content"
+        URL: "https://github.com/miotke/andrewmiotke.com/content"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 
