@@ -2,7 +2,7 @@
 layout: post
 title:  "A New Hope"
 date:   2020-03-31 13:56:46 -0700
-categories: update
+categories: Personal Update
 ---
 After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks...hard.
 I'm now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.

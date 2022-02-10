@@ -2,7 +2,7 @@
 layout: post
 title:  "Portfolio App: Meal Time"
 date:   2020-04-22 15:36:46 -0700
-categories: update
+categories: Apps
 ---
 ### Update
 

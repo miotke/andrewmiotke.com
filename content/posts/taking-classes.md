@@ -2,7 +2,7 @@
 layout: post
 title:  "Taking Classes"
 date:   2019-02-17 16:22:46 -0700
-categories: personal update
+categories: Personal Update
 ---
 
 # Taking Classes

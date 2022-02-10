@@ -2,7 +2,7 @@
 layout: post
 title:  "Vision and Purpose"
 date:   2018-07-10 09:04:00 -0700
-categories: update
+categories: Personal Update
 ---
 In my last post I explained my journey up to this point in time and my found passion for Swift. Today I'm going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.
 

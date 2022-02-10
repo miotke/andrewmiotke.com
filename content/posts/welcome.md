@@ -2,7 +2,7 @@
 layout: post
 title:  "andrewmiotke.com v2.0"
 date:   2018-06-30 17:44:46 -0700
-categories: update
+categories: Personal Update
 ---
 Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.
 
