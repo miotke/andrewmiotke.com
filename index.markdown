@@ -5,10 +5,8 @@
 layout: home
 ---
 
-Hi, I'm Andrew I do computer stuff, mostly in Swift and Python and currently living in Tacoma, WA.
+Hi, I'm Andrew I do computer stuff, mostly in Swift and Python.
 Feel free to reach out to me on [Mastodon](https://mastodon.social/@mtke) or on [Github](https://github.com/miotke).
-If you're interested in seeing my resume, you can find it [here](https://andrewmiotke.com/resume.html).
-I'm mostly writing Swift and Python but I'm always interested in learning a new technology or language.
 
 ## Currently learning: 
 
