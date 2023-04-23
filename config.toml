@@ -1,0 +1,4 @@
+baseURL = 'http://andrewmiotke.com/'
+languageCode = 'en-us'
+title = 'andrewmiotke.com'
+theme = 'ananke'
