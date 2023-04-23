@@ -2,12 +2,12 @@
 layout: post
 title: "SwiftUI: List Card View"
 date: 2021-06-14 10:48:41 -0700
-categories: SwiftUI
+categories: Swift UI
 ---
 
 To be upfront, I'm not sure if calling each row a "card" is the best way to describe this but, it seems reasonable to me.
 
-Creating a "card" within a List view using SwiftUI was something that always seemed super hacky to me until [@mecid](https://twitter.com/mecid) replied with a very concise and obvious answer. Simply, create a List with the `.listStyle(InsetGroupedListStyle())` modifier and for each row within the list, give it a `Section`.  
+Creating a "card" within a List view using SwiftUI was something that always seemed super hacky to me until [@mecid](https://twitter.com/mecid) replied with a very concise and obvious answer. Simply, create a List with the `.listStyle(InsetGroupedListStyle())` modifier and for each row within the list, give it a `Section`.
 
 <p align="center">
   <img src="/images/mecid_creating_card.png">
@@ -15,7 +15,7 @@ Creating a "card" within a List view using SwiftUI was something that always see
 
 ## Code sample
 
-The code below has a List with a ForEach loop. Within the loop a Section is created and inside the Section is the row content. Obviously the row content can have anything you like in there. If you wanted to create a more complex row you could extract that out into its own view and pass that into each section within the loop. 
+The code below has a List with a ForEach loop. Within the loop a Section is created and inside the Section is the row content. Obviously the row content can have anything you like in there. If you wanted to create a more complex row you could extract that out into its own view and pass that into each section within the loop.
 
 ```swift
 import SwiftUI
@@ -53,7 +53,7 @@ struct ContentView: View {
                     }
                 }
             }
-            
+
             Section(header: Text("Not completed")) {
                 ForEach(0..<5) { i in
                     Section {
