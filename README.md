@@ -15,3 +15,6 @@ As of August 12, 2021 the "primary" branch has been renamed to `main`.
 - Start server without drafts: `hugo server`
 - Start server with drafts: `hugo server -D` or `hugo server --buildDrafts`
 
+# Create new post
+- Create new draft post: `hugo new posts/<file-name>.md`
+
