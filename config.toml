@@ -1,4 +1,11 @@
 baseURL = 'http://andrewmiotke.com/'
 languageCode = 'en-us'
 title = 'andrewmiotke.com'
-theme = 'ananke'
+theme = 'devise'
+copyright = "&copy; Copyright 2023, Andrew Miotke"
+
+# Devise theme configuration
+[params]
+    header_title = ""
+    header_subtitle = ""
+    home_image = "/images/puppet.jpg"
