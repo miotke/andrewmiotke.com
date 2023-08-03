@@ -91,7 +91,6 @@ Open the project in Xcode and in the _Sources_ directory rename or create a new 
 
 You can run your code at any time but if you have required arguments, you will get an error and the help dialog will be displayed.
 
-    ```
     Error: Missing expected argument '<name>'
 
     USAGE: cli-swift <name> [--age <age>]
@@ -104,7 +103,7 @@ You can run your code at any time but if you have required arguments, you will g
     -h, --help              Show help information.
 
     Program ended with exit code: 64
-    ```
+
 
 1. To create arguments for testing click the target at the top of Xcode and select _Edit Scheme..._. Under Run click the + under _Arguments Passed On Launch_. These arguments need to be in order, top to bottom as they appear in your app with optional arguments above the optional argument value.
 2. Close the _Edit Scheme..._ window and try running your app again. The output should now have your argument values
