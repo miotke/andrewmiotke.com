@@ -91,7 +91,7 @@ Open the project in Xcode and in the _Sources_ directory rename or create a new 
 
 You can run your code at any time but if you have required arguments, you will get an error and the help dialog will be displayed.
 
-    ```bash
+    ```
     Error: Missing expected argument '<name>'
 
     USAGE: cli-swift <name> [--age <age>]
