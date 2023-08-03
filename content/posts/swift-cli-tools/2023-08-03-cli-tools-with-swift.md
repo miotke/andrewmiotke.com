@@ -17,27 +17,27 @@ categories: Swift CLI Tools
 To get your new CLI too ready to start building add the following to your package.swift file.
 
 1. Add a `products` array the package constant. e.g.
-```swift
-products: [
-    .executable(name: "cli_swift", targets: ["cli_swift"])
-],
-```
+    ```swift
+    products: [
+        .executable(name: "cli_swift", targets: ["cli_swift"])
+    ],
+    ```
 
 2. If you're adding any dependencies such as other Swift packages, add a `dependencies` array to the package constant e.g.
-```swift
-dependencies: [
-    .package(url: "https://github.com/apple/swift-argument-parser", exact: "1.2.2")
-],
-```
+    ```swift
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-argument-parser", exact: "1.2.2")
+    ],
+    ```
 
 3. Add a `dependencies` array to your `targets` array. e.g.
-```swift
-.executableTarget(
-    name: "cli_swift",
-    dependencies: [.product(name: "ArgumentParser", package: "swift-argument-parser")],
-    path: "Sources"
-),
-```
+    ```swift
+    .executableTarget(
+        name: "cli_swift",
+        dependencies: [.product(name: "ArgumentParser", package: "swift-argument-parser")],
+        path: "Sources"
+    ),
+    ```
 
 4. Add the target platforms to the package constant. e.g.
 ```swift
@@ -69,50 +69,51 @@ Open the project in Xcode and in the _Sources_ directory rename or create a new 
     var age: Int?
     ```
 7. Inside the `run()` method, we can do any type of operation on those arguments by calling their variable name. See the full code sample below.
-```swift
-import Foundation
-import ArgumentParser
+    ```swift
+    import Foundation
+    import ArgumentParser
 
-@main
-struct CliSwift: AsyncParsableCommand {
-    @Argument(help: "Enter the your name")
-    var name: String
+    @main
+    struct CliSwift: AsyncParsableCommand {
+        @Argument(help: "Enter the your name")
+        var name: String
 
-    @Option(help: "Enter your age")
-    var age: Int?
+        @Option(help: "Enter your age")
+        var age: Int?
 
-    func run() async throws {
-        print("Your name is \(name)!!!")
-        print("Your age is \(age ?? 0)")
+        func run() async throws {
+            print("Your name is \(name)!!!")
+            print("Your age is \(age ?? 0)")
+        }
     }
-}
-```
+    ```
 # Create arguments for testing.
 
 You can run your code at any time but if you have required arguments, you will get an error and the help dialog will be displayed.
 
-```
-Error: Missing expected argument '<name>'
+    ```bash
+    Error: Missing expected argument '<name>'
 
-USAGE: cli-swift <name> [--age <age>]
+    USAGE: cli-swift <name> [--age <age>]
 
-ARGUMENTS:
-  <name>                  Enter the your name
+    ARGUMENTS:
+    <name>                  Enter the your name
 
-OPTIONS:
-  --age <age>             Enter your age
-  -h, --help              Show help information.
+    OPTIONS:
+    --age <age>             Enter your age
+    -h, --help              Show help information.
 
-Program ended with exit code: 64
-```
+    Program ended with exit code: 64
+    ```
 
 1. To create arguments for testing click the target at the top of Xcode and select _Edit Scheme..._. Under Run click the + under _Arguments Passed On Launch_. These arguments need to be in order, top to bottom as they appear in your app with optional arguments above the optional argument value.
 2. Close the _Edit Scheme..._ window and try running your app again. The output should now have your argument values
-```
-Your name is gus!!!
-Your age is 13
-Program ended with exit code: 0
-```
+
+    ```
+    Your name is gus!!!
+    Your age is 13
+    Program ended with exit code: 0
+    ```
 
 # Running your CLI tool from the command line.
 
@@ -126,17 +127,17 @@ Once you're ready for a final release you can Archive the build using Xcode.
 2. Once built select Distribute Content and follow the prompts.
 3. Select Built Produdcts for your method of distribution and select where to save it on your Mac. It will create a new folder with the products name and date of the build. Click Export.
 4. You can find your new CLI executable binary in the Products/usr/local/bin/ path of your working directory
-```
-~/Desktop/cli_swift> tree .
-.
-├── Package.resolved
-├── Package.swift
-├── Sources
-│   └── CliSwift.swift
-└── cli_swift 2023-08-03 15-14-54
-    └── Products
-        └── usr
-            └── local
-                └── bin
-                    └── cli_swift
-```
+    ```
+    ~/Desktop/cli_swift> tree .
+    .
+    ├── Package.resolved
+    ├── Package.swift
+    ├── Sources
+    │   └── CliSwift.swift
+    └── cli_swift 2023-08-03 15-14-54
+        └── Products
+            └── usr
+                └── local
+                    └── bin
+                        └── cli_swift
+    ```
