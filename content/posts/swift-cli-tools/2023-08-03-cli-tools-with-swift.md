@@ -40,10 +40,10 @@ To get your new CLI too ready to start building add the following to your packag
     ```
 
 4. Add the target platforms to the package constant. e.g.
-```swift
-// Sets the target platform to macOS 13+
-platforms: [.macOS(.v13)],
-``````
+    ```swift
+    // Sets the target platform to macOS 13+
+    platforms: [.macOS(.v13)],
+    ``````
 # Create a basic CLI tool with ArgumentParser
 
 Next we're going to create a simple CLI tool that takes in 1 required argument and 1 optional requrement using Apple's [ArugmentParser](https://github.com/apple/swift-argument-parser) package. Note that this package was already configured in our _package.swift_ file.
