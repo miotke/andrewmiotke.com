@@ -2,7 +2,7 @@
 layout: post
 title: "TIL: Docker - My notes"
 date: 2021-07-21 15:21:59 -0700
-categories: update
+categories: til
 ---
 
 Expect this post to be updated over time.

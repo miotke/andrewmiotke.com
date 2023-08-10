@@ -2,7 +2,7 @@
 layout: post
 title: "TIL Cron - My notes"
 date: 2021-07-22 15:02:30 -0700
-categories: TIL
+categories: til
 ---
 
 These notes are not exhaustive. As I learn more I'll try and update this post.
