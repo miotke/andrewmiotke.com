@@ -34,7 +34,12 @@ def create_post(file_name, category):
     # Variables that create the front matter.
     post_title = file_name
     path = "content/posts/"
-    file_name = f"{date.today()}-{post_title}"
+
+    if category == "til" or "TIL":
+        til_path = "content/posts/til/"
+        file_name = f"{post_title}"
+
+    file_name = f"{post_title}"
     get_time = datetime.now()
     formatted_time = get_time.strftime("%H:%M:%S")
     extension = ".md"
@@ -46,8 +51,10 @@ categories: {category}
 ---
 
 """
-
-    new_post_file = f"{path}{file_name}{extension}"
+    if category == "til" or "TIL":
+        new_post_file = f"{til_path}{file_name}{extension}"
+    else:
+        new_post_file = f"{path}{file_name}{extension}"
 
     # Calls the create_git_branch function and passes
     # in the post_title.
