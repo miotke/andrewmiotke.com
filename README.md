@@ -19,4 +19,6 @@ Theme: https://themes.gohugo.io/themes/devise/
 # Create new post
 - Create new draft post: `hugo new posts/<file-name>.md`
 
+# TIL
 
+The TIL section is inspired by Simon Willson's [til](https://github.com/simonw/til)
