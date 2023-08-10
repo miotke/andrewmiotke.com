@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Parsing JSON with the Requests library"
+title: "Parsing JSON using the Requests Python library"
 date: 2023-08-10 15:11:42 -0700
 categories: til
 ---
