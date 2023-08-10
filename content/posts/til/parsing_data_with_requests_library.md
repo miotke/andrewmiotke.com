@@ -7,15 +7,15 @@ categories: til
 
 # Parsing JSON using the Requests Python library
 
-The [Requests](https://requests.readthedocs.io/en/latest/) library can parse and print out JSON key:value pairs. It's fairly simple so lets go through it.
+The [Requests](https://requests.readthedocs.io/en/latest/) library can parse out JSON `key:value` pairs. It's fairly simple so lets go through it.
 
 ## Make the GET request
 
-This does assume that requests is already installed using `pip install requests`.
+This does assume that Requests is already installed using `pip install requests`.
 
-1. Import `requests`
+1. Import `requests`.
 2. Put your URL into a variable. This just makes calling it more readable later on.
-3. Set up the following Python dicts: `payload` and `headers`. There's a third, `params`, but we'll use that later for pagination.
+3. Set up the following Python dicts: `payload` and `headers`.
 
 Example:
 ```python
@@ -32,15 +32,15 @@ headers = {
     #"Authorization": f"{API_KEY}"
 }
 ```
-Note: If the API you're trying to talk to requires an API key (most do) then use `Authorization: "API_KEY"`.
+Note: If the API you're trying to talk to requires an API key (most do) then use `"Authorization": "API_KEY"`.
 
 Note 2: NEVER put the actual API key in code, call it from an environment variable or other secure method.
 
 ## Call the API
 
-1. Next we'll make a new variable and store the return value of `requets.get()`passing in the `url`, `headers`, and `payload` variables we created earlier.
-2. We'll put this response into a new variable as JSON
-2. We can print the response to get a blob of JSON shown in example 2 of this section
+1. Next we'll make a new variable and store the returned value of `requets.get()` passing in the `url`, `headers`, and `payload` variables we created earlier.
+2. We'll put this response into a new variable as JSON.
+2. We can print the response to get a blob of JSON shown in example 2 of this section.
 
 Example 1:
 ```python
@@ -54,16 +54,16 @@ response_data = response.json()
 print(response_data)
 ```
 
-Example 2:
+Example 2 (truncated JSON):
 ```json
-{'id': 1296269, 'node_id': 'MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'name': 'Hello-World', 'full_name': 'octocat/Hello-World', 'private': False, 'owner': {'login': 'octocat', 'id': 583231, 'node_id': 'MDQ6VXNlcjU4MzIzMQ==', 'avatar_url': 'https://avatars.githubusercontent.com/u/583231?v=4', 'gravatar_id': '', 'url': 'https://api.github.com/users/octocat', 'html_url': 'https://github.com/octocat', 'followers_url': 'https://api.github.com/users/octocat/followers', 'following_url': 'https://api.github.com/users/octocat/following{/other_user}', 'gists_url': 'https://api.github.com/users/octocat/gists{/gist_id}', 'starred_url': 'https://api.github.com/users/octocat/starred{/owner}{/repo}',...
+{'id': 1296269, 'node_id': 'MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'name': 'Hello-World', 'full_name': 'octocat/Hello-World', 'private': False, 'owner': {},...
 ```
 
 ## Parsing the JSON
 
-This part is fairly simple but can be more complex as the JSON becomes more complex. This is very straight forward example.
+This part is fairly simple but can be more complex as the JSON becomes more complex. This is a very straight forward example.
 
-We'll be parsing the JSON for the URL (and in Example 2 above) to get the name of a repo.
+We'll be parsing the JSON from the URL (and in Example 2 above) to get the name of a repo.
 
 1. Create a new variable, maybe named after the JSON key we're getting the value for. Use `.get("")` on the `response_data` variable and pass in the `key` for the `value` that you want. Remember, this is looking for a `key:value` pair.
 2. Print the value.
