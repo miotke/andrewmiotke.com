@@ -33,53 +33,53 @@ def main():
 def create_post(file_name, category):
     # Variables that create the front matter.
     post_title = file_name
-    path = 'content/posts/'
-    file_name = f'{date.today()}-{post_title}'
+    path = "content/posts/"
+    file_name = f"{date.today()}-{post_title}"
     get_time = datetime.now()
     formatted_time = get_time.strftime("%H:%M:%S")
-    extension = '.md'
-    front_matter = f'''---
+    extension = ".md"
+    front_matter = f"""---
 layout: post
 title: "{post_title}"
 date: {date.today()} {formatted_time} -0700
 categories: {category}
 ---
 
-'''
+"""
 
-    new_post_file = f'{path}{file_name}{extension}'
+    new_post_file = f"{path}{file_name}{extension}"
 
     # Calls the create_git_branch function and passes
     # in the post_title.
     try:
         create_git_branch(post_title)
-        print(f'🚀 Successfully created {post_title + extension} and checked out a new git branch: {post_title}')
+        print(f"🚀 Successfully created {post_title + extension} and checked out a new git branch: {post_title}")
     except:
-        print(f'❌ Failed created a new git branch named {post_title}')
+        print(f"❌ Failed created a new git branch named {post_title}")
 
     # Creates the new post file and adds the Jekyll front matter.
     try:
         # Creates new post file using the new_post_file variable.
         # Stores the file in the _posts/ directory.
-        os.system(f'touch {new_post_file}')
+        os.system(f"touch {new_post_file}")
 
         # Opens new_post_file with read/write access
         # and writes the contents of the front_matter
         # variable at the top of the file.
-        with open(f'{new_post_file}', 'r+') as f:
-            f.write(f'{front_matter}')
+        with open(f"{new_post_file}", "r+") as f:
+            f.write(f"{front_matter}")
 
         # Prints to the console that a new file has been created.
-        print(f'👍 {file_name} successfully created in {path}{file_name}')
+        print(f"👍 {file_name} successfully created in {path}{file_name}")
     except:
-        print('😳 An error occured')
+        print("😳 An error occured")
 
 
 def create_git_branch(post_title):
     try:
-        os.system(f'git checkout -b {post_title}')
+        os.system(f"git checkout -b {post_title}")
     except:
-        print(f'Failed to checkout branch: {post_title}')
+        print(f"Failed to checkout branch: {post_title}")
 
 
 if __name__ == "__main__":
