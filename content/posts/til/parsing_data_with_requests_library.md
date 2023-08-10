@@ -56,7 +56,7 @@ print(response_data)
 
 Example 2 (truncated JSON):
 ```json
-{'id': 1296269, 'node_id': 'MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'name': 'Hello-World', 'full_name': 'octocat/Hello-World', 'private': False, 'owner': {},...
+{'id': 1296269, 'node_id': 'MDEwOlJlcG9zaXRvcnkxMjk2MjY5', 'name': 'Hello-World', 'full_name': 'octocat/Hello-World', 'private': False, 'owner': {}},...
 ```
 
 ## Parsing the JSON
