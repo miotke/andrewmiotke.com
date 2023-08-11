@@ -9,7 +9,7 @@ categories: til
 
 You shouldn't use AppStorage for sensitive or personal information. AppStorage is really intended for app settings, such as theme (dark/light mode, etc).
 
-Full code example below and the project can be downloaded at: [code_examples/Appstorage](https://github.com/miotke/andrewmiotke.com/tree/main/swiftui_app_storage/code_examples/Appstorage).
+Full code example below and the project can be downloaded at: [code_examples/Appstorage](https://github.com/miotke/andrewmiotke.com/tree/main/code_examples/Appstorage).
 
 # Writing to @AppStorage
 
