@@ -3,9 +3,27 @@ languageCode = 'en-us'
 title = 'andrewmiotke.com'
 theme = 'devise'
 copyright = "&copy; Copyright 2023, Andrew Miotke"
+enableRobotsTXT = true
+paginate = 10
 
 # Devise theme configuration
 [params]
-    header_title = ""
-    header_subtitle = ""
-    home_image = "/images/puppet.jpg"
+    header_title = "IT stuff and things"
+    header_subtitle = "Posting about IT stuff. Sometimes programming, usually Python or Swift."
+    home_image = "/images/memoji.PNG"
+    recent_posts = 5
+    mainSections = ["posts"]
+
+[menu]
+    [[ menu.main ]]
+        identifier = "posts"
+        name = "Posts"
+        title = "Posts"
+        url = "/"
+        weight = -110
+    [[menu.main]]
+        identifier = "resume"
+        name = "Resume"
+        title = "Resume"
+        url = "/resume/"
+        weight = -110
