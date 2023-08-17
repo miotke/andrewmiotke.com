@@ -9,4 +9,4 @@ TIL I was laid off.
 
 That's it, today is just shitposting.
 
-For a bit real reflection though, this was by far, by favorite job I've ever had. So it's pretty disappointing to have been let go. However, that's life and so we move on.
+For a bit of real reflection though, this was by far, by favorite job I've ever had. So it's pretty disappointing to have been let go. However, that's life and so we move on.
