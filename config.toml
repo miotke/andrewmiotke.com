@@ -10,7 +10,7 @@ paginate = 10
 [params]
     header_title = "IT stuff and things"
     header_subtitle = "Posting about IT stuff. Sometimes programming, usually Python or Swift."
-    home_image = "/images/puppet.jpg"
+    home_image = "/images/memoji.PNG"
     recent_posts = 5
     mainSections = ["posts"]
 
