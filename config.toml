@@ -8,7 +8,7 @@ paginate = 10
 
 # Devise theme configuration
 [params]
-    header_title = "IT stuff and things"
+    header_title = "Andrew Miotke"
     header_subtitle = "Posting about IT stuff. Sometimes programming, usually Python or Swift."
     home_image = "/images/memoji.PNG"
     recent_posts = 5
