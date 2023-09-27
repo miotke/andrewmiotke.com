@@ -27,7 +27,6 @@ GitHub.
 - Acted as an escalation point for the support engineering team
 - Assist in supporting users across the country in multiple timezones, including Europe
 
-
 ### Karat (Remote)
 
 November 2021 - March 2022
