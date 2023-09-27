@@ -24,6 +24,8 @@ March 2022 - August 2023
 manipulation and user lifecycle where Okta and SCIM were not able to. Version control using Git and
 GitHub.
 - Implemented Panther’s first IT ticketing system using Freshservice and began automating workflows
+- Acted as an escalation point for the support engineering team
+- Assist in supporting users across the country in multiple timezones, including Europe
 
 ### Karat (Remote)
 
@@ -38,6 +40,8 @@ November 2021 - March 2022
 - Maintain and update documentation for projects and processes
 - Revamped the Mac onboarding process to make the process easier and quicker for end-users and
 the IT team
+- Acted as an escalation point for the support engineering team
+- Assist in supporting users across the country in multiple timezones
 
 ### Nordstrom (Seattle, WA)
 
