@@ -7,6 +7,13 @@ Andrew is self-taught systems administrator with twelve years of IT and IT suppo
 
 # Work Experience
 
+### BetterUp (Remote)
+
+October 2023 - Present
+
+**Senior IT Systems Engineer**
+
+
 ### Panther Labs (Remote)
 
 March 2022 - August 2023
