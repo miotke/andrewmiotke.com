@@ -41,7 +41,14 @@ function addTodo(event) {
 }
 
 function toggleTodo(index) {
+    const wasCompleted = todos[index].completed;
     todos[index].completed = !todos[index].completed;
+    
+    // Trigger celebration only when marking as complete (not unchecking)
+    if (!wasCompleted && todos[index].completed) {
+        celebrate();
+    }
+    
     saveTodos();
     render();
 }
@@ -91,6 +98,52 @@ function navigateUp() {
 
 function saveTodos() {
     localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+function celebrate() {
+    // Create celebration container
+    const celebration = document.createElement('div');
+    celebration.className = 'celebration';
+    
+    // Add confetti
+    for (let i = 0; i < 27; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        celebration.appendChild(confetti);
+    }
+    
+    // Add big checkmark
+    const checkmark = document.createElement('div');
+    checkmark.className = 'checkmark';
+    checkmark.textContent = '✓';
+    celebration.appendChild(checkmark);
+    
+    // Add fireworks at random positions
+    for (let i = 0; i < 6; i++) {
+        const firework = document.createElement('div');
+        firework.className = 'firework';
+        firework.style.left = Math.random() * 80 + 10 + '%';
+        firework.style.top = Math.random() * 60 + 20 + '%';
+        firework.style.animationDelay = Math.random() * 0.5 + 's';
+        celebration.appendChild(firework);
+    }
+    
+    // Add sparkles
+    for (let i = 0; i < 12; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.left = Math.random() * 90 + 5 + '%';
+        sparkle.style.top = Math.random() * 70 + 15 + '%';
+        sparkle.style.animationDelay = Math.random() * 0.8 + 's';
+        celebration.appendChild(sparkle);
+    }
+    
+    document.body.appendChild(celebration);
+    
+    // Remove celebration after animation completes
+    setTimeout(() => {
+        document.body.removeChild(celebration);
+    }, 3000);
 }
 
 // Event listeners
