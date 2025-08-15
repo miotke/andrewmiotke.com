@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Andrew Miotke</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="/" class="back-link">← Back to andrewmiotke.com</a>
+    
+    <div class="container">
+        <h1>Todo List</h1>
+        <p class="help">Vim keys: j/k navigate, x delete, space toggle, s star, i add</p>
+        
+        <form id="todoForm">
+            <input type="text" id="todoInput" placeholder="What needs to be done?" required>
+            <button type="submit">Add</button>
+        </form>
+        
+        <div id="todoList" class="todo-list">
+            <div class="empty-state">No todos yet. Add one above!</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

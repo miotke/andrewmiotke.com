@@ -4,7 +4,8 @@ title = 'andrewmiotke.com'
 theme = 'devise'
 copyright = "&copy; Copyright 2023, Andrew Miotke"
 enableRobotsTXT = true
-paginate = 10
+[pagination]
+pagerSize = 10
 
 # Devise theme configuration
 [params]
