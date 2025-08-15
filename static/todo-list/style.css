@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+}
+
+.back-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 400;
+}
+
+.help {
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.todo-list {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    gap: 0.75rem;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-item.focused {
+    background: #fff3cd;
+}
+
+.todo-checkbox {
+    margin: 0;
+}
+
+.priority-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #ddd;
+    padding: 0.25rem;
+}
+
+.priority-btn.high {
+    color: #ffc107;
+}
+
+.priority-btn:hover {
+    color: #ffc107;
+}
+
+.todo-text {
+    flex: 1;
+    cursor: pointer;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background: #dc3545;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #888;
+    font-style: italic;
+}
+
+/* Celebration animations */
+.celebration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: confetti-fall 3s linear forwards;
+}
+
+.confetti:nth-child(1) { background: #ff6b6b; left: 10%; animation-delay: 0s; }
+.confetti:nth-child(2) { background: #4ecdc4; left: 20%; animation-delay: 0.1s; }
+.confetti:nth-child(3) { background: #45b7d1; left: 30%; animation-delay: 0.2s; }
+.confetti:nth-child(4) { background: #96ceb4; left: 40%; animation-delay: 0.1s; }
+.confetti:nth-child(5) { background: #ffd93d; left: 50%; animation-delay: 0.3s; }
+.confetti:nth-child(6) { background: #ff9ff3; left: 60%; animation-delay: 0.2s; }
+.confetti:nth-child(7) { background: #54a0ff; left: 70%; animation-delay: 0.1s; }
+.confetti:nth-child(8) { background: #5f27cd; left: 80%; animation-delay: 0.4s; }
+.confetti:nth-child(9) { background: #00d2d3; left: 90%; animation-delay: 0.2s; }
+.confetti:nth-child(10) { background: #ff9f43; left: 15%; animation-delay: 0.3s; }
+.confetti:nth-child(11) { background: #10ac84; left: 25%; animation-delay: 0.4s; }
+.confetti:nth-child(12) { background: #ee5a24; left: 35%; animation-delay: 0.1s; }
+.confetti:nth-child(13) { background: #0984e3; left: 45%; animation-delay: 0.3s; }
+.confetti:nth-child(14) { background: #a29bfe; left: 55%; animation-delay: 0.2s; }
+.confetti:nth-child(15) { background: #fd79a8; left: 65%; animation-delay: 0.4s; }
+.confetti:nth-child(16) { background: #fdcb6e; left: 75%; animation-delay: 0.1s; }
+.confetti:nth-child(17) { background: #6c5ce7; left: 85%; animation-delay: 0.3s; }
+.confetti:nth-child(18) { background: #00b894; left: 95%; animation-delay: 0.2s; }
+.confetti:nth-child(19) { background: #e17055; left: 5%; animation-delay: 0.4s; }
+.confetti:nth-child(20) { background: #74b9ff; left: 95%; animation-delay: 0.1s; }
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.checkmark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    color: #28a745;
+    animation: checkmark-bounce 1s ease-out forwards;
+    pointer-events: none;
+    z-index: 1001;
+}
+
+@keyframes checkmark-bounce {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        opacity: 0;
+    }
+}
+
+.firework {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    animation: firework 1.5s ease-out forwards;
+}
+
+.firework:nth-child(1) { background: #ff6b6b; }
+.firework:nth-child(2) { background: #4ecdc4; }
+.firework:nth-child(3) { background: #45b7d1; }
+.firework:nth-child(4) { background: #96ceb4; }
+.firework:nth-child(5) { background: #ffd93d; }
+.firework:nth-child(6) { background: #ff9ff3; }
+
+@keyframes firework {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Sparkle animation */
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #ffd700;
+    border-radius: 50%;
+    animation: sparkle 1s ease-out forwards;
+}
+
+.sparkle::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: radial-gradient(circle, #ffd700 20%, transparent 50%);
+    border-radius: 50%;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5) rotate(180deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
