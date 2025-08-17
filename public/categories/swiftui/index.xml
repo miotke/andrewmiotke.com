@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SwiftUI on andrewmiotke.com</title>
+    <link>http://localhost:1313/categories/swiftui/</link>
+    <description>Recent content in SwiftUI on andrewmiotke.com</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2023, Andrew Miotke</copyright>
+    <lastBuildDate>Mon, 14 Jun 2021 10:48:41 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SwiftUI: List Card View</title>
+      <link>http://localhost:1313/posts/2021-06-14-swiftui-list-card-view/</link>
+      <pubDate>Mon, 14 Jun 2021 10:48:41 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2021-06-14-swiftui-list-card-view/</guid>
+      <description>&lt;p&gt;To be upfront, I&amp;rsquo;m not sure if calling each row a &amp;ldquo;card&amp;rdquo; is the best way to describe this but, it seems reasonable to me.&lt;/p&gt;&#xA;&lt;p&gt;Creating a &amp;ldquo;card&amp;rdquo; within a List view using SwiftUI was something that always seemed super hacky to me until &lt;a href=&#34;https://twitter.com/mecid&#34;&gt;@mecid&lt;/a&gt; replied with a very concise and obvious answer. Simply, create a List with the &lt;code&gt;.listStyle(InsetGroupedListStyle())&lt;/code&gt; modifier and for each row within the list, give it a &lt;code&gt;Section&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

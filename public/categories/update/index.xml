@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Update on andrewmiotke.com</title>
+    <link>http://localhost:1313/categories/update/</link>
+    <description>Recent content in Update on andrewmiotke.com</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2023, Andrew Miotke</copyright>
+    <lastBuildDate>Mon, 14 Jun 2021 11:51:22 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift: Markdown Support</title>
+      <link>http://localhost:1313/posts/2021-06-14-swift-markdown-support/</link>
+      <pubDate>Mon, 14 Jun 2021 11:51:22 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2021-06-14-swift-markdown-support/</guid>
+      <description>&lt;p&gt;This year at WWDC 2021 Apple introduced Markdown support in its UI frameworks, which is awesome! I&amp;rsquo;ve used it only with SwiftUI so far but I expect Markdown support to be adopted by a lot of apps that have formatted text input.&lt;/p&gt;&#xA;&lt;p&gt;This is a quick reference for supporting Markdown in your app.&lt;/p&gt;&#xA;&lt;p&gt;Currently in SwiftUI &lt;code&gt;Text(&amp;quot;**Here is a** [link to apple.com](https://apple.com)&amp;quot;)&lt;/code&gt; will render the Markdown without trouble. However, if you&amp;rsquo;re fetching a String out of CoreData as was my case or you&amp;rsquo;re calling a String from a &lt;code&gt;var&lt;/code&gt; or &lt;code&gt;let&lt;/code&gt; you may need a return that fetched string as an &lt;code&gt;AttributedString&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Procrastinating with writing more</title>
+      <link>http://localhost:1313/posts/2021-06-01-procrastinating-with-writing-more/</link>
+      <pubDate>Tue, 01 Jun 2021 14:52:51 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2021-06-01-procrastinating-with-writing-more/</guid>
+      <description>&lt;p&gt;I have decided I want to write more. I&amp;rsquo;m just not sure what, if any, focus I want to have with it. Tech will be the primary focus leaning toward writing code and other tech opinions that come to mind.&lt;/p&gt;&#xA;&lt;p&gt;This post is my attempt at getting back into writing. In typical form, I found myself sitting down with a cup coffee yesterday morning ready to go. Then I thought about a problem I had and wrote a Python script to solve that problem. A classic procrastination moment for me, sit down to write a post and instead write some code to solve such a minor problem to begin writing. Always need more tooling :eye-roll:.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First App in TestFlight: Tankd</title>
+      <link>http://localhost:1313/posts/2020-05-20-first-app-in-testflight/</link>
+      <pubDate>Wed, 20 May 2020 09:29:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2020-05-20-first-app-in-testflight/</guid>
+      <description>&lt;p&gt;I finally did it! Earlier this week I submitted an app to TestFlight for the first time. This is the first step in achieving my goal of submitting an app to the iOS App Store and I could not be more excited. I&amp;rsquo;ll talk more about the app in a moment with a link so you can download it. I&amp;rsquo;m hoping to let it bake with testers in TestFlight to work out all the kinks and bugs then move it to the App Store soon.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Portfolio App: Meal Time</title>
+      <link>http://localhost:1313/posts/2020-04-11-meal-time/</link>
+      <pubDate>Wed, 22 Apr 2020 15:36:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2020-04-11-meal-time/</guid>
+      <description>&lt;h3 id=&#34;update&#34;&gt;Update&lt;/h3&gt;&#xA;&lt;p&gt;As I outlined in &lt;a href=&#34;http://andrewmiotke.com/update/2020/03/31/a-new-hope.html&#34;&gt;A New Hope&lt;/a&gt; I&amp;rsquo;m taking&#xA;this time to refocus my software development efforts on iOS and Swift. It&amp;rsquo;s been about a week and a half&#xA;since I was laid off of my job and I have taken it in stride. I&amp;rsquo;ve decided to work on a few different types of&#xA;apps, some &amp;ldquo;portfolio&amp;rdquo; that won&amp;rsquo;t be released on the App Store and at least one that will be released on the App Store.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A New Hope</title>
+      <link>http://localhost:1313/posts/2020-03-31-a-new-hope/</link>
+      <pubDate>Tue, 31 Mar 2020 13:56:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2020-03-31-a-new-hope/</guid>
+      <description>&lt;p&gt;After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks&amp;hellip;hard.&#xA;I&amp;rsquo;m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-breakup&#34;&gt;The breakup&lt;/h3&gt;&#xA;&lt;p&gt;I found out at the same time as many of my colleagues, Slack exploded and Notification Center on my Mac was trying to keep up. It was terrible.&#xA;There were enough tears coming out of my face to fill a bucket. I was in absolute disbelief because I&amp;rsquo;ve never been let go from a job before, I guess there&amp;rsquo;s a first for everything 🤷‍♂️.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vision and Purpose</title>
+      <link>http://localhost:1313/posts/2018-07-10-vision-and-purpose/</link>
+      <pubDate>Tue, 10 Jul 2018 09:04:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2018-07-10-vision-and-purpose/</guid>
+      <description>&lt;p&gt;In my last post I explained my journey up to this point in time and my found passion for Swift. Today I&amp;rsquo;m going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.&lt;/p&gt;&#xA;&lt;h1 id=&#34;vision&#34;&gt;Vision&lt;/h1&gt;&#xA;&lt;p&gt;My vision for this website is to have a place that I can talk about my various learnings with Swift and other topics as I explore iOS development and developing on Apple platforms. Along with this I hope to show case and promote other people who are contributing to the Swift community as I find their articles, podcasts, or even a repo on Github.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>andrewmiotke.com v2.0</title>
+      <link>http://localhost:1313/posts/2018-06-30-welcome/</link>
+      <pubDate>Sat, 30 Jun 2018 17:44:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2018-06-30-welcome/</guid>
+      <description>&lt;p&gt;Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-happened-with-web&#34;&gt;What happened with web?&lt;/h1&gt;&#xA;&lt;p&gt;Well, I learned after spending too much time that I didn&amp;rsquo;t care enough. It wasn&amp;rsquo;t that it was hard, or the job market wasn&amp;rsquo;t flourishing - because it is and still is. I left the &lt;em&gt;dream&lt;/em&gt; of becoming a web developer because I wasn&amp;rsquo;t having fun with it. Full transparency, I never achieved a career or was offered a job as a web developer. I didn&amp;rsquo;t even work that hard in my spare time to study languages like JavaScript, it just didn&amp;rsquo;t interest me enough. To this day I still think it&amp;rsquo;s incredible what can be done in a browser.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

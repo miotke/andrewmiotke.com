@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac Admin on andrewmiotke.com</title>
+    <link>http://localhost:1313/categories/mac-admin/</link>
+    <description>Recent content in Mac Admin on andrewmiotke.com</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2023, Andrew Miotke</copyright>
+    <lastBuildDate>Thu, 13 Jan 2022 16:30:23 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/mac-admin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automate jamf2snipe with GitHub Actions</title>
+      <link>http://localhost:1313/posts/2022-01-11-automate_jamf2snipe_with_github_actions/</link>
+      <pubDate>Thu, 13 Jan 2022 16:30:23 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2022-01-11-automate_jamf2snipe_with_github_actions/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://snipeitapp.com&#34;&gt;Snipe-IT&lt;/a&gt; is a great asset tracking tool for IT teams and if you use Jamf to manage Apple devices then you probably want an easy way to sync those objects from Jamf into Snipe-IT. That&amp;rsquo;s where &lt;a href=&#34;https://github.com/ParadoxGuitarist/jamf2snipe&#34;&gt;jamf2snipe&lt;/a&gt; comes in, written by &lt;a href=&#34;https://github.com/ParadoxGuitarist&#34;&gt;ParadoxGuitarist&lt;/a&gt; on GitHub.&lt;/p&gt;&#xA;&lt;p&gt;In this post we&amp;rsquo;re going to walk through using GitHub Actions to automate running jamf2snipe on a regular cadence.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;re going to assume that you already have jamf2snipe set up and it can run from your local machine and you have a forked copy of jamf2snipe in GitHub. Checkout jamf2snipe&amp;rsquo;s README for instructions on how to configure the script.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

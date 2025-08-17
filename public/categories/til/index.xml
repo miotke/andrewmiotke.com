@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Til on andrewmiotke.com</title>
+    <link>http://localhost:1313/categories/til/</link>
+    <description>Recent content in Til on andrewmiotke.com</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2023, Andrew Miotke</copyright>
+    <lastBuildDate>Tue, 14 Nov 2023 15:38:32 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/til/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>macOS repeat key strokes in VSCode/VSCodium</title>
+      <link>http://localhost:1313/posts/til/macos_repeat_key_strokes_in_vscode_vscodium/</link>
+      <pubDate>Tue, 14 Nov 2023 15:38:32 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/macos_repeat_key_strokes_in_vscode_vscodium/</guid>
+      <description>&lt;p&gt;Using the vim or neovim plugin in VSCode or VSCodium does not allow you to hold a key and have that key repeat. The commands below will allow for that behavior on macOS.&lt;/p&gt;&#xA;&lt;h2 id=&#34;vscodium&#34;&gt;VSCodium&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;defaults write -app VSCodium ApplePressAndHoldEnabled -bool false&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;vscode&#34;&gt;VSCode&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Globally ignore .DS_Store with Git</title>
+      <link>http://localhost:1313/posts/til/globally_ignore_ds_store/</link>
+      <pubDate>Mon, 13 Nov 2023 15:43:51 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/globally_ignore_ds_store/</guid>
+      <description>&lt;p&gt;Settings for git to ignore &lt;code&gt;.DS_Store&lt;/code&gt; globally on macOS.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global core.excludesfile ~/.gitignore&#xA;&#xA;echo .DS_Store &amp;gt;&amp;gt; ~/.gitignore&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Laid off</title>
+      <link>http://localhost:1313/posts/til/laid_off/</link>
+      <pubDate>Wed, 16 Aug 2023 15:50:12 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/laid_off/</guid>
+      <description>&lt;p&gt;TIL I was laid off.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s it, today is just shitposting.&lt;/p&gt;&#xA;&lt;p&gt;For a bit of real reflection though, this was by far, by favorite job I&amp;rsquo;ve ever had. So it&amp;rsquo;s pretty disappointing to have been let go. However, that&amp;rsquo;s life and so we move on.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Simple URL formatting for Okta Workflow Slack messages</title>
+      <link>http://localhost:1313/posts/til/simple_url_formatting_for_slack_messages_from_okta_workflows/</link>
+      <pubDate>Wed, 16 Aug 2023 15:50:12 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/simple_url_formatting_for_slack_messages_from_okta_workflows/</guid>
+      <description>&lt;p&gt;Markdown formatting when composing a Slack message that is being sent from Okta Workflows.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;&amp;lt;URL|&amp;lt;Name for the URL&amp;gt;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Put the actual URL first and then the formatted name after the pipe (&lt;code&gt;|&lt;/code&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using SwiftUI&#39;s @AppStorage</title>
+      <link>http://localhost:1313/posts/til/swiftui_app_storage/</link>
+      <pubDate>Fri, 11 Aug 2023 15:39:44 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/swiftui_app_storage/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;AppStorage is not a secure storage location&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;You shouldn&amp;rsquo;t use AppStorage for sensitive or personal information. AppStorage is really intended for app settings, such as theme (dark/light mode, etc).&lt;/p&gt;&#xA;&lt;p&gt;Full code example below and the project can be downloaded at: &lt;a href=&#34;https://github.com/miotke/andrewmiotke.com/tree/main/code_examples/Appstorage&#34;&gt;code_examples/Appstorage&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h1 id=&#34;writing-to-appstorage&#34;&gt;Writing to @AppStorage&lt;/h1&gt;&#xA;&lt;p&gt;Writing to &lt;code&gt;@AppStorage&lt;/code&gt; is fairly straight forward. Declare &lt;code&gt;@AppStorage&lt;/code&gt; in one of your views as shown below. In this instance the thing we are storing is a &lt;code&gt;String&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Parsing JSON using the Requests Python library</title>
+      <link>http://localhost:1313/posts/til/parsing_data_with_requests_library/</link>
+      <pubDate>Thu, 10 Aug 2023 15:11:42 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/parsing_data_with_requests_library/</guid>
+      <description>&lt;h1 id=&#34;parsing-json-using-the-requests-python-library&#34;&gt;Parsing JSON using the Requests Python library&lt;/h1&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://requests.readthedocs.io/en/latest/&#34;&gt;Requests&lt;/a&gt; library can parse out JSON &lt;code&gt;key:value&lt;/code&gt; pairs. It&amp;rsquo;s fairly simple so lets go through it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;make-the-get-request&#34;&gt;Make the GET request&lt;/h2&gt;&#xA;&lt;p&gt;This does assume that Requests is already installed using &lt;code&gt;pip install requests&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Import &lt;code&gt;requests&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Put your URL into a variable. This just makes calling it more readable later on.&lt;/li&gt;&#xA;&lt;li&gt;Set up the following Python dicts: &lt;code&gt;payload&lt;/code&gt; and &lt;code&gt;headers&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Example:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; requests&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://api.github.com/repos/octocat/Hello-World&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;payload &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;headers &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Accept&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;application/json&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;application/json&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Not using an API key in this example due to a public API endpoint.&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#&amp;#34;Authorization&amp;#34;: f&amp;#34;{API_KEY}&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note: If the API you&amp;rsquo;re trying to talk to requires an API key (most do) then use &lt;code&gt;&amp;quot;Authorization&amp;quot;: &amp;quot;API_KEY&amp;quot;&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TIL Cron - My notes</title>
+      <link>http://localhost:1313/posts/til/til-cron/</link>
+      <pubDate>Thu, 22 Jul 2021 15:02:30 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/til-cron/</guid>
+      <description>&lt;p&gt;These notes are not exhaustive. As I learn more I&amp;rsquo;ll try and update this post.&lt;/p&gt;&#xA;&lt;p&gt;Cron jobs are useful for running automated tasks in Linux based environments. The syntax is kind goofy and took me reading a few different articles to really grasp it. I found this great article, &lt;a href=&#34;https://techgirlkb.guru/2018/10/writing-a-basic-cron-job-in-linux/&#34;&gt;Writing a basic cron job in Linux&lt;/a&gt; which really helped give a good understanding on how the astrisk syntax works.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-cron&#34; data-lang=&#34;cron&#34;&gt;# ┌───────────── minute (0 - 59)&#xA;# │ ┌───────────── hour (0 - 23)&#xA;# │ │ ┌───────────── day of the month (1 - 31)&#xA;# │ │ │ ┌───────────── month (1 - 12)&#xA;# │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;&#xA;# │ │ │ │ │                                   7 is also Sunday on some systems)&#xA;# │ │ │ │ │&#xA;# │ │ │ │ │&#xA;# * * * * *&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://techgirlkb.guru/2018/10/writing-a-basic-cron-job-in-linux/&#34;&gt;Writing a basic cron job in Linux&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://crontab.guru/&#34;&gt;Validate cron jobs&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#cron-schedule-syntax&#34;&gt;CronJob&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;listing-out-current-cron-jobs&#34;&gt;Listing out current cron jobs&lt;/h2&gt;&#xA;&lt;h4 id=&#34;command&#34;&gt;Command:&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;crontab -l&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;compose-new-cron-job&#34;&gt;Compose new cron job&lt;/h2&gt;&#xA;&lt;h4 id=&#34;command-1&#34;&gt;Command:&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You may be asked on the first run which editor to use between Nano and a couple variations of vim.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TIL: Docker - My notes</title>
+      <link>http://localhost:1313/posts/til/til-docker/</link>
+      <pubDate>Wed, 21 Jul 2021 15:21:59 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/til-docker/</guid>
+      <description>&lt;p&gt;Expect this post to be updated over time.&lt;/p&gt;&#xA;&lt;p&gt;Here are the notes I&amp;rsquo;ve taken so far while learning Docker over the last few days.&lt;/p&gt;&#xA;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docker-curriculum.com/&#34;&gt;Docker for beginners&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://medium.com/shot-code/running-django-postgresql-containers-and-persisting-data-with-docker-4dd8e4dd5361&#34;&gt;Running Django + PostgreSQL containers and persisting data with Docker&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;docker-pull&#34;&gt;docker pull&lt;/h2&gt;&#xA;&lt;h5 id=&#34;command&#34;&gt;Command:&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;docker pull [image name or url]&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Pulls the docker image from the docker registry. The docker registry is similar to Github in that it hosts a bunch of docker images.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

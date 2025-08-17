@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>andrewmiotke.com</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on andrewmiotke.com</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2023, Andrew Miotke</copyright>
+    <lastBuildDate>Tue, 14 Nov 2023 15:38:32 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>macOS repeat key strokes in VSCode/VSCodium</title>
+      <link>http://localhost:1313/posts/til/macos_repeat_key_strokes_in_vscode_vscodium/</link>
+      <pubDate>Tue, 14 Nov 2023 15:38:32 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/macos_repeat_key_strokes_in_vscode_vscodium/</guid>
+      <description>&lt;p&gt;Using the vim or neovim plugin in VSCode or VSCodium does not allow you to hold a key and have that key repeat. The commands below will allow for that behavior on macOS.&lt;/p&gt;&#xA;&lt;h2 id=&#34;vscodium&#34;&gt;VSCodium&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;defaults write -app VSCodium ApplePressAndHoldEnabled -bool false&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;vscode&#34;&gt;VSCode&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Globally ignore .DS_Store with Git</title>
+      <link>http://localhost:1313/posts/til/globally_ignore_ds_store/</link>
+      <pubDate>Mon, 13 Nov 2023 15:43:51 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/globally_ignore_ds_store/</guid>
+      <description>&lt;p&gt;Settings for git to ignore &lt;code&gt;.DS_Store&lt;/code&gt; globally on macOS.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global core.excludesfile ~/.gitignore&#xA;&#xA;echo .DS_Store &amp;gt;&amp;gt; ~/.gitignore&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Laid off</title>
+      <link>http://localhost:1313/posts/til/laid_off/</link>
+      <pubDate>Wed, 16 Aug 2023 15:50:12 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/laid_off/</guid>
+      <description>&lt;p&gt;TIL I was laid off.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s it, today is just shitposting.&lt;/p&gt;&#xA;&lt;p&gt;For a bit of real reflection though, this was by far, by favorite job I&amp;rsquo;ve ever had. So it&amp;rsquo;s pretty disappointing to have been let go. However, that&amp;rsquo;s life and so we move on.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Simple URL formatting for Okta Workflow Slack messages</title>
+      <link>http://localhost:1313/posts/til/simple_url_formatting_for_slack_messages_from_okta_workflows/</link>
+      <pubDate>Wed, 16 Aug 2023 15:50:12 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/simple_url_formatting_for_slack_messages_from_okta_workflows/</guid>
+      <description>&lt;p&gt;Markdown formatting when composing a Slack message that is being sent from Okta Workflows.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;&amp;lt;URL|&amp;lt;Name for the URL&amp;gt;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Put the actual URL first and then the formatted name after the pipe (&lt;code&gt;|&lt;/code&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using SwiftUI&#39;s @AppStorage</title>
+      <link>http://localhost:1313/posts/til/swiftui_app_storage/</link>
+      <pubDate>Fri, 11 Aug 2023 15:39:44 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/swiftui_app_storage/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;AppStorage is not a secure storage location&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;You shouldn&amp;rsquo;t use AppStorage for sensitive or personal information. AppStorage is really intended for app settings, such as theme (dark/light mode, etc).&lt;/p&gt;&#xA;&lt;p&gt;Full code example below and the project can be downloaded at: &lt;a href=&#34;https://github.com/miotke/andrewmiotke.com/tree/main/code_examples/Appstorage&#34;&gt;code_examples/Appstorage&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h1 id=&#34;writing-to-appstorage&#34;&gt;Writing to @AppStorage&lt;/h1&gt;&#xA;&lt;p&gt;Writing to &lt;code&gt;@AppStorage&lt;/code&gt; is fairly straight forward. Declare &lt;code&gt;@AppStorage&lt;/code&gt; in one of your views as shown below. In this instance the thing we are storing is a &lt;code&gt;String&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Parsing JSON using the Requests Python library</title>
+      <link>http://localhost:1313/posts/til/parsing_data_with_requests_library/</link>
+      <pubDate>Thu, 10 Aug 2023 15:11:42 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/parsing_data_with_requests_library/</guid>
+      <description>&lt;h1 id=&#34;parsing-json-using-the-requests-python-library&#34;&gt;Parsing JSON using the Requests Python library&lt;/h1&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://requests.readthedocs.io/en/latest/&#34;&gt;Requests&lt;/a&gt; library can parse out JSON &lt;code&gt;key:value&lt;/code&gt; pairs. It&amp;rsquo;s fairly simple so lets go through it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;make-the-get-request&#34;&gt;Make the GET request&lt;/h2&gt;&#xA;&lt;p&gt;This does assume that Requests is already installed using &lt;code&gt;pip install requests&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Import &lt;code&gt;requests&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Put your URL into a variable. This just makes calling it more readable later on.&lt;/li&gt;&#xA;&lt;li&gt;Set up the following Python dicts: &lt;code&gt;payload&lt;/code&gt; and &lt;code&gt;headers&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Example:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; requests&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://api.github.com/repos/octocat/Hello-World&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;payload &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;headers &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Accept&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;application/json&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;application/json&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Not using an API key in this example due to a public API endpoint.&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#&amp;#34;Authorization&amp;#34;: f&amp;#34;{API_KEY}&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note: If the API you&amp;rsquo;re trying to talk to requires an API key (most do) then use &lt;code&gt;&amp;quot;Authorization&amp;quot;: &amp;quot;API_KEY&amp;quot;&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CLI Tools with Swift</title>
+      <link>http://localhost:1313/posts/swift-cli-tools/2023-08-03-cli-tools-with-swift/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/swift-cli-tools/2023-08-03-cli-tools-with-swift/</guid>
+      <description>&lt;h1 id=&#34;getting-started-writing-a-cli-tool-with-swift&#34;&gt;Getting started writing a CLI tool with Swift&lt;/h1&gt;&#xA;&lt;h2 id=&#34;start-project&#34;&gt;Start project&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Start by making a new directory, &lt;code&gt;mkdir &amp;lt;path/to/dir&amp;gt;&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Run &lt;code&gt;swift package init --type executable&lt;/code&gt;. This creates an executable package that can be opened in Xcode or any text editor&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;prepare-packageswift&#34;&gt;Prepare &lt;code&gt;package.swift&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;p&gt;To get your new CLI too ready to start building add the following to your package.swift file.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Add a &lt;code&gt;products&lt;/code&gt; array the package constant. e.g.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;products: [&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .executable(name: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cli_swift&amp;#34;&lt;/span&gt;, targets: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cli_swift&amp;#34;&lt;/span&gt;])&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;],&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re adding any dependencies such as other Swift packages, add a &lt;code&gt;dependencies&lt;/code&gt; array to the package constant e.g.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automate jamf2snipe with GitHub Actions</title>
+      <link>http://localhost:1313/posts/2022-01-11-automate_jamf2snipe_with_github_actions/</link>
+      <pubDate>Thu, 13 Jan 2022 16:30:23 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2022-01-11-automate_jamf2snipe_with_github_actions/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://snipeitapp.com&#34;&gt;Snipe-IT&lt;/a&gt; is a great asset tracking tool for IT teams and if you use Jamf to manage Apple devices then you probably want an easy way to sync those objects from Jamf into Snipe-IT. That&amp;rsquo;s where &lt;a href=&#34;https://github.com/ParadoxGuitarist/jamf2snipe&#34;&gt;jamf2snipe&lt;/a&gt; comes in, written by &lt;a href=&#34;https://github.com/ParadoxGuitarist&#34;&gt;ParadoxGuitarist&lt;/a&gt; on GitHub.&lt;/p&gt;&#xA;&lt;p&gt;In this post we&amp;rsquo;re going to walk through using GitHub Actions to automate running jamf2snipe on a regular cadence.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;re going to assume that you already have jamf2snipe set up and it can run from your local machine and you have a forked copy of jamf2snipe in GitHub. Checkout jamf2snipe&amp;rsquo;s README for instructions on how to configure the script.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TIL Cron - My notes</title>
+      <link>http://localhost:1313/posts/til/til-cron/</link>
+      <pubDate>Thu, 22 Jul 2021 15:02:30 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/til-cron/</guid>
+      <description>&lt;p&gt;These notes are not exhaustive. As I learn more I&amp;rsquo;ll try and update this post.&lt;/p&gt;&#xA;&lt;p&gt;Cron jobs are useful for running automated tasks in Linux based environments. The syntax is kind goofy and took me reading a few different articles to really grasp it. I found this great article, &lt;a href=&#34;https://techgirlkb.guru/2018/10/writing-a-basic-cron-job-in-linux/&#34;&gt;Writing a basic cron job in Linux&lt;/a&gt; which really helped give a good understanding on how the astrisk syntax works.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-cron&#34; data-lang=&#34;cron&#34;&gt;# ┌───────────── minute (0 - 59)&#xA;# │ ┌───────────── hour (0 - 23)&#xA;# │ │ ┌───────────── day of the month (1 - 31)&#xA;# │ │ │ ┌───────────── month (1 - 12)&#xA;# │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;&#xA;# │ │ │ │ │                                   7 is also Sunday on some systems)&#xA;# │ │ │ │ │&#xA;# │ │ │ │ │&#xA;# * * * * *&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://techgirlkb.guru/2018/10/writing-a-basic-cron-job-in-linux/&#34;&gt;Writing a basic cron job in Linux&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://crontab.guru/&#34;&gt;Validate cron jobs&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#cron-schedule-syntax&#34;&gt;CronJob&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;listing-out-current-cron-jobs&#34;&gt;Listing out current cron jobs&lt;/h2&gt;&#xA;&lt;h4 id=&#34;command&#34;&gt;Command:&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;crontab -l&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;compose-new-cron-job&#34;&gt;Compose new cron job&lt;/h2&gt;&#xA;&lt;h4 id=&#34;command-1&#34;&gt;Command:&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You may be asked on the first run which editor to use between Nano and a couple variations of vim.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TIL: Docker - My notes</title>
+      <link>http://localhost:1313/posts/til/til-docker/</link>
+      <pubDate>Wed, 21 Jul 2021 15:21:59 -0700</pubDate>
+      <guid>http://localhost:1313/posts/til/til-docker/</guid>
+      <description>&lt;p&gt;Expect this post to be updated over time.&lt;/p&gt;&#xA;&lt;p&gt;Here are the notes I&amp;rsquo;ve taken so far while learning Docker over the last few days.&lt;/p&gt;&#xA;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docker-curriculum.com/&#34;&gt;Docker for beginners&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://medium.com/shot-code/running-django-postgresql-containers-and-persisting-data-with-docker-4dd8e4dd5361&#34;&gt;Running Django + PostgreSQL containers and persisting data with Docker&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;docker-pull&#34;&gt;docker pull&lt;/h2&gt;&#xA;&lt;h5 id=&#34;command&#34;&gt;Command:&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;docker pull [image name or url]&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Pulls the docker image from the docker registry. The docker registry is similar to Github in that it hosts a bunch of docker images.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Swift: Markdown Support</title>
+      <link>http://localhost:1313/posts/2021-06-14-swift-markdown-support/</link>
+      <pubDate>Mon, 14 Jun 2021 11:51:22 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2021-06-14-swift-markdown-support/</guid>
+      <description>&lt;p&gt;This year at WWDC 2021 Apple introduced Markdown support in its UI frameworks, which is awesome! I&amp;rsquo;ve used it only with SwiftUI so far but I expect Markdown support to be adopted by a lot of apps that have formatted text input.&lt;/p&gt;&#xA;&lt;p&gt;This is a quick reference for supporting Markdown in your app.&lt;/p&gt;&#xA;&lt;p&gt;Currently in SwiftUI &lt;code&gt;Text(&amp;quot;**Here is a** [link to apple.com](https://apple.com)&amp;quot;)&lt;/code&gt; will render the Markdown without trouble. However, if you&amp;rsquo;re fetching a String out of CoreData as was my case or you&amp;rsquo;re calling a String from a &lt;code&gt;var&lt;/code&gt; or &lt;code&gt;let&lt;/code&gt; you may need a return that fetched string as an &lt;code&gt;AttributedString&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SwiftUI: List Card View</title>
+      <link>http://localhost:1313/posts/2021-06-14-swiftui-list-card-view/</link>
+      <pubDate>Mon, 14 Jun 2021 10:48:41 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2021-06-14-swiftui-list-card-view/</guid>
+      <description>&lt;p&gt;To be upfront, I&amp;rsquo;m not sure if calling each row a &amp;ldquo;card&amp;rdquo; is the best way to describe this but, it seems reasonable to me.&lt;/p&gt;&#xA;&lt;p&gt;Creating a &amp;ldquo;card&amp;rdquo; within a List view using SwiftUI was something that always seemed super hacky to me until &lt;a href=&#34;https://twitter.com/mecid&#34;&gt;@mecid&lt;/a&gt; replied with a very concise and obvious answer. Simply, create a List with the &lt;code&gt;.listStyle(InsetGroupedListStyle())&lt;/code&gt; modifier and for each row within the list, give it a &lt;code&gt;Section&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Procrastinating with writing more</title>
+      <link>http://localhost:1313/posts/2021-06-01-procrastinating-with-writing-more/</link>
+      <pubDate>Tue, 01 Jun 2021 14:52:51 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2021-06-01-procrastinating-with-writing-more/</guid>
+      <description>&lt;p&gt;I have decided I want to write more. I&amp;rsquo;m just not sure what, if any, focus I want to have with it. Tech will be the primary focus leaning toward writing code and other tech opinions that come to mind.&lt;/p&gt;&#xA;&lt;p&gt;This post is my attempt at getting back into writing. In typical form, I found myself sitting down with a cup coffee yesterday morning ready to go. Then I thought about a problem I had and wrote a Python script to solve that problem. A classic procrastination moment for me, sit down to write a post and instead write some code to solve such a minor problem to begin writing. Always need more tooling :eye-roll:.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Coming soon: AutoMate</title>
+      <link>http://localhost:1313/posts/2020-08-14-automate/</link>
+      <pubDate>Fri, 14 Aug 2020 09:04:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2020-08-14-automate/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;AutoMate is an app to help keep track of your car&amp;rsquo;s maintenance schedule and service history. I am expecting to have this out by the end of Fall 2020 🤞.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re interested in downloading and using the TestFlight beta builds, feel free to check it out here: &lt;a href=&#34;https://testflight.apple.com/join/WwJH6tyO&#34;&gt;https://testflight.apple.com/join/WwJH6tyO&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ll update this post as I continue to make more progress on the app.&lt;/p&gt;&#xA;&lt;h3 id=&#34;plans-and-features&#34;&gt;Plans and features&lt;/h3&gt;&#xA;&lt;p&gt;Once complete you should be able to add your car(s) and add in your car&amp;rsquo;s full service history. All backed up using iCloud/CloudKit.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing: Tankd</title>
+      <link>http://localhost:1313/posts/2020-06-16-tankd/</link>
+      <pubDate>Tue, 16 Jun 2020 09:04:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2020-06-16-tankd/</guid>
+      <description>&lt;p&gt;Introducing Tankd, my first iOS app released in the App Store for iOS!&lt;/p&gt;&#xA;&lt;p&gt;So the app is called Tankd and simply put it’s a fuel stop tracking app for iOS. I had heard a few times and even talked to a few friends who like to save their receipts at every fuel stop they make. I tried this for a short bit and got frustrated with all of the receipt papers cluttering up areas like the glove box. There’s also spreadsheets which would solve this problem just as easy. However, I thought I could try and make a more eloquent way of tracking fuel stops and maybe, eventually, present the data as more of an overview like a dashboard.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First App in TestFlight: Tankd</title>
+      <link>http://localhost:1313/posts/2020-05-20-first-app-in-testflight/</link>
+      <pubDate>Wed, 20 May 2020 09:29:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2020-05-20-first-app-in-testflight/</guid>
+      <description>&lt;p&gt;I finally did it! Earlier this week I submitted an app to TestFlight for the first time. This is the first step in achieving my goal of submitting an app to the iOS App Store and I could not be more excited. I&amp;rsquo;ll talk more about the app in a moment with a link so you can download it. I&amp;rsquo;m hoping to let it bake with testers in TestFlight to work out all the kinks and bugs then move it to the App Store soon.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Portfolio App: Meal Time</title>
+      <link>http://localhost:1313/posts/2020-04-11-meal-time/</link>
+      <pubDate>Wed, 22 Apr 2020 15:36:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2020-04-11-meal-time/</guid>
+      <description>&lt;h3 id=&#34;update&#34;&gt;Update&lt;/h3&gt;&#xA;&lt;p&gt;As I outlined in &lt;a href=&#34;http://andrewmiotke.com/update/2020/03/31/a-new-hope.html&#34;&gt;A New Hope&lt;/a&gt; I&amp;rsquo;m taking&#xA;this time to refocus my software development efforts on iOS and Swift. It&amp;rsquo;s been about a week and a half&#xA;since I was laid off of my job and I have taken it in stride. I&amp;rsquo;ve decided to work on a few different types of&#xA;apps, some &amp;ldquo;portfolio&amp;rdquo; that won&amp;rsquo;t be released on the App Store and at least one that will be released on the App Store.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A New Hope</title>
+      <link>http://localhost:1313/posts/2020-03-31-a-new-hope/</link>
+      <pubDate>Tue, 31 Mar 2020 13:56:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2020-03-31-a-new-hope/</guid>
+      <description>&lt;p&gt;After nearly three years I was let go and lost my job due to the COVID-19 pandemic, yeah, it sucks&amp;hellip;hard.&#xA;I&amp;rsquo;m now unemployed but thankfully I have a tremendous and supportive wife, family and friends. I really have no idea where I would be without them.&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-breakup&#34;&gt;The breakup&lt;/h3&gt;&#xA;&lt;p&gt;I found out at the same time as many of my colleagues, Slack exploded and Notification Center on my Mac was trying to keep up. It was terrible.&#xA;There were enough tears coming out of my face to fill a bucket. I was in absolute disbelief because I&amp;rsquo;ve never been let go from a job before, I guess there&amp;rsquo;s a first for everything 🤷‍♂️.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Resume Gist</title>
+      <link>http://localhost:1313/posts/2019-04-06-resume-gist/</link>
+      <pubDate>Sat, 06 Apr 2019 10:28:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2019-04-06-resume-gist/</guid>
+      <description>&lt;p&gt;For awhile now I&amp;rsquo;ve been thinking about the resumé, that piece of paper - or nowadays pdf file that we upload to a website or give a recruiter. The rule of thumb I&amp;rsquo;ve always been given is keep it short and sweet and try to keep it all on one page. In today’s world we rarely stay at a company for more than three or four years, how are we supposed to keep all this work experience limited one page? Especially when you have to include tings like education, and typically a quick synopsis of who you are.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Taking Classes</title>
+      <link>http://localhost:1313/posts/2019-02-17-taking-classes/</link>
+      <pubDate>Sun, 17 Feb 2019 16:22:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2019-02-17-taking-classes/</guid>
+      <description>&lt;h1 id=&#34;taking-classes&#34;&gt;Taking Classes&lt;/h1&gt;&#xA;&lt;p&gt;Well it&amp;rsquo;s that time again, it&amp;rsquo;s time to start looking at taking a new class to continue to grow my fundamentals in programming. This time I found a class at the Univeristy of Washington(UW) and the course is in Python 🐍!&lt;/p&gt;&#xA;&lt;p&gt;Python is a language that I&amp;rsquo;ve wanted to learn for awhile now, once I had an understanding of Swift. I applied for the class last week and I&amp;rsquo;m just waiting to get the &amp;ldquo;acceptance letter&amp;rdquo;. I plan on using this site to write about my experience and to write about what I learn. I&amp;rsquo;m trying to commit to writing each week 😬🤞.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vision and Purpose</title>
+      <link>http://localhost:1313/posts/2018-07-10-vision-and-purpose/</link>
+      <pubDate>Tue, 10 Jul 2018 09:04:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2018-07-10-vision-and-purpose/</guid>
+      <description>&lt;p&gt;In my last post I explained my journey up to this point in time and my found passion for Swift. Today I&amp;rsquo;m going to explain the vision and purpose of why this website exists in the first place and what I hope to achieve with it.&lt;/p&gt;&#xA;&lt;h1 id=&#34;vision&#34;&gt;Vision&lt;/h1&gt;&#xA;&lt;p&gt;My vision for this website is to have a place that I can talk about my various learnings with Swift and other topics as I explore iOS development and developing on Apple platforms. Along with this I hope to show case and promote other people who are contributing to the Swift community as I find their articles, podcasts, or even a repo on Github.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>andrewmiotke.com v2.0</title>
+      <link>http://localhost:1313/posts/2018-06-30-welcome/</link>
+      <pubDate>Sat, 30 Jun 2018 17:44:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2018-06-30-welcome/</guid>
+      <description>&lt;p&gt;Welcome to andrewmiotke.com v2.0, if you saw my previous website then you know it was aimed at being a web developer, this is taking a whole new turn. Over the last eight months I made the decision to leave what I thought my dreams were, web development(yet here we are on a website) to pursue what I quickly learn was a true passion of mine, iOS development with Swift.&lt;/p&gt;&#xA;&lt;h1 id=&#34;what-happened-with-web&#34;&gt;What happened with web?&lt;/h1&gt;&#xA;&lt;p&gt;Well, I learned after spending too much time that I didn&amp;rsquo;t care enough. It wasn&amp;rsquo;t that it was hard, or the job market wasn&amp;rsquo;t flourishing - because it is and still is. I left the &lt;em&gt;dream&lt;/em&gt; of becoming a web developer because I wasn&amp;rsquo;t having fun with it. Full transparency, I never achieved a career or was offered a job as a web developer. I didn&amp;rsquo;t even work that hard in my spare time to study languages like JavaScript, it just didn&amp;rsquo;t interest me enough. To this day I still think it&amp;rsquo;s incredible what can be done in a browser.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>resume</title>
+      <link>http://localhost:1313/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resume/</guid>
+      <description>&lt;p&gt;Andrew is self-taught systems administrator with twelve years of IT and IT support experience with an eye toward automation. He believes technology is a tool to help people do their best work. He enjoys solving technical problems, building scalable solutions, and helping others.&lt;/p&gt;&#xA;&lt;h1 id=&#34;work-experience&#34;&gt;Work Experience&lt;/h1&gt;&#xA;&lt;h3 id=&#34;betterup-remote&#34;&gt;BetterUp (Remote)&lt;/h3&gt;&#xA;&lt;p&gt;October 2023 - Present&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Senior IT Systems Engineer&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;panther-labs-remote&#34;&gt;Panther Labs (Remote)&lt;/h3&gt;&#xA;&lt;p&gt;March 2022 - August 2023&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Senior IT Engineer&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Manage and maintain Panther’s 200+ Macs using Kandji for MDM&lt;/li&gt;&#xA;&lt;li&gt;Configure over 150 SaaS applications using SAML and provisioning with SCIM using Okta&lt;/li&gt;&#xA;&lt;li&gt;Automated the onboarding and account lifecycle process between an HRIS and Okta&lt;/li&gt;&#xA;&lt;li&gt;Constructed multiple Okta Workflows to help automate off-boarding. Includes Slack notifications and error checking for each workflow that runs.&lt;/li&gt;&#xA;&lt;li&gt;Designed, implemented, and rolled out a Device Trust system using Kandji, Okta, and YubiKeys&lt;/li&gt;&#xA;&lt;li&gt;Helped lead the effort of removing all phishable MFA in our SaaS/Okta environment using YubiKeys&lt;/li&gt;&#xA;&lt;li&gt;Wrote multiple SIEM detection rules using Python&lt;/li&gt;&#xA;&lt;li&gt;Wrote Python scripts and custom API Connectors with Okta Workflows to handle account&#xA;manipulation and user lifecycle where Okta and SCIM were not able to. Version control using Git and&#xA;GitHub.&lt;/li&gt;&#xA;&lt;li&gt;Implemented Panther’s first IT ticketing system using Freshservice and began automating workflows&lt;/li&gt;&#xA;&lt;li&gt;Acted as an escalation point for the support engineering team&lt;/li&gt;&#xA;&lt;li&gt;Assist in supporting users across the country in multiple timezones, including Europe&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;karat-remote&#34;&gt;Karat (Remote)&lt;/h3&gt;&#xA;&lt;p&gt;November 2021 - March 2022&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

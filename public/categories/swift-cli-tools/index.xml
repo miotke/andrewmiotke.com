@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swift CLI Tools on andrewmiotke.com</title>
+    <link>http://localhost:1313/categories/swift-cli-tools/</link>
+    <description>Recent content in Swift CLI Tools on andrewmiotke.com</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2023, Andrew Miotke</copyright>
+    <lastBuildDate>Thu, 03 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/swift-cli-tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CLI Tools with Swift</title>
+      <link>http://localhost:1313/posts/swift-cli-tools/2023-08-03-cli-tools-with-swift/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/swift-cli-tools/2023-08-03-cli-tools-with-swift/</guid>
+      <description>&lt;h1 id=&#34;getting-started-writing-a-cli-tool-with-swift&#34;&gt;Getting started writing a CLI tool with Swift&lt;/h1&gt;&#xA;&lt;h2 id=&#34;start-project&#34;&gt;Start project&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Start by making a new directory, &lt;code&gt;mkdir &amp;lt;path/to/dir&amp;gt;&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Run &lt;code&gt;swift package init --type executable&lt;/code&gt;. This creates an executable package that can be opened in Xcode or any text editor&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;prepare-packageswift&#34;&gt;Prepare &lt;code&gt;package.swift&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;p&gt;To get your new CLI too ready to start building add the following to your package.swift file.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Add a &lt;code&gt;products&lt;/code&gt; array the package constant. e.g.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;products: [&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    .executable(name: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cli_swift&amp;#34;&lt;/span&gt;, targets: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cli_swift&amp;#34;&lt;/span&gt;])&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;],&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re adding any dependencies such as other Swift packages, add a &lt;code&gt;dependencies&lt;/code&gt; array to the package constant e.g.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

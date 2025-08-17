@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal Update on andrewmiotke.com</title>
+    <link>http://localhost:1313/categories/personal-update/</link>
+    <description>Recent content in Personal Update on andrewmiotke.com</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2023, Andrew Miotke</copyright>
+    <lastBuildDate>Sat, 06 Apr 2019 10:28:46 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/personal-update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resume Gist</title>
+      <link>http://localhost:1313/posts/2019-04-06-resume-gist/</link>
+      <pubDate>Sat, 06 Apr 2019 10:28:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2019-04-06-resume-gist/</guid>
+      <description>&lt;p&gt;For awhile now I&amp;rsquo;ve been thinking about the resumé, that piece of paper - or nowadays pdf file that we upload to a website or give a recruiter. The rule of thumb I&amp;rsquo;ve always been given is keep it short and sweet and try to keep it all on one page. In today’s world we rarely stay at a company for more than three or four years, how are we supposed to keep all this work experience limited one page? Especially when you have to include tings like education, and typically a quick synopsis of who you are.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Taking Classes</title>
+      <link>http://localhost:1313/posts/2019-02-17-taking-classes/</link>
+      <pubDate>Sun, 17 Feb 2019 16:22:46 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2019-02-17-taking-classes/</guid>
+      <description>&lt;h1 id=&#34;taking-classes&#34;&gt;Taking Classes&lt;/h1&gt;&#xA;&lt;p&gt;Well it&amp;rsquo;s that time again, it&amp;rsquo;s time to start looking at taking a new class to continue to grow my fundamentals in programming. This time I found a class at the Univeristy of Washington(UW) and the course is in Python 🐍!&lt;/p&gt;&#xA;&lt;p&gt;Python is a language that I&amp;rsquo;ve wanted to learn for awhile now, once I had an understanding of Swift. I applied for the class last week and I&amp;rsquo;m just waiting to get the &amp;ldquo;acceptance letter&amp;rdquo;. I plan on using this site to write about my experience and to write about what I learn. I&amp;rsquo;m trying to commit to writing each week 😬🤞.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
