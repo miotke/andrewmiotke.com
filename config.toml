@@ -28,3 +28,9 @@ pagerSize = 10
         title = "Resume"
         url = "/resume/"
         weight = -110
+    [[menu.main]]
+        identifier = "dogstore"
+        name = "Dog Store"
+        title = "Dog Store"
+        url = "/dogstore/"
+        weight = -100
